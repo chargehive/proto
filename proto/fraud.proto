@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+package chtype;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/timestamp.proto";
+
+option (gogoproto.goproto_enum_prefix_all) = false;
+option go_package = "chtype";
+option java_multiple_files = true;
+option java_outer_classname = "FraudProto";
+option java_package = "com.chargehive";
+
+message FraudResult {
+  string fraud_check_id = 1;
+  FraudScore overall_score = 2;
+  repeated FraudScore sub_scores = 3;
+  SuggestedAction suggested_action = 4;
+  google.protobuf.Timestamp scan_time = 5;
+  string connector_library = 6;
+}
+
+message FraudScore {
+  float score = 1;
+  RiskLevel risk_level = 2;
+  FraudFactor factor = 4;
+  string summary = 6;
+  map<string, string> data = 7;
+}
+
+enum SuggestedAction {
+  SUGGESTED_ACTION_INVALID = 0;
+  SUGGESTED_ACTION_NO_SUGGESTION = 1;
+  SUGGESTED_ACTION_REVIEW = 2;
+  SUGGESTED_ACTION_ALLOW = 3;
+  SUGGESTED_ACTION_DENY = 4;
+}
+
+enum RiskLevel {
+  RISK_LEVEL_INVALID = 0;
+  RISK_LEVEL_NOT_RATED = 1;
+  RISK_LEVEL_NEGLIGIBLE = 10;
+  RISK_LEVEL_MINOR = 20;
+  RISK_LEVEL_MODERATE = 30;
+  RISK_LEVEL_SIGNIFICANT = 40;
+  RISK_LEVEL_SERVERE = 50;
+}
+
+message FraudFactor {
+  enum On {
+    FRAUD_FACTOR_ON_INVALID = 0;
+    FRAUD_FACTOR_ON_ADDRESS = 1;
+    FRAUD_FACTOR_ON_BROWSER = 2;
+    FRAUD_FACTOR_ON_IP = 3;
+    FRAUD_FACTOR_ON_COUNTRY = 4;
+    FRAUD_FACTOR_ON_STATE = 5;
+    FRAUD_FACTOR_ON_CITY = 6;
+    FRAUD_FACTOR_ON_DEVICE = 7;
+    FRAUD_FACTOR_ON_EMAIL = 8;
+    FRAUD_FACTOR_ON_EMAIL_DOMAIN = 9;
+    FRAUD_FACTOR_ON_DATE = 10;
+    FRAUD_FACTOR_ON_MERCHANT = 11;
+    FRAUD_FACTOR_ON_ISSUER = 12;
+    FRAUD_FACTOR_ON_BIN = 13;
+    FRAUD_FACTOR_ON_METHOD = 14;
+    FRAUD_FACTOR_ON_CUSTOMER = 15;
+    FRAUD_FACTOR_ON_AMOUNT = 16;
+    FRAUD_FACTOR_ON_PHONE = 17;
+    FRAUD_FACTOR_ON_LANGUAGE = 18;
+    FRAUD_FACTOR_ON_DISTANCE_TO_BILLING = 19;
+    FRAUD_FACTOR_ON_DISTANCE_TO_SHIPPING = 20;
+    FRAUD_FACTOR_ON_DISTANCE_TO_IP = 21;
+    FRAUD_FACTOR_ON_OTHER = 22;
+  }
+  enum Factor {
+    FRAUD_FACTOR_INVALID = 0;
+    FRAUD_FACTOR_VERIFICATION = 1;
+    FRAUD_FACTOR_VALIDATION = 2;
+    FRAUD_FACTOR_VELOCITY = 3;
+    FRAUD_FACTOR_TRUST = 4;
+    FRAUD_FACTOR_DURATION = 5;
+    FRAUD_FACTOR_OTHER = 6;
+  }
+
+  On on = 1;
+  Factor factor = 2;
+  string other_on = 3;
+  string other_factor = 4;
+}

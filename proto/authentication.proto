@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package chtype;
+
+import "enum.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.goproto_enum_prefix_all) = false;
+option go_package = "chtype";
+option java_multiple_files = true;
+option java_outer_classname = "RequestProto";
+option java_package = "com.chargehive";
+
+message AuthenticationChain {
+    AuthenticationChain parent = 1;
+    string verification_hash = 2;
+    HandlerType handler_type = 3;
+    string handler = 4;
+  
+    string project_id = 5;
+    string user_id = 6;
+    string user_agent = 7;
+    string ip_address = 8;
+  }

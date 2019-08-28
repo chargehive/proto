@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+package chtype;
+
+import "generic.proto";
+import "enum.proto";
+import "fraud.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/timestamp.proto";
+
+option (gogoproto.goproto_enum_prefix_all) = false;
+option go_package = "chtype";
+option java_multiple_files = true;
+option java_outer_classname = "TransactionProto";
+option java_package = "com.chargehive";
+
+message Transaction {
+  string token_id = 1;
+  string transaction_id = 2;
+  repeated TransactionDetail details = 3;
+  PaymentMethodType payment_type = 4;
+  string payment_scheme = 5;
+  TransactionType transaction_type = 6;
+  Amount request_amount = 7; //Amount requested
+  Amount transacted_amount = 8; //Amount received
+  ContractType contract = 9;
+  string statement_descriptor = 10;
+  TransactionResult result = 11;
+  VerifyRequestData verify_request = 12;
+  FailureType failure_type = 13;
+  string consumer_message = 14;
+  string arn = 15;
+  VerificationStatus verified = 16; //Additional Verification provided and passed
+  Liability liability = 17;
+  string response_code = 18;
+  AttemptDetail attempt_detail = 19;
+  repeated FraudResult fraud_results = 20;
+}
+
+message TransactionDetail {
+  string actor_id = 1;
+  string actor_version = 2;
+  ActorType actor_type = 3;
+  string transaction_id = 4;
+  Amount requested_amount = 5; //Amount sent in the request
+  Amount processed_amount = 6; //Amount received in the result
+  Amount fee_estimate = 7; //Amount charged for the transaction
+  Amount fee_actual = 8; //Amount charged for the transaction
+  google.protobuf.Timestamp start_time = 9; //Request Send Time
+  google.protobuf.Timestamp end_time = 10; //Response Receive Time
+  bool was_successful = 11;
+  FailureType failure_type = 12;
+  string response_code = 13;
+  string response_message = 14;
+  Environment environment = 15;
+  VerificationResult verification_result = 16;
+  map<string, string> additional_data = 17;
+  string authorization_code = 18;
+  Liability liability = 19;
+}
+
+message VerifyRequestData {
+  VerifyRequestType type = 1;
+  map<string, string> data = 2;
+  string connector_library = 3;
+  Environment environment = 4;
+  bool required = 5;
+}
+
+message ThreeDSResult {
+  string eci = 1;
+  string cavv = 2;
+  string xid = 3;
+  string enrollment = 4;
+  string result = 5;
+  string signature_status = 6;
+  string server_transaction_id = 7;
+  string status = 8;
+  int32 major_version = 9;
+  string version = 10;
+  string pa_req = 11;
+  string acs_url = 12;
+  string pa_res = 13;
+  string id = 14;
+  google.protobuf.Timestamp timestamp = 15;
+  Liability liability = 16;
+  string sdk_response = 17;
+}
+
+message VerificationResult {
+  string address_verification_result = 1; //Address verification code
+  string cvv_verification_result = 2; //e.g. CVV Response Code
+  string fraud_result = 3; //Calculated fraud response if available
+  ThreeDSResult threeds_result = 5;
+}
+
+message AttemptDetail {
+  int64 ChargeTransactionNumber = 1;
+  int64 ChargeAttemptNumber = 2;
+  int64 AttemptTransactionNumber = 3;
+  int64 AttemptMethodCascade = 4;
+  int64 AttemptConnectorCascade = 5;
+  bool IsPrimaryMethod = 6;
+}
