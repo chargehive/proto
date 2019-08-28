@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package chtype;
 
-import "generic.proto";
-import "enum.proto";
-import "fraud.proto";
+import "github.com/chargehive/proto/proto/generic.proto";
+import "github.com/chargehive/proto/proto/enum.proto";
+import "github.com/chargehive/proto/proto/fraud.proto";
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 

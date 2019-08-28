@@ -3,7 +3,7 @@ syntax = "proto3";
 package chtype;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
-import "enum.proto";
+import "github.com/chargehive/proto/proto/enum.proto";
 import "google/protobuf/timestamp.proto";
 
 
