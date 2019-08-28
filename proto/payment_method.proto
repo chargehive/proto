@@ -7,7 +7,7 @@ import "github.com/chargehive/proto/proto/enum.proto";
 import "google/protobuf/timestamp.proto";
 
 
-option go_package = "chtype";
+option go_package = "github.com/chargehive/proto/golang/chtype";
 option (gogoproto.goproto_enum_prefix_all) = false;
 
 message PaymentMethod {

@@ -5,7 +5,7 @@ package chtype;
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
-option go_package = "chtype";
+option go_package = "github.com/chargehive/proto/golang/chtype";
 option java_multiple_files = true;
 option java_outer_classname = "AddressProto";
 option java_package = "com.chargehive";
