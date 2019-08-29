@@ -16,21 +16,21 @@ enum PaymentMethodSchema {
 }
 
 message PaymentMethodSchemaEncryptedCard {
-  bytes NameOnCard = 1;
-  bytes Number = 2;
-  bytes ValidFromMonth = 3;
-  bytes ValidFromYear = 4;
-  bytes ExpiryMonth = 5;
-  bytes ExpiryYear = 6;
-  bytes IssueNumber = 7;
+  bytes name_on_card = 1;
+  bytes number = 2;
+  bytes valid_from_month = 3;
+  bytes valid_from_year = 4;
+  bytes expiry_month = 5;
+  bytes expiry_year = 6;
+  bytes issue_number = 7;
   string transport_key_id = 8;
 }
 
 message PaymentMethodSchemaCard {
-  string NameOnCard = 1;
-  int32 ValidFromMonth = 2;
-  int32 ValidFromYear = 3;
-  int32 ExpiryMonth = 4;
-  int32 ExpiryYear = 5;
-  int32 IssueNumber = 6;
+  string name_on_card = 1;
+  int32 valid_from_month = 2;
+  int32 valid_from_year = 3;
+  int32 expiry_month = 4;
+  int32 expiry_year = 5;
+  int32 issue_number = 6;
 }
