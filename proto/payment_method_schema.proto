@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package chtype;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/timestamp.proto";
+
+
+option go_package = "github.com/chargehive/proto/golang/chtype";
+option (gogoproto.goproto_enum_prefix_all) = false;
+
+enum PaymentMethodSchema {
+  PAYMENT_METHOD_SCHEMA_INVALID = 0;
+  PAYMENT_METHOD_SCHEMA_ENCRYPTED_CARD = 1;
+  PAYMENT_METHOD_SCHEMA_CARD = 2;
+}
+
+message PaymentMethodSchemaEncryptedCard {
+  bytes NameOnCard = 1;
+  bytes Number = 2;
+  bytes ValidFromMonth = 3;
+  bytes ValidFromYear = 4;
+  bytes ExpiryMonth = 5;
+  bytes ExpiryYear = 6;
+  bytes IssueNumber = 7;
+  string transport_key_id = 8;
+}
+
+message PaymentMethodSchemaCard {
+  string NameOnCard = 1;
+  int32 ValidFromMonth = 2;
+  int32 ValidFromYear = 3;
+  int32 ExpiryMonth = 4;
+  int32 ExpiryYear = 5;
+  int32 IssueNumber = 6;
+}

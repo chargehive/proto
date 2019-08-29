@@ -4,6 +4,7 @@ package chtype;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "github.com/chargehive/proto/proto/enum.proto";
+import "github.com/chargehive/proto/proto/payment_method_schema.proto";
 import "google/protobuf/timestamp.proto";
 
 
@@ -11,7 +12,7 @@ option go_package = "github.com/chargehive/proto/golang/chtype";
 option (gogoproto.goproto_enum_prefix_all) = false;
 
 message PaymentMethod {
-  PaymentMethodType type = 1;
+  chtype.PaymentMethodSchema schema = 1;
   bytes json = 2;
 }
 
