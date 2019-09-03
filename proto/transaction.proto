@@ -5,6 +5,7 @@ package chtype;
 import "github.com/chargehive/proto/proto/generic.proto";
 import "github.com/chargehive/proto/proto/enum.proto";
 import "github.com/chargehive/proto/proto/fraud.proto";
+import "github.com/chargehive/proto/proto/response_codes.proto";
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 
@@ -35,6 +36,7 @@ message Transaction {
   string response_code = 18;
   AttemptDetail attempt_detail = 19;
   repeated FraudResult fraud_results = 20;
+  repeated chtype.ResponseDetail response = 21;
 }
 
 message TransactionDetail {
@@ -58,6 +60,7 @@ message TransactionDetail {
   string authorization_code = 18;
   Liability liability = 19;
   string connector_library = 20;
+  repeated chtype.ResponseDetail response = 21;
 }
 
 message VerifyRequestData {
