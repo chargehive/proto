@@ -57,6 +57,7 @@ message TransactionDetail {
   map<string, string> additional_data = 17;
   string authorization_code = 18;
   Liability liability = 19;
+  string connector_library = 20;
 }
 
 message VerifyRequestData {
