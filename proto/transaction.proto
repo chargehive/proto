@@ -37,7 +37,8 @@ message Transaction {
   AttemptDetail attempt_detail = 19;
   repeated FraudResult fraud_results = 20;
   repeated chtype.ResponseDetail response = 21;
-  string source_transaction_id = 22;//Auth Trans ID for captureAuth, Capture Trans ID for Refund
+  string source_transaction_id = 22; //Auth Trans ID for captureAuth, Capture Trans ID for Refund
+  string payment_method_id = 23;
 }
 
 message TransactionDetail {
