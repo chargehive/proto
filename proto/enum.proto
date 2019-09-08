@@ -123,6 +123,7 @@ enum FailureType {
   FAILURE_TYPE_SOFT = 2;
   FAILURE_TYPE_HARD = 3;
   FAILURE_TYPE_RETRY = 4;
+  FAILURE_TYPE_INTERNAL = 5;
 }
 
 enum TransactionResult {
