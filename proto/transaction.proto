@@ -29,14 +29,12 @@ message Transaction {
   TransactionResult result = 11;
   VerifyRequestData verify_request = 12;
   FailureType failure_type = 13;
-  string consumer_message = 14;
   string arn = 15;
   VerificationStatus verified = 16; //Additional Verification provided and passed
   Liability liability = 17;
-  string response_code = 18;
   AttemptDetail attempt_detail = 19;
   repeated FraudResult fraud_results = 20;
-  repeated chtype.ResponseDetail response = 21;
+  chtype.ResponseDetail response = 21;
   string source_transaction_id = 22; //Auth Trans ID for captureAuth, Capture Trans ID for Refund
   string payment_method_id = 23;
 }
@@ -54,8 +52,6 @@ message TransactionDetail {
   google.protobuf.Timestamp end_time = 10; //Response Receive Time
   bool was_successful = 11;
   FailureType failure_type = 12;
-  string response_code = 13;
-  string response_message = 14;
   Environment environment = 15;
   VerificationResult verification_result = 16;
   map<string, string> additional_data = 17;

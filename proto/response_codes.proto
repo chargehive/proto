@@ -21,16 +21,16 @@ message ResponseDetail {
   ResponseError error_type = 6;
   repeated string error_properties = 7;
   string originating_code = 8;
-  repeated ResponseDetail sub_errors = 9;
+  repeated ResponseDetail specific_errors = 9;
 }
 
 enum ResponseCategory {
   RESPONSE_CATEGORY_INVALID = 0;
-  RESPONSE_CATEGORY_CHARGE = 1; //Charge is incorrectly set
+  RESPONSE_CATEGORY_CHARGE = 1; //Charge is incorrectly set, e.g. currency unsupported
   RESPONSE_CATEGORY_METHOD = 2; //problem with payment method
   RESPONSE_CATEGORY_ADDRESS = 3; //problem with address
-  RESPONSE_CATEGORY_CONFIGURATION = 4; //problem with configuration, e.g. cannot accept currency
-  RESPONSE_CATEGORY_CONNECTIVITY = 5; //connectivity
+  RESPONSE_CATEGORY_CONFIGURATION = 4; //problem with configuration, e.g. invalid connector details, no connectors available
+  RESPONSE_CATEGORY_CONNECTIVITY = 5; //timeouts
   RESPONSE_CATEGORY_FRAUD = 6; //fraud
   RESPONSE_CATEGORY_VERIFICATION = 7; //verification required
   RESPONSE_CATEGORY_PROCESSING = 8; //background processing
