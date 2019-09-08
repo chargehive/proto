@@ -19,7 +19,7 @@ message ResponseDetail {
   FailureType failure_type = 4;
   ResponseCategory category = 5;
   ResponseError error_type = 6;
-  repeated string error_properties = 7;
+  map<string, string> error_properties = 7;
   string originating_code = 8;
   repeated ResponseDetail specific_errors = 9;
 }
