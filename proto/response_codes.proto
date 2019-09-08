@@ -28,7 +28,7 @@ enum ResponseCategory {
   RESPONSE_CATEGORY_INVALID = 0;
   RESPONSE_CATEGORY_CHARGE = 1; //Charge is incorrectly set, e.g. currency unsupported
   RESPONSE_CATEGORY_METHOD = 2; //problem with payment method
-  RESPONSE_CATEGORY_ADDRESS = 3; //problem with address
+  RESPONSE_CATEGORY_PERSON = 3; //problem with contact details, first name, address etc
   RESPONSE_CATEGORY_CONFIGURATION = 4; //problem with configuration, e.g. invalid connector details, no connectors available
   RESPONSE_CATEGORY_CONNECTIVITY = 5; //timeouts
   RESPONSE_CATEGORY_FRAUD = 6; //fraud
