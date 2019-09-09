@@ -4,6 +4,7 @@ package chtype;
 
 import "github.com/chargehive/proto/proto/generic.proto";
 import "github.com/chargehive/proto/proto/contact.proto";
+import "github.com/chargehive/proto/proto/language.proto";
 import "github.com/chargehive/proto/proto/enum.proto";
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
@@ -58,6 +59,7 @@ message Charge {
   string user_locale = 13;
   string user_location = 14;
   ChargeEnvironment environment = 15;
+  chtype.Language language = 16;
 }
 
 message ChargeItem {
