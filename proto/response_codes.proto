@@ -68,6 +68,7 @@ enum ResponseError {
   RESPONSE_ERROR_UNKNOWN = 26;
   RESPONSE_ERROR_NOT_READY = 27;
   RESPONSE_ERROR_DISABLED = 28;
+  RESPONSE_ERROR_CVV = 29;
 }
 
 enum ResponseCode {
