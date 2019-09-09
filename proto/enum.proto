@@ -119,11 +119,11 @@ enum DeliveryStandard {
 
 enum FailureType {
   FAILURE_TYPE_INVALID = 0;
-  FAILURE_TYPE_NONE = 1;
-  FAILURE_TYPE_SOFT = 2;
-  FAILURE_TYPE_HARD = 3;
-  FAILURE_TYPE_RETRY = 4;
-  FAILURE_TYPE_INTERNAL = 5;
+  FAILURE_TYPE_NONE = 1; //Nothing went wrong
+  FAILURE_TYPE_SOFT = 2; //Should be able to retry and may work
+  FAILURE_TYPE_HARD = 3; //Retry without changing the payload will continue to fail
+  FAILURE_TYPE_RETRY = 4; //Must Retry
+  FAILURE_TYPE_INTERNAL = 5; //Server Error
 }
 
 enum TransactionResult {
