@@ -18,6 +18,7 @@ message FraudResult {
   SuggestedAction suggested_action = 4;
   google.protobuf.Timestamp scan_time = 5;
   string connector_library = 6;
+  map<string, string> additional_data = 7;
 }
 
 message FraudScore {
