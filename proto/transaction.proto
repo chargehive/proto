@@ -59,6 +59,7 @@ message TransactionDetail {
   string authorization_code = 17;
   Liability liability = 18;
   string connector_library = 19;
+  string connector_id = 20;
 }
 
 message VerifyRequestData {
