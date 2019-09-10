@@ -19,6 +19,7 @@ message FraudResult {
   google.protobuf.Timestamp scan_time = 5;
   string connector_library = 6;
   map<string, string> additional_data = 7;
+  map<string, string> info_links = 8;
 }
 
 message FraudScore {
