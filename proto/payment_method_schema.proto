@@ -5,9 +5,9 @@ package chtype;
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 
-
-option go_package = "github.com/chargehive/proto/golang/chtype";
 option (gogoproto.goproto_enum_prefix_all) = false;
+option (gogoproto.goproto_registration) = true;
+option go_package = "github.com/chargehive/proto/golang/chtype";
 
 enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_INVALID = 0;

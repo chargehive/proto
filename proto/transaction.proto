@@ -10,10 +10,8 @@ import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "google/protobuf/timestamp.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
+option (gogoproto.goproto_registration) = true;
 option go_package = "github.com/chargehive/proto/golang/chtype";
-option java_multiple_files = true;
-option java_outer_classname = "TransactionProto";
-option java_package = "com.chargehive";
 
 message Transaction {
   string token_id = 1;
