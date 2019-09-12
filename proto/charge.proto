@@ -77,6 +77,8 @@ message ChargeItem {
   string description = 14;
   string product_code = 15;
   string sku_code = 16;
+  int64 term_units = 17;
+  chtype.TermType term_type = 18;
 }
 
 message ChargeMeta {

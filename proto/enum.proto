@@ -115,6 +115,16 @@ enum DeliveryStandard {
   DELIVERY_STANDARD_OTHER = 5;
 }
 
+enum TermType {
+  TERM_TYPE_INVALID = 0;
+  TERM_TYPE_ONE_TIME = 1;
+  TERM_TYPE_MINUTE = 3;
+  TERM_TYPE_DAY = 4;
+  TERM_TYPE_WEEK = 5;
+  TERM_TYPE_MONTH = 6;
+  TERM_TYPE_YEAR = 7;
+}
+
 enum FailureType {
   FAILURE_TYPE_INVALID = 0;
   FAILURE_TYPE_NONE = 1; //Nothing went wrong
