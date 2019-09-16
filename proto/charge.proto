@@ -133,7 +133,7 @@ message Device {
   Dimension screen_available = 7;
   Dimension window_inner = 8;
   Dimension window_outer = 9;
-  string timezone_offset = 10;
+  int32 timezone_offset_mins = 10;
   string user_agent = 11;
   string ip_address = 12;
   bool cookies_enabled = 13;
@@ -148,4 +148,5 @@ message Device {
   string device_version = 22;
   string fingerprint = 23;
   DeviceType type = 24;
+  string timezone = 25;
 }
