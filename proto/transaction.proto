@@ -36,6 +36,7 @@ message Transaction {
   string source_transaction_id = 20; //Auth Trans ID for captureAuth, Capture Trans ID for Refund
   string payment_method_id = 21;
   TransactionSubType transaction_sub_type = 22;
+  repeated Transaction ancillary_transactions = 23;
 }
 
 message TransactionDetail {
