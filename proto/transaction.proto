@@ -37,6 +37,9 @@ message Transaction {
   string payment_method_id = 21;
   TransactionSubType transaction_sub_type = 22;
   repeated Transaction ancillary_transactions = 23;
+  string requested_connector_id = 24;
+  string requested_connector_library = 25;
+  google.protobuf.Timestamp transaction_time = 26;
 }
 
 message TransactionDetail {
