@@ -38,6 +38,7 @@ enum ActorType {
   ACTOR_TYPE_ISSUING_BANK = 9;
   ACTOR_TYPE_RECOVERY_AGENT = 10;
   ACTOR_TYPE_EXCHANGE = 11;
+  ACTOR_TYPE_POLICY = 12;
 }
 
 enum HandlerType {
