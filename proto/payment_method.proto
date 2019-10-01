@@ -28,6 +28,7 @@ message PaymentMethodVerificationItem {
   PaymentMethodVerificationItemType type = 1;
   bytes value = 2;
   string transport_key_id = 4;
+  bool is_error = 5;
 }
 
 message PaymentMethodInfo {
