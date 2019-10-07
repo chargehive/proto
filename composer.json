@@ -1,0 +1,14 @@
+{
+    "name": "chargehive/proto",
+    "license": "MIT",
+    "type": "library",
+    "description": "",
+    "require": {
+        "google/protobuf": "^3.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChargeHive\\": "php/src/ChargeHive"
+        }
+    }
+}

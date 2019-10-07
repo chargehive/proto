@@ -7,6 +7,8 @@ import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 option (gogoproto.goproto_enum_prefix_all) = false;
 option (gogoproto.goproto_registration) = true;
 option go_package = "github.com/chargehive/proto/golang/chtype";
+option php_namespace = "ChargeHive\\Chtype";
+option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
 
 //ISO 3166 Country Code
 enum CountryCode {
