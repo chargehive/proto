@@ -101,6 +101,7 @@ message ChargeMeta {
   string ip_address = 15;
   Delivery delivery = 16;
   Device device = 17;
+  string customer_id = 18;
 }
 
 message Delivery {

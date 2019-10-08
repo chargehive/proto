@@ -81,6 +81,10 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.chtype.Device device = 17;</code>
      */
     private $device = null;
+    /**
+     * Generated from protobuf field <code>string customer_id = 18;</code>
+     */
+    private $customer_id = '';
 
     /**
      * Constructor.
@@ -105,6 +109,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      *     @type string $ip_address
      *     @type \ChargeHive\Chtype\Delivery $delivery
      *     @type \ChargeHive\Chtype\Device $device
+     *     @type string $customer_id
      * }
      */
     public function __construct($data = NULL) {
@@ -482,6 +487,28 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \ChargeHive\Chtype\Device::class);
         $this->device = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string customer_id = 18;</code>
+     * @return string
+     */
+    public function getCustomerId()
+    {
+        return $this->customer_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string customer_id = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCustomerId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->customer_id = $var;
 
         return $this;
     }
