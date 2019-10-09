@@ -9,28 +9,29 @@ if [[ "$PROTOC_PATH" == "" ]]; then
   exit 1
 fi
 
-# init
-mkdir genproto
-cp proto/*.proto genproto/
-
 # go
 rm -rf golang
-mkdir -p golang/chtype
-sed -i '' "s#github.com/chargehive/proto/proto/##g" genproto/*.proto
-$PROTOC_PATH -I genproto \
+mkdir -p golang
+
+$PROTOC_PATH -I . \
   -I $GOPATH/src \
-  --gogo_out=plugins=grpc,paths=source_relative:golang/chtype \
-  genproto/*.proto
+  --gogo_out=plugins=grpc,paths=source_relative:golang \
+  chargehive/**/*.proto
+
+# init
+mkdir -p genproto
+cp -R chargehive genproto
 
 # php
 rm -rf php
 mkdir -p php/src
-sed -i '' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' genproto/*.proto
-sed -i '' -E 's#^option \(gogoproto\..+##g' genproto/*.proto
+sed -i '' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' genproto/chargehive/**/*.proto
+sed -i '' -E 's#^option \(gogoproto\..+##g' genproto/chargehive/**/*.proto
+
 $PROTOC_PATH -I genproto \
   -I $GOPATH/src \
-  --php_out=php/src \
-  genproto/*.proto
+  --php_out=php \
+  genproto/chargehive/**/*.proto
 
 # cleanup
 rm -Rf genproto

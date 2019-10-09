@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package chargehive.chtype;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.goproto_enum_prefix_all) = false;
+option (gogoproto.goproto_registration) = true;
+option go_package = "github.com/chargehive/proto/golang/chargehive/chtype";
+option php_namespace = "ChargeHive\\Chtype";
+option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
+
+message Address {
+  string line_one = 1;
+  string line_two = 2;
+  string line_three = 3;
+  string town = 4;
+  string county = 5;
+  string country = 6;
+  string postal_code = 7;
+  string fao = 8;
+  string company_name = 9;
+}
+
+message Company {
+  string name = 1;
+  string email = 2;
+  string phone_number = 3;
+}
+
+message Person {
+  string title = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string full_name = 4;
+  string email = 5;
+  string phone_number = 6;
+  string language = 7;
+}

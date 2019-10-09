@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package chargehive.chtype;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.goproto_enum_prefix_all) = false;
+option (gogoproto.goproto_registration) = true;
+option go_package = "github.com/chargehive/proto/golang/chargehive/chtype";
+option php_namespace = "ChargeHive\\Chtype";
+option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
+
+enum PaymentMethodSchema {
+  PAYMENT_METHOD_SCHEMA_INVALID = 0;
+  PAYMENT_METHOD_SCHEMA_ENCRYPTED_CARD = 1;
+  PAYMENT_METHOD_SCHEMA_CARD = 2;
+}
+
+message PaymentMethodSchemaEncryptedCard {
+  bytes name_on_card = 1;
+  bytes number = 2;
+  bytes valid_from_month = 3;
+  bytes valid_from_year = 4;
+  bytes expiry_month = 5;
+  bytes expiry_year = 6;
+  bytes issue_number = 7;
+  string transport_key_id = 8;
+}
+
+message PaymentMethodSchemaCard {
+  string name_on_card = 1;
+  int32 valid_from_month = 2;
+  int32 valid_from_year = 3;
+  int32 expiry_month = 4;
+  int32 expiry_year = 5;
+  int32 issue_number = 6;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package chargehive.chtype;
+
+import "chargehive/chtype/enum.proto";
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.goproto_enum_prefix_all) = false;
+option (gogoproto.goproto_registration) = true;
+option go_package = "github.com/chargehive/proto/golang/chargehive/chtype";
+option php_namespace = "ChargeHive\\Chtype";
+option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
+
+message AuthenticationChain {
+  AuthenticationChain parent = 1;
+  string verification_hash = 2;
+  HandlerType handler_type = 3;
+  string handler = 4;
+
+  string project_id = 5;
+  string user_id = 6;
+  string user_agent = 7;
+  string ip_address = 8;
+}

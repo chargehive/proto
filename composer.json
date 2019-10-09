@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "ChargeHive\\Chtype\\": "php/src/ChargeHive/Chtype"
+      "ChargeHive\\Chtype\\": "php/ChargeHive/Chtype"
     }
   }
 }
