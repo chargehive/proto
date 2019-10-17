@@ -43,6 +43,14 @@ class TransactionResult
      * Generated from protobuf enum <code>TRANSACTION_RESULT_EXPIRED = 8;</code>
      */
     const TRANSACTION_RESULT_EXPIRED = 8;
+    /**
+     * Generated from protobuf enum <code>TRANSACTION_RESULT_PARTIAL_SUCCESS = 9;</code>
+     */
+    const TRANSACTION_RESULT_PARTIAL_SUCCESS = 9;
+    /**
+     * Generated from protobuf enum <code>TRANSACTION_RESULT_FAILURE = 10;</code>
+     */
+    const TRANSACTION_RESULT_FAILURE = 10;
 
     private static $valueToName = [
         self::TRANSACTION_RESULT_INVALID => 'TRANSACTION_RESULT_INVALID',
@@ -53,6 +61,8 @@ class TransactionResult
         self::TRANSACTION_RESULT_PENDING_SUCCESS => 'TRANSACTION_RESULT_PENDING_SUCCESS',
         self::TRANSACTION_RESULT_RETRY => 'TRANSACTION_RESULT_RETRY',
         self::TRANSACTION_RESULT_EXPIRED => 'TRANSACTION_RESULT_EXPIRED',
+        self::TRANSACTION_RESULT_PARTIAL_SUCCESS => 'TRANSACTION_RESULT_PARTIAL_SUCCESS',
+        self::TRANSACTION_RESULT_FAILURE => 'TRANSACTION_RESULT_FAILURE',
     ];
 
     public static function name($value)
