@@ -18,23 +18,23 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string address_verification_result = 1;</code>
      */
-    private $address_verification_result = '';
+    protected $address_verification_result = '';
     /**
      *e.g. CVV Response Code
      *
      * Generated from protobuf field <code>string cvv_verification_result = 2;</code>
      */
-    private $cvv_verification_result = '';
+    protected $cvv_verification_result = '';
     /**
      *Calculated fraud response if available
      *
      * Generated from protobuf field <code>string fraud_result = 3;</code>
      */
-    private $fraud_result = '';
+    protected $fraud_result = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ThreeDSResult threeds_result = 5;</code>
      */
-    private $threeds_result = null;
+    protected $threeds_result = null;
 
     /**
      * Constructor.

@@ -16,27 +16,27 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string response_code = 1;</code>
      */
-    private $response_code = '';
+    protected $response_code = '';
     /**
      * Generated from protobuf field <code>string consumer_message = 2;</code>
      */
-    private $consumer_message = '';
+    protected $consumer_message = '';
     /**
      * Generated from protobuf field <code>string merchant_message = 3;</code>
      */
-    private $merchant_message = '';
+    protected $merchant_message = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 4;</code>
      */
-    private $failure_type = 0;
+    protected $failure_type = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseCategory category = 5;</code>
      */
-    private $category = 0;
+    protected $category = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseError error_type = 6;</code>
      */
-    private $error_type = 0;
+    protected $error_type = 0;
     /**
      * Generated from protobuf field <code>map<string, string> error_properties = 7;</code>
      */
@@ -44,7 +44,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string originating_code = 8;</code>
      */
-    private $originating_code = '';
+    protected $originating_code = '';
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ResponseDetail specific_errors = 9;</code>
      */

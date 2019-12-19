@@ -16,35 +16,35 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes name_on_card = 1;</code>
      */
-    private $name_on_card = '';
+    protected $name_on_card = '';
     /**
      * Generated from protobuf field <code>bytes number = 2;</code>
      */
-    private $number = '';
+    protected $number = '';
     /**
      * Generated from protobuf field <code>bytes valid_from_month = 3;</code>
      */
-    private $valid_from_month = '';
+    protected $valid_from_month = '';
     /**
      * Generated from protobuf field <code>bytes valid_from_year = 4;</code>
      */
-    private $valid_from_year = '';
+    protected $valid_from_year = '';
     /**
      * Generated from protobuf field <code>bytes expiry_month = 5;</code>
      */
-    private $expiry_month = '';
+    protected $expiry_month = '';
     /**
      * Generated from protobuf field <code>bytes expiry_year = 6;</code>
      */
-    private $expiry_year = '';
+    protected $expiry_year = '';
     /**
      * Generated from protobuf field <code>bytes issue_number = 7;</code>
      */
-    private $issue_number = '';
+    protected $issue_number = '';
     /**
      * Generated from protobuf field <code>string transport_key_id = 8;</code>
      */
-    private $transport_key_id = '';
+    protected $transport_key_id = '';
 
     /**
      * Constructor.

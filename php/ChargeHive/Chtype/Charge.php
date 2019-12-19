@@ -16,23 +16,23 @@ class Charge extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string charge_id = 1;</code>
      */
-    private $charge_id = '';
+    protected $charge_id = '';
     /**
      * Generated from protobuf field <code>string version = 2;</code>
      */
-    private $version = '';
+    protected $version = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ChargeIntent intent = 3;</code>
      */
-    private $intent = 0;
+    protected $intent = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ContractType contract = 4;</code>
      */
-    private $contract = 0;
+    protected $contract = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount amount = 5;</code>
      */
-    private $amount = null;
+    protected $amount = null;
     /**
      * Generated from protobuf field <code>repeated string payment_method_ids = 6;</code>
      */
@@ -40,15 +40,15 @@ class Charge extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiry_time = 7;</code>
      */
-    private $expiry_time = null;
+    protected $expiry_time = null;
     /**
      * Generated from protobuf field <code>string merchant_reference = 8;</code>
      */
-    private $merchant_reference = '';
+    protected $merchant_reference = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.StatementDescriptor statement_descriptor = 9;</code>
      */
-    private $statement_descriptor = null;
+    protected $statement_descriptor = null;
     /**
      * Generated from protobuf field <code>map<string, string> references = 10;</code>
      */
@@ -60,23 +60,27 @@ class Charge extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string charge_key = 12;</code>
      */
-    private $charge_key = '';
+    protected $charge_key = '';
     /**
      * Generated from protobuf field <code>string user_locale = 13;</code>
      */
-    private $user_locale = '';
+    protected $user_locale = '';
     /**
      * Generated from protobuf field <code>string user_location = 14;</code>
      */
-    private $user_location = '';
+    protected $user_location = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ChargeEnvironment environment = 15;</code>
      */
-    private $environment = 0;
+    protected $environment = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Language language = 16;</code>
      */
-    private $language = 0;
+    protected $language = 0;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType preferred_method_type = 17;</code>
+     */
+    protected $preferred_method_type = 0;
 
     /**
      * Constructor.
@@ -100,6 +104,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      *     @type string $user_location
      *     @type int $environment
      *     @type int $language
+     *     @type int $preferred_method_type
      * }
      */
     public function __construct($data = NULL) {
@@ -455,6 +460,28 @@ class Charge extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Language::class);
         $this->language = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType preferred_method_type = 17;</code>
+     * @return int
+     */
+    public function getPreferredMethodType()
+    {
+        return $this->preferred_method_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType preferred_method_type = 17;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPreferredMethodType($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
+        $this->preferred_method_type = $var;
 
         return $this;
     }

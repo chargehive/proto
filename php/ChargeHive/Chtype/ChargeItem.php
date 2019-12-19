@@ -16,75 +16,75 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string subscription_id = 1;</code>
      */
-    private $subscription_id = '';
+    protected $subscription_id = '';
     /**
      * Generated from protobuf field <code>int32 renewal_number = 2;</code>
      */
-    private $renewal_number = 0;
+    protected $renewal_number = 0;
     /**
      * Generated from protobuf field <code>int64 duration = 3;</code>
      */
-    private $duration = 0;
+    protected $duration = 0;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_date = 4;</code>
      */
-    private $start_date = null;
+    protected $start_date = null;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_date = 5;</code>
      */
-    private $end_date = null;
+    protected $end_date = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ProductType product_type = 6;</code>
      */
-    private $product_type = 0;
+    protected $product_type = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.SKUType sku_type = 7;</code>
      */
-    private $sku_type = 0;
+    protected $sku_type = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Delivery delivery = 8;</code>
      */
-    private $delivery = null;
+    protected $delivery = null;
     /**
      * Generated from protobuf field <code>int64 quantity = 9;</code>
      */
-    private $quantity = 0;
+    protected $quantity = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount unit_price = 10;</code>
      */
-    private $unit_price = null;
+    protected $unit_price = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount tax_amount = 11;</code>
      */
-    private $tax_amount = null;
+    protected $tax_amount = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount discount_amount = 12;</code>
      */
-    private $discount_amount = null;
+    protected $discount_amount = null;
     /**
      * Generated from protobuf field <code>string name = 13;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      * Generated from protobuf field <code>string description = 14;</code>
      */
-    private $description = '';
+    protected $description = '';
     /**
      * Generated from protobuf field <code>string product_code = 15;</code>
      */
-    private $product_code = '';
+    protected $product_code = '';
     /**
      * Generated from protobuf field <code>string sku_code = 16;</code>
      */
-    private $sku_code = '';
+    protected $sku_code = '';
     /**
      * Generated from protobuf field <code>int64 term_units = 17;</code>
      */
-    private $term_units = 0;
+    protected $term_units = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TermType term_type = 18;</code>
      */
-    private $term_type = 0;
+    protected $term_type = 0;
 
     /**
      * Constructor.

@@ -16,15 +16,15 @@ class Configuration extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string kind = 1;</code>
      */
-    private $kind = '';
+    protected $kind = '';
     /**
      * Generated from protobuf field <code>bytes spec = 2;</code>
      */
-    private $spec = '';
+    protected $spec = '';
     /**
      * Generated from protobuf field <code>string spec_version = 3;</code>
      */
-    private $spec_version = '';
+    protected $spec_version = '';
 
     /**
      * Constructor.

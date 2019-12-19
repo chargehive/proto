@@ -16,27 +16,27 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string name_on_card = 1;</code>
      */
-    private $name_on_card = '';
+    protected $name_on_card = '';
     /**
      * Generated from protobuf field <code>int32 valid_from_month = 2;</code>
      */
-    private $valid_from_month = 0;
+    protected $valid_from_month = 0;
     /**
      * Generated from protobuf field <code>int32 valid_from_year = 3;</code>
      */
-    private $valid_from_year = 0;
+    protected $valid_from_year = 0;
     /**
      * Generated from protobuf field <code>int32 expiry_month = 4;</code>
      */
-    private $expiry_month = 0;
+    protected $expiry_month = 0;
     /**
      * Generated from protobuf field <code>int32 expiry_year = 5;</code>
      */
-    private $expiry_year = 0;
+    protected $expiry_year = 0;
     /**
      * Generated from protobuf field <code>int32 issue_number = 6;</code>
      */
-    private $issue_number = 0;
+    protected $issue_number = 0;
 
     /**
      * Constructor.

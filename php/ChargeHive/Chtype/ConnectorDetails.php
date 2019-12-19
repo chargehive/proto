@@ -16,11 +16,11 @@ class ConnectorDetails extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string connector_library = 1;</code>
      */
-    private $connector_library = '';
+    protected $connector_library = '';
     /**
      * Generated from protobuf field <code>bytes connector_credentials_json = 2;</code>
      */
-    private $connector_credentials_json = '';
+    protected $connector_credentials_json = '';
 
     /**
      * Constructor.

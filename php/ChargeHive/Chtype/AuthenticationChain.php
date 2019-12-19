@@ -16,35 +16,35 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.AuthenticationChain parent = 1;</code>
      */
-    private $parent = null;
+    protected $parent = null;
     /**
      * Generated from protobuf field <code>string verification_hash = 2;</code>
      */
-    private $verification_hash = '';
+    protected $verification_hash = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.HandlerType handler_type = 3;</code>
      */
-    private $handler_type = 0;
+    protected $handler_type = 0;
     /**
      * Generated from protobuf field <code>string handler = 4;</code>
      */
-    private $handler = '';
+    protected $handler = '';
     /**
      * Generated from protobuf field <code>string project_id = 5;</code>
      */
-    private $project_id = '';
+    protected $project_id = '';
     /**
      * Generated from protobuf field <code>string user_id = 6;</code>
      */
-    private $user_id = '';
+    protected $user_id = '';
     /**
      * Generated from protobuf field <code>string user_agent = 7;</code>
      */
-    private $user_agent = '';
+    protected $user_agent = '';
     /**
      * Generated from protobuf field <code>string ip_address = 8;</code>
      */
-    private $ip_address = '';
+    protected $ip_address = '';
 
     /**
      * Constructor.

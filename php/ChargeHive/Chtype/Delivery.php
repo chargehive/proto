@@ -16,19 +16,19 @@ class Delivery extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeliveryStandard standard = 1;</code>
      */
-    private $standard = 0;
+    protected $standard = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeliveryType type = 2;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     /**
      * Generated from protobuf field <code>string tracking_code = 3;</code>
      */
-    private $tracking_code = '';
+    protected $tracking_code = '';
     /**
      * Generated from protobuf field <code>string courier = 4;</code>
      */
-    private $courier = '';
+    protected $courier = '';
 
     /**
      * Constructor.

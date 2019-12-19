@@ -16,11 +16,11 @@ class StatementDescriptor extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string message = 1;</code>
      */
-    private $message = '';
+    protected $message = '';
     /**
      * Generated from protobuf field <code>string phone = 2;</code>
      */
-    private $phone = '';
+    protected $phone = '';
 
     /**
      * Constructor.

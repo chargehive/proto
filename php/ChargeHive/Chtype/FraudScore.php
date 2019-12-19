@@ -16,19 +16,19 @@ class FraudScore extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>float score = 1;</code>
      */
-    private $score = 0.0;
+    protected $score = 0.0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.RiskLevel risk_level = 2;</code>
      */
-    private $risk_level = 0;
+    protected $risk_level = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor factor = 4;</code>
      */
-    private $factor = null;
+    protected $factor = null;
     /**
      * Generated from protobuf field <code>string summary = 6;</code>
      */
-    private $summary = '';
+    protected $summary = '';
     /**
      * Generated from protobuf field <code>map<string, string> data = 7;</code>
      */

@@ -16,19 +16,19 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor.On on = 1;</code>
      */
-    private $on = 0;
+    protected $on = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor.Factor factor = 2;</code>
      */
-    private $factor = 0;
+    protected $factor = 0;
     /**
      * Generated from protobuf field <code>string other_on = 3;</code>
      */
-    private $other_on = '';
+    protected $other_on = '';
     /**
      * Generated from protobuf field <code>string other_factor = 4;</code>
      */
-    private $other_factor = '';
+    protected $other_factor = '';
 
     /**
      * Constructor.

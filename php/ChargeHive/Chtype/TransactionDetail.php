@@ -16,75 +16,75 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string actor_id = 1;</code>
      */
-    private $actor_id = '';
+    protected $actor_id = '';
     /**
      * Generated from protobuf field <code>string actor_version = 2;</code>
      */
-    private $actor_version = '';
+    protected $actor_version = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ActorType actor_type = 3;</code>
      */
-    private $actor_type = 0;
+    protected $actor_type = 0;
     /**
      * Generated from protobuf field <code>string transaction_id = 4;</code>
      */
-    private $transaction_id = '';
+    protected $transaction_id = '';
     /**
      *Amount sent in the request
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount requested_amount = 5;</code>
      */
-    private $requested_amount = null;
+    protected $requested_amount = null;
     /**
      *Amount received in the result
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount processed_amount = 6;</code>
      */
-    private $processed_amount = null;
+    protected $processed_amount = null;
     /**
      *Amount charged for the transaction
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount fee_estimate = 7;</code>
      */
-    private $fee_estimate = null;
+    protected $fee_estimate = null;
     /**
      *Amount charged for the transaction
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount fee_actual = 8;</code>
      */
-    private $fee_actual = null;
+    protected $fee_actual = null;
     /**
      *Request Send Time
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_time = 9;</code>
      */
-    private $start_time = null;
+    protected $start_time = null;
     /**
      *Response Receive Time
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_time = 10;</code>
      */
-    private $end_time = null;
+    protected $end_time = null;
     /**
      * Generated from protobuf field <code>bool was_successful = 11;</code>
      */
-    private $was_successful = false;
+    protected $was_successful = false;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 12;</code>
      */
-    private $failure_type = 0;
+    protected $failure_type = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 13;</code>
      */
-    private $environment = 0;
+    protected $environment = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseDetail response = 14;</code>
      */
-    private $response = null;
+    protected $response = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerificationResult verification_result = 15;</code>
      */
-    private $verification_result = null;
+    protected $verification_result = null;
     /**
      * Generated from protobuf field <code>map<string, string> additional_data = 16;</code>
      */
@@ -92,19 +92,19 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string authorization_code = 17;</code>
      */
-    private $authorization_code = '';
+    protected $authorization_code = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 18;</code>
      */
-    private $liability = 0;
+    protected $liability = 0;
     /**
      * Generated from protobuf field <code>string connector_library = 19;</code>
      */
-    private $connector_library = '';
+    protected $connector_library = '';
     /**
      * Generated from protobuf field <code>string connector_id = 20;</code>
      */
-    private $connector_id = '';
+    protected $connector_id = '';
 
     /**
      * Constructor.

@@ -16,19 +16,19 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodVerificationItemType type = 1;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     /**
      * Generated from protobuf field <code>bytes value = 2;</code>
      */
-    private $value = '';
+    protected $value = '';
     /**
      * Generated from protobuf field <code>string transport_key_id = 4;</code>
      */
-    private $transport_key_id = '';
+    protected $transport_key_id = '';
     /**
      * Generated from protobuf field <code>bool is_error = 5;</code>
      */
-    private $is_error = false;
+    protected $is_error = false;
 
     /**
      * Constructor.

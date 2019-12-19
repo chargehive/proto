@@ -16,11 +16,11 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodSchema schema = 1;</code>
      */
-    private $schema = 0;
+    protected $schema = 0;
     /**
      * Generated from protobuf field <code>bytes json = 2;</code>
      */
-    private $json = '';
+    protected $json = '';
 
     /**
      * Constructor.

@@ -16,19 +16,19 @@ class Reason extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string description = 1;</code>
      */
-    private $description = '';
+    protected $description = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Reason.ReasonType reason_type = 2;</code>
      */
-    private $reason_type = 0;
+    protected $reason_type = 0;
     /**
      * Generated from protobuf field <code>string requestor_comment = 3;</code>
      */
-    private $requestor_comment = '';
+    protected $requestor_comment = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ActorType requested_by = 4;</code>
      */
-    private $requested_by = 0;
+    protected $requested_by = 0;
 
     /**
      * Constructor.

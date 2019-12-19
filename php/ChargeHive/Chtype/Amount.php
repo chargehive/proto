@@ -16,11 +16,11 @@ class Amount extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>int64 units = 1;</code>
      */
-    private $units = 0;
+    protected $units = 0;
     /**
      * Generated from protobuf field <code>string currency = 2;</code>
      */
-    private $currency = '';
+    protected $currency = '';
 
     /**
      * Constructor.

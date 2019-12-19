@@ -16,7 +16,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerifyRequestType type = 1;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     /**
      * Generated from protobuf field <code>map<string, string> data = 2;</code>
      */
@@ -24,15 +24,15 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string connector_library = 3;</code>
      */
-    private $connector_library = '';
+    protected $connector_library = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 4;</code>
      */
-    private $environment = 0;
+    protected $environment = 0;
     /**
      * Generated from protobuf field <code>bool required = 5;</code>
      */
-    private $required = false;
+    protected $required = false;
 
     /**
      * Constructor.

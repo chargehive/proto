@@ -16,11 +16,11 @@ class FraudResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string fraud_check_id = 1;</code>
      */
-    private $fraud_check_id = '';
+    protected $fraud_check_id = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudScore overall_score = 2;</code>
      */
-    private $overall_score = null;
+    protected $overall_score = null;
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.FraudScore sub_scores = 3;</code>
      */
@@ -28,15 +28,15 @@ class FraudResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.SuggestedAction suggested_action = 4;</code>
      */
-    private $suggested_action = 0;
+    protected $suggested_action = 0;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp scan_time = 5;</code>
      */
-    private $scan_time = null;
+    protected $scan_time = null;
     /**
      * Generated from protobuf field <code>string connector_library = 6;</code>
      */
-    private $connector_library = '';
+    protected $connector_library = '';
     /**
      * Generated from protobuf field <code>map<string, string> additional_data = 7;</code>
      */

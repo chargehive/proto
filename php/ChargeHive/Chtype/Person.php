@@ -16,31 +16,31 @@ class Person extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string title = 1;</code>
      */
-    private $title = '';
+    protected $title = '';
     /**
      * Generated from protobuf field <code>string first_name = 2;</code>
      */
-    private $first_name = '';
+    protected $first_name = '';
     /**
      * Generated from protobuf field <code>string last_name = 3;</code>
      */
-    private $last_name = '';
+    protected $last_name = '';
     /**
      * Generated from protobuf field <code>string full_name = 4;</code>
      */
-    private $full_name = '';
+    protected $full_name = '';
     /**
      * Generated from protobuf field <code>string email = 5;</code>
      */
-    private $email = '';
+    protected $email = '';
     /**
      * Generated from protobuf field <code>string phone_number = 6;</code>
      */
-    private $phone_number = '';
+    protected $phone_number = '';
     /**
      * Generated from protobuf field <code>string language = 7;</code>
      */
-    private $language = '';
+    protected $language = '';
 
     /**
      * Constructor.

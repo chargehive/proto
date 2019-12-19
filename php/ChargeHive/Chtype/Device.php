@@ -16,103 +16,103 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string browser_accept_header = 1;</code>
      */
-    private $browser_accept_header = '';
+    protected $browser_accept_header = '';
     /**
      * Generated from protobuf field <code>int32 color_depth = 2;</code>
      */
-    private $color_depth = 0;
+    protected $color_depth = 0;
     /**
      * Generated from protobuf field <code>bool java_enabled = 3;</code>
      */
-    private $java_enabled = false;
+    protected $java_enabled = false;
     /**
      * Generated from protobuf field <code>bool javascript_enabled = 4;</code>
      */
-    private $javascript_enabled = false;
+    protected $javascript_enabled = false;
     /**
      * Generated from protobuf field <code>string language = 5;</code>
      */
-    private $language = '';
+    protected $language = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension screen = 6;</code>
      */
-    private $screen = null;
+    protected $screen = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension screen_available = 7;</code>
      */
-    private $screen_available = null;
+    protected $screen_available = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension window_inner = 8;</code>
      */
-    private $window_inner = null;
+    protected $window_inner = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension window_outer = 9;</code>
      */
-    private $window_outer = null;
+    protected $window_outer = null;
     /**
      * Generated from protobuf field <code>int32 timezone_offset_mins = 10;</code>
      */
-    private $timezone_offset_mins = 0;
+    protected $timezone_offset_mins = 0;
     /**
      * Generated from protobuf field <code>string user_agent = 11;</code>
      */
-    private $user_agent = '';
+    protected $user_agent = '';
     /**
      * Generated from protobuf field <code>string ip_address = 12;</code>
      */
-    private $ip_address = '';
+    protected $ip_address = '';
     /**
      * Generated from protobuf field <code>bool cookies_enabled = 13;</code>
      */
-    private $cookies_enabled = false;
+    protected $cookies_enabled = false;
     /**
      * Generated from protobuf field <code>string flash_version = 14;</code>
      */
-    private $flash_version = '';
+    protected $flash_version = '';
     /**
      * Generated from protobuf field <code>bool is_touch = 15;</code>
      */
-    private $is_touch = false;
+    protected $is_touch = false;
     /**
      * Generated from protobuf field <code>string os = 16;</code>
      */
-    private $os = '';
+    protected $os = '';
     /**
      * Generated from protobuf field <code>string os_version = 17;</code>
      */
-    private $os_version = '';
+    protected $os_version = '';
     /**
      * Generated from protobuf field <code>string browser = 18;</code>
      */
-    private $browser = '';
+    protected $browser = '';
     /**
      * Generated from protobuf field <code>string browser_version = 19;</code>
      */
-    private $browser_version = '';
+    protected $browser_version = '';
     /**
      * Generated from protobuf field <code>string device_manufacturer = 20;</code>
      */
-    private $device_manufacturer = '';
+    protected $device_manufacturer = '';
     /**
      * Generated from protobuf field <code>string device_name = 21;</code>
      */
-    private $device_name = '';
+    protected $device_name = '';
     /**
      * Generated from protobuf field <code>string device_version = 22;</code>
      */
-    private $device_version = '';
+    protected $device_version = '';
     /**
      * Generated from protobuf field <code>string fingerprint = 23;</code>
      */
-    private $fingerprint = '';
+    protected $fingerprint = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeviceType type = 24;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     /**
      * Generated from protobuf field <code>string timezone = 25;</code>
      */
-    private $timezone = '';
+    protected $timezone = '';
 
     /**
      * Constructor.

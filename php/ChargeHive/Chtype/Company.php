@@ -16,15 +16,15 @@ class Company extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string name = 1;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      * Generated from protobuf field <code>string email = 2;</code>
      */
-    private $email = '';
+    protected $email = '';
     /**
      * Generated from protobuf field <code>string phone_number = 3;</code>
      */
-    private $phone_number = '';
+    protected $phone_number = '';
 
     /**
      * Constructor.

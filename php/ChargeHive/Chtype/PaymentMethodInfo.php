@@ -16,27 +16,27 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string token_id = 1;</code>
      */
-    private $token_id = '';
+    protected $token_id = '';
     /**
      * Generated from protobuf field <code>string name = 2;</code>
      */
-    private $name = '';
+    protected $name = '';
     /**
      * Generated from protobuf field <code>string payment_scheme = 3;</code>
      */
-    private $payment_scheme = '';
+    protected $payment_scheme = '';
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp valid_from = 4;</code>
      */
-    private $valid_from = null;
+    protected $valid_from = null;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiry = 5;</code>
      */
-    private $expiry = null;
+    protected $expiry = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType type = 6;</code>
      */
-    private $type = 0;
+    protected $type = 0;
     /**
      * Generated from protobuf field <code>map<string, string> info = 7;</code>
      */

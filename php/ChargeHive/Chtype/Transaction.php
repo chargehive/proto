@@ -16,11 +16,11 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string token_id = 1;</code>
      */
-    private $token_id = '';
+    protected $token_id = '';
     /**
      * Generated from protobuf field <code>string transaction_id = 2;</code>
      */
-    private $transaction_id = '';
+    protected $transaction_id = '';
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.TransactionDetail details = 3;</code>
      */
@@ -28,65 +28,65 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType payment_type = 4;</code>
      */
-    private $payment_type = 0;
+    protected $payment_type = 0;
     /**
      * Generated from protobuf field <code>string payment_scheme = 5;</code>
      */
-    private $payment_scheme = '';
+    protected $payment_scheme = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 6;</code>
      */
-    private $transaction_type = 0;
+    protected $transaction_type = 0;
     /**
      *Amount requested
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount request_amount = 7;</code>
      */
-    private $request_amount = null;
+    protected $request_amount = null;
     /**
      *Amount received
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount transacted_amount = 8;</code>
      */
-    private $transacted_amount = null;
+    protected $transacted_amount = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ContractType contract = 9;</code>
      */
-    private $contract = 0;
+    protected $contract = 0;
     /**
      * Generated from protobuf field <code>string statement_descriptor = 10;</code>
      */
-    private $statement_descriptor = '';
+    protected $statement_descriptor = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionResult result = 11;</code>
      */
-    private $result = 0;
+    protected $result = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerifyRequestData verify_request = 12;</code>
      */
-    private $verify_request = null;
+    protected $verify_request = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 13;</code>
      */
-    private $failure_type = 0;
+    protected $failure_type = 0;
     /**
      * Generated from protobuf field <code>string arn = 14;</code>
      */
-    private $arn = '';
+    protected $arn = '';
     /**
      *Additional Verification provided and passed
      *
      * Generated from protobuf field <code>.chargehive.chtype.VerificationStatus verified = 15;</code>
      */
-    private $verified = 0;
+    protected $verified = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 16;</code>
      */
-    private $liability = 0;
+    protected $liability = 0;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.AttemptDetail attempt_detail = 17;</code>
      */
-    private $attempt_detail = null;
+    protected $attempt_detail = null;
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.FraudResult fraud_results = 18;</code>
      */
@@ -94,21 +94,21 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseDetail response = 19;</code>
      */
-    private $response = null;
+    protected $response = null;
     /**
      *Auth Trans ID for captureAuth, Capture Trans ID for Refund
      *
      * Generated from protobuf field <code>string source_transaction_id = 20;</code>
      */
-    private $source_transaction_id = '';
+    protected $source_transaction_id = '';
     /**
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      */
-    private $payment_method_id = '';
+    protected $payment_method_id = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionSubType transaction_sub_type = 22;</code>
      */
-    private $transaction_sub_type = 0;
+    protected $transaction_sub_type = 0;
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.Transaction ancillary_transactions = 23;</code>
      */
@@ -116,15 +116,15 @@ class Transaction extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string requested_connector_id = 24;</code>
      */
-    private $requested_connector_id = '';
+    protected $requested_connector_id = '';
     /**
      * Generated from protobuf field <code>string requested_connector_library = 25;</code>
      */
-    private $requested_connector_library = '';
+    protected $requested_connector_library = '';
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp transaction_time = 26;</code>
      */
-    private $transaction_time = null;
+    protected $transaction_time = null;
 
     /**
      * Constructor.

@@ -16,11 +16,11 @@ class Label extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string label = 1;</code>
      */
-    private $label = '';
+    protected $label = '';
     /**
      * Generated from protobuf field <code>string value = 2;</code>
      */
-    private $value = '';
+    protected $value = '';
 
     /**
      * Constructor.

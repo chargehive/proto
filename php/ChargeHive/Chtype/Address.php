@@ -16,39 +16,39 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string line_one = 1;</code>
      */
-    private $line_one = '';
+    protected $line_one = '';
     /**
      * Generated from protobuf field <code>string line_two = 2;</code>
      */
-    private $line_two = '';
+    protected $line_two = '';
     /**
      * Generated from protobuf field <code>string line_three = 3;</code>
      */
-    private $line_three = '';
+    protected $line_three = '';
     /**
      * Generated from protobuf field <code>string town = 4;</code>
      */
-    private $town = '';
+    protected $town = '';
     /**
      * Generated from protobuf field <code>string county = 5;</code>
      */
-    private $county = '';
+    protected $county = '';
     /**
      * Generated from protobuf field <code>string country = 6;</code>
      */
-    private $country = '';
+    protected $country = '';
     /**
      * Generated from protobuf field <code>string postal_code = 7;</code>
      */
-    private $postal_code = '';
+    protected $postal_code = '';
     /**
      * Generated from protobuf field <code>string fao = 8;</code>
      */
-    private $fao = '';
+    protected $fao = '';
     /**
      * Generated from protobuf field <code>string company_name = 9;</code>
      */
-    private $company_name = '';
+    protected $company_name = '';
 
     /**
      * Constructor.

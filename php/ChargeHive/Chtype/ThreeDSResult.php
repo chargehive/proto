@@ -16,71 +16,71 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string eci = 1;</code>
      */
-    private $eci = '';
+    protected $eci = '';
     /**
      * Generated from protobuf field <code>string cavv = 2;</code>
      */
-    private $cavv = '';
+    protected $cavv = '';
     /**
      * Generated from protobuf field <code>string xid = 3;</code>
      */
-    private $xid = '';
+    protected $xid = '';
     /**
      * Generated from protobuf field <code>string enrollment = 4;</code>
      */
-    private $enrollment = '';
+    protected $enrollment = '';
     /**
      * Generated from protobuf field <code>string result = 5;</code>
      */
-    private $result = '';
+    protected $result = '';
     /**
      * Generated from protobuf field <code>string signature_status = 6;</code>
      */
-    private $signature_status = '';
+    protected $signature_status = '';
     /**
      * Generated from protobuf field <code>string server_transaction_id = 7;</code>
      */
-    private $server_transaction_id = '';
+    protected $server_transaction_id = '';
     /**
      * Generated from protobuf field <code>string status = 8;</code>
      */
-    private $status = '';
+    protected $status = '';
     /**
      * Generated from protobuf field <code>int32 major_version = 9;</code>
      */
-    private $major_version = 0;
+    protected $major_version = 0;
     /**
      * Generated from protobuf field <code>string version = 10;</code>
      */
-    private $version = '';
+    protected $version = '';
     /**
      * Generated from protobuf field <code>string pa_req = 11;</code>
      */
-    private $pa_req = '';
+    protected $pa_req = '';
     /**
      * Generated from protobuf field <code>string acs_url = 12;</code>
      */
-    private $acs_url = '';
+    protected $acs_url = '';
     /**
      * Generated from protobuf field <code>string pa_res = 13;</code>
      */
-    private $pa_res = '';
+    protected $pa_res = '';
     /**
      * Generated from protobuf field <code>string id = 14;</code>
      */
-    private $id = '';
+    protected $id = '';
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 15;</code>
      */
-    private $timestamp = null;
+    protected $timestamp = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 16;</code>
      */
-    private $liability = 0;
+    protected $liability = 0;
     /**
      * Generated from protobuf field <code>string sdk_response = 17;</code>
      */
-    private $sdk_response = '';
+    protected $sdk_response = '';
 
     /**
      * Constructor.

@@ -16,27 +16,27 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>int64 ChargeTransactionNumber = 1;</code>
      */
-    private $ChargeTransactionNumber = 0;
+    protected $ChargeTransactionNumber = 0;
     /**
      * Generated from protobuf field <code>int64 ChargeAttemptNumber = 2;</code>
      */
-    private $ChargeAttemptNumber = 0;
+    protected $ChargeAttemptNumber = 0;
     /**
      * Generated from protobuf field <code>int64 AttemptTransactionNumber = 3;</code>
      */
-    private $AttemptTransactionNumber = 0;
+    protected $AttemptTransactionNumber = 0;
     /**
      * Generated from protobuf field <code>int64 AttemptMethodCascade = 4;</code>
      */
-    private $AttemptMethodCascade = 0;
+    protected $AttemptMethodCascade = 0;
     /**
      * Generated from protobuf field <code>int64 AttemptConnectorCascade = 5;</code>
      */
-    private $AttemptConnectorCascade = 0;
+    protected $AttemptConnectorCascade = 0;
     /**
      * Generated from protobuf field <code>bool IsPrimaryMethod = 6;</code>
      */
-    private $IsPrimaryMethod = false;
+    protected $IsPrimaryMethod = false;
 
     /**
      * Constructor.

@@ -16,11 +16,11 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Address billing_address = 1;</code>
      */
-    private $billing_address = null;
+    protected $billing_address = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Address delivery_address = 2;</code>
      */
-    private $delivery_address = null;
+    protected $delivery_address = null;
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ChargeItem items = 3;</code>
      */
@@ -28,63 +28,63 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string terms = 4;</code>
      */
-    private $terms = '';
+    protected $terms = '';
     /**
      * Generated from protobuf field <code>string note = 5;</code>
      */
-    private $note = '';
+    protected $note = '';
     /**
      * Generated from protobuf field <code>string merchant_memo = 6;</code>
      */
-    private $merchant_memo = '';
+    protected $merchant_memo = '';
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp invoice_date = 7;</code>
      */
-    private $invoice_date = null;
+    protected $invoice_date = null;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp due_date = 8;</code>
      */
-    private $due_date = null;
+    protected $due_date = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount discount_amount = 9;</code>
      */
-    private $discount_amount = null;
+    protected $discount_amount = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount delivery_amount = 10;</code>
      */
-    private $delivery_amount = null;
+    protected $delivery_amount = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount tax_amount = 11;</code>
      */
-    private $tax_amount = null;
+    protected $tax_amount = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount total_amount = 12;</code>
      */
-    private $total_amount = null;
+    protected $total_amount = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Person person = 13;</code>
      */
-    private $person = null;
+    protected $person = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Company company = 14;</code>
      */
-    private $company = null;
+    protected $company = null;
     /**
      * Generated from protobuf field <code>string ip_address = 15;</code>
      */
-    private $ip_address = '';
+    protected $ip_address = '';
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Delivery delivery = 16;</code>
      */
-    private $delivery = null;
+    protected $delivery = null;
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Device device = 17;</code>
      */
-    private $device = null;
+    protected $device = null;
     /**
      * Generated from protobuf field <code>string customer_id = 18;</code>
      */
-    private $customer_id = '';
+    protected $customer_id = '';
 
     /**
      * Constructor.

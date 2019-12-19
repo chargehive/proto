@@ -16,11 +16,11 @@ class Dimension extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>int32 width = 1;</code>
      */
-    private $width = 0;
+    protected $width = 0;
     /**
      * Generated from protobuf field <code>int32 height = 2;</code>
      */
-    private $height = 0;
+    protected $height = 0;
 
     /**
      * Constructor.
