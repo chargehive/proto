@@ -60,6 +60,7 @@ message Charge {
   string user_location = 14;
   ChargeEnvironment environment = 15;
   chtype.Language language = 16;
+  chtype.PaymentMethodType preferred_method_type = 17;
 }
 
 message ChargeItem {
