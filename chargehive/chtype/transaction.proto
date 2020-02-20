@@ -36,7 +36,7 @@ message Transaction {
   repeated FraudResult fraud_results = 18;
   chtype.ResponseDetail response = 19;
   string source_transaction_id = 20; //Auth Trans ID for captureAuth, Capture Trans ID for Refund
-  string payment_method_id = 21;
+  string payment_method_id = 21;  // Potential duplicate of token_id (1) 
   TransactionSubType transaction_sub_type = 22;
   repeated Transaction ancillary_transactions = 23;
   string requested_connector_id = 24;
