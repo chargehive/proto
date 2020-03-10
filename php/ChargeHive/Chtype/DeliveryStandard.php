@@ -35,6 +35,10 @@ class DeliveryStandard
      * Generated from protobuf enum <code>DELIVERY_STANDARD_OTHER = 5;</code>
      */
     const DELIVERY_STANDARD_OTHER = 5;
+    /**
+     * Generated from protobuf enum <code>DELIVERY_STANDARD_NONE = 6;</code>
+     */
+    const DELIVERY_STANDARD_NONE = 6;
 
     private static $valueToName = [
         self::DELIVERY_STANDARD_INVALID => 'DELIVERY_STANDARD_INVALID',
@@ -43,6 +47,7 @@ class DeliveryStandard
         self::DELIVERY_STANDARD_TWO_DAY => 'DELIVERY_STANDARD_TWO_DAY',
         self::DELIVERY_STANDARD_ECONOMY => 'DELIVERY_STANDARD_ECONOMY',
         self::DELIVERY_STANDARD_OTHER => 'DELIVERY_STANDARD_OTHER',
+        self::DELIVERY_STANDARD_NONE => 'DELIVERY_STANDARD_NONE',
     ];
 
     public static function name($value)

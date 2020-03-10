@@ -27,12 +27,17 @@ class TransactionSubType
      * Generated from protobuf enum <code>TRANSACTION_SUB_TYPE_CAPTURE_AUTH = 3;</code>
      */
     const TRANSACTION_SUB_TYPE_CAPTURE_AUTH = 3;
+    /**
+     * Generated from protobuf enum <code>TRANSACTION_SUB_TYPE_NONE = 4;</code>
+     */
+    const TRANSACTION_SUB_TYPE_NONE = 4;
 
     private static $valueToName = [
         self::TRANSACTION_SUB_TYPE_INVALID => 'TRANSACTION_SUB_TYPE_INVALID',
         self::TRANSACTION_SUB_TYPE_IDENTIFY => 'TRANSACTION_SUB_TYPE_IDENTIFY',
         self::TRANSACTION_SUB_TYPE_CHALLENGE => 'TRANSACTION_SUB_TYPE_CHALLENGE',
         self::TRANSACTION_SUB_TYPE_CAPTURE_AUTH => 'TRANSACTION_SUB_TYPE_CAPTURE_AUTH',
+        self::TRANSACTION_SUB_TYPE_NONE => 'TRANSACTION_SUB_TYPE_NONE',
     ];
 
     public static function name($value)

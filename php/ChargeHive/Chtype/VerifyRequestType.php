@@ -27,11 +27,16 @@ class VerifyRequestType
      * Generated from protobuf enum <code>VERIFY_REQUEST_TYPE_CHALLENGE = 2;</code>
      */
     const VERIFY_REQUEST_TYPE_CHALLENGE = 2;
+    /**
+     * Generated from protobuf enum <code>VERIFY_REQUEST_TYPE_NONE = 3;</code>
+     */
+    const VERIFY_REQUEST_TYPE_NONE = 3;
 
     private static $valueToName = [
         self::VERIFY_REQUEST_TYPE_INVALID => 'VERIFY_REQUEST_TYPE_INVALID',
         self::VERIFY_REQUEST_TYPE_IDENTIFY => 'VERIFY_REQUEST_TYPE_IDENTIFY',
         self::VERIFY_REQUEST_TYPE_CHALLENGE => 'VERIFY_REQUEST_TYPE_CHALLENGE',
+        self::VERIFY_REQUEST_TYPE_NONE => 'VERIFY_REQUEST_TYPE_NONE',
     ];
 
     public static function name($value)

@@ -39,6 +39,10 @@ class PaymentMethodType
      * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY = 6;</code>
      */
     const PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY = 6;
+    /**
+     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_NONE = 7;</code>
+     */
+    const PAYMENT_METHOD_TYPE_NONE = 7;
 
     private static $valueToName = [
         self::PAYMENT_METHOD_TYPE_INVALID => 'PAYMENT_METHOD_TYPE_INVALID',
@@ -48,6 +52,7 @@ class PaymentMethodType
         self::PAYMENT_METHOD_TYPE_CRYPTOCURRENCY => 'PAYMENT_METHOD_TYPE_CRYPTOCURRENCY',
         self::PAYMENT_METHOD_TYPE_PAYSAFE_APPLEPAY => 'PAYMENT_METHOD_TYPE_PAYSAFE_APPLEPAY',
         self::PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY => 'PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY',
+        self::PAYMENT_METHOD_TYPE_NONE => 'PAYMENT_METHOD_TYPE_NONE',
     ];
 
     public static function name($value)

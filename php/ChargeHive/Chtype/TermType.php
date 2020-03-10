@@ -39,6 +39,10 @@ class TermType
      * Generated from protobuf enum <code>TERM_TYPE_YEAR = 7;</code>
      */
     const TERM_TYPE_YEAR = 7;
+    /**
+     * Generated from protobuf enum <code>TERM_TYPE_NONE = 8;</code>
+     */
+    const TERM_TYPE_NONE = 8;
 
     private static $valueToName = [
         self::TERM_TYPE_INVALID => 'TERM_TYPE_INVALID',
@@ -48,6 +52,7 @@ class TermType
         self::TERM_TYPE_WEEK => 'TERM_TYPE_WEEK',
         self::TERM_TYPE_MONTH => 'TERM_TYPE_MONTH',
         self::TERM_TYPE_YEAR => 'TERM_TYPE_YEAR',
+        self::TERM_TYPE_NONE => 'TERM_TYPE_NONE',
     ];
 
     public static function name($value)

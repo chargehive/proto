@@ -102,6 +102,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     protected $source_transaction_id = '';
     /**
+     * Potential duplicate of token_id (1) 
+     *
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      */
     protected $payment_method_id = '';
@@ -157,6 +159,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type string $source_transaction_id
      *          Auth Trans ID for captureAuth, Capture Trans ID for Refund
      *     @type string $payment_method_id
+     *           Potential duplicate of token_id (1) 
      *     @type int $transaction_sub_type
      *     @type \ChargeHive\Chtype\Transaction[]|\Google\Protobuf\Internal\RepeatedField $ancillary_transactions
      *     @type string $requested_connector_id
@@ -626,6 +629,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Potential duplicate of token_id (1) 
+     *
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      * @return string
      */
@@ -635,6 +640,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Potential duplicate of token_id (1) 
+     *
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      * @param string $var
      * @return $this
