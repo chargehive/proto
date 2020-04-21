@@ -32,17 +32,13 @@ class PaymentMethodType
      */
     const PAYMENT_METHOD_TYPE_CRYPTOCURRENCY = 4;
     /**
-     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_PAYSAFE_APPLEPAY = 5;</code>
+     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_APPLEPAY = 5;</code>
      */
-    const PAYMENT_METHOD_TYPE_PAYSAFE_APPLEPAY = 5;
+    const PAYMENT_METHOD_TYPE_APPLEPAY = 5;
     /**
-     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY = 6;</code>
+     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_GOOGLEPAY = 6;</code>
      */
-    const PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY = 6;
-    /**
-     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_NONE = 7;</code>
-     */
-    const PAYMENT_METHOD_TYPE_NONE = 7;
+    const PAYMENT_METHOD_TYPE_GOOGLEPAY = 6;
 
     private static $valueToName = [
         self::PAYMENT_METHOD_TYPE_INVALID => 'PAYMENT_METHOD_TYPE_INVALID',
@@ -50,9 +46,8 @@ class PaymentMethodType
         self::PAYMENT_METHOD_TYPE_PAYPAL => 'PAYMENT_METHOD_TYPE_PAYPAL',
         self::PAYMENT_METHOD_TYPE_DIRECTDEBIT => 'PAYMENT_METHOD_TYPE_DIRECTDEBIT',
         self::PAYMENT_METHOD_TYPE_CRYPTOCURRENCY => 'PAYMENT_METHOD_TYPE_CRYPTOCURRENCY',
-        self::PAYMENT_METHOD_TYPE_PAYSAFE_APPLEPAY => 'PAYMENT_METHOD_TYPE_PAYSAFE_APPLEPAY',
-        self::PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY => 'PAYMENT_METHOD_TYPE_PAYSAFE_GOOGLEPAY',
-        self::PAYMENT_METHOD_TYPE_NONE => 'PAYMENT_METHOD_TYPE_NONE',
+        self::PAYMENT_METHOD_TYPE_APPLEPAY => 'PAYMENT_METHOD_TYPE_APPLEPAY',
+        self::PAYMENT_METHOD_TYPE_GOOGLEPAY => 'PAYMENT_METHOD_TYPE_GOOGLEPAY',
     ];
 
     public static function name($value)
