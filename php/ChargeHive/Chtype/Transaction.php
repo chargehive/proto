@@ -102,7 +102,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     protected $source_transaction_id = '';
     /**
-     * Potential duplicate of token_id (1) 
+     * Potential duplicate of token_id (1)
      *
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      */
@@ -127,6 +127,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp transaction_time = 26;</code>
      */
     protected $transaction_time = null;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider payment_provider = 27;</code>
+     */
+    protected $payment_provider = 0;
 
     /**
      * Constructor.
@@ -159,12 +163,13 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type string $source_transaction_id
      *          Auth Trans ID for captureAuth, Capture Trans ID for Refund
      *     @type string $payment_method_id
-     *           Potential duplicate of token_id (1) 
+     *           Potential duplicate of token_id (1)
      *     @type int $transaction_sub_type
      *     @type \ChargeHive\Chtype\Transaction[]|\Google\Protobuf\Internal\RepeatedField $ancillary_transactions
      *     @type string $requested_connector_id
      *     @type string $requested_connector_library
      *     @type \Google\Protobuf\Timestamp $transaction_time
+     *     @type int $payment_provider
      * }
      */
     public function __construct($data = NULL) {
@@ -629,7 +634,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Potential duplicate of token_id (1) 
+     * Potential duplicate of token_id (1)
      *
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      * @return string
@@ -640,7 +645,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Potential duplicate of token_id (1) 
+     * Potential duplicate of token_id (1)
      *
      * Generated from protobuf field <code>string payment_method_id = 21;</code>
      * @param string $var
@@ -760,6 +765,28 @@ class Transaction extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->transaction_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider payment_provider = 27;</code>
+     * @return int
+     */
+    public function getPaymentProvider()
+    {
+        return $this->payment_provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider payment_provider = 27;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPaymentProvider($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodProvider::class);
+        $this->payment_provider = $var;
 
         return $this;
     }
