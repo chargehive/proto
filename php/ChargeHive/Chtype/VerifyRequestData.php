@@ -33,6 +33,10 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool required = 5;</code>
      */
     protected $required = false;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType payment_type = 6;</code>
+     */
+    protected $payment_type = 0;
 
     /**
      * Constructor.
@@ -45,6 +49,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      *     @type string $connector_library
      *     @type int $environment
      *     @type bool $required
+     *     @type int $payment_type
      * }
      */
     public function __construct($data = NULL) {
@@ -158,6 +163,28 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->required = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType payment_type = 6;</code>
+     * @return int
+     */
+    public function getPaymentType()
+    {
+        return $this->payment_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType payment_type = 6;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPaymentType($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
+        $this->payment_type = $var;
 
         return $this;
     }
