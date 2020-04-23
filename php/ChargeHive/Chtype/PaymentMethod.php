@@ -21,6 +21,14 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes json = 2;</code>
      */
     protected $json = '';
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType type = 3;</code>
+     */
+    protected $type = 0;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 4;</code>
+     */
+    protected $provider = 0;
 
     /**
      * Constructor.
@@ -30,6 +38,8 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
      *
      *     @type int $schema
      *     @type string $json
+     *     @type int $type
+     *     @type int $provider
      * }
      */
     public function __construct($data = NULL) {
@@ -77,6 +87,50 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->json = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType type = 3;</code>
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType type = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setType($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
+        $this->type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 4;</code>
+     * @return int
+     */
+    public function getProvider()
+    {
+        return $this->provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setProvider($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodProvider::class);
+        $this->provider = $var;
 
         return $this;
     }

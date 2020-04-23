@@ -16,6 +16,8 @@ option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
 message PaymentMethod {
   chtype.PaymentMethodSchema schema = 1;
   bytes json = 2;
+  chtype.PaymentMethodType type = 3;
+  chtype.PaymentMethodProvider provider = 4;
 }
 
 enum PaymentMethodVerificationItemType {
