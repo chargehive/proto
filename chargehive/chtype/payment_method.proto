@@ -41,4 +41,5 @@ message PaymentMethodInfo {
   google.protobuf.Timestamp expiry = 5;
   chtype.PaymentMethodType type = 6;
   map<string, string> info = 7;
+  chtype.PaymentMethodProvider provider = 8;
 }

@@ -41,6 +41,10 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>map<string, string> info = 7;</code>
      */
     private $info;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 8;</code>
+     */
+    protected $provider = 0;
 
     /**
      * Constructor.
@@ -55,6 +59,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $expiry
      *     @type int $type
      *     @type array|\Google\Protobuf\Internal\MapField $info
+     *     @type int $provider
      * }
      */
     public function __construct($data = NULL) {
@@ -212,6 +217,28 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->info = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 8;</code>
+     * @return int
+     */
+    public function getProvider()
+    {
+        return $this->provider;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setProvider($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodProvider::class);
+        $this->provider = $var;
 
         return $this;
     }
