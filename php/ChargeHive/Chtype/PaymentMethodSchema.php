@@ -23,11 +23,16 @@ class PaymentMethodSchema
      * Generated from protobuf enum <code>PAYMENT_METHOD_SCHEMA_CARD = 2;</code>
      */
     const PAYMENT_METHOD_SCHEMA_CARD = 2;
+    /**
+     * Generated from protobuf enum <code>PAYMENT_METHOD_SCHEMA_APPLE_PAY = 3;</code>
+     */
+    const PAYMENT_METHOD_SCHEMA_APPLE_PAY = 3;
 
     private static $valueToName = [
         self::PAYMENT_METHOD_SCHEMA_INVALID => 'PAYMENT_METHOD_SCHEMA_INVALID',
         self::PAYMENT_METHOD_SCHEMA_ENCRYPTED_CARD => 'PAYMENT_METHOD_SCHEMA_ENCRYPTED_CARD',
         self::PAYMENT_METHOD_SCHEMA_CARD => 'PAYMENT_METHOD_SCHEMA_CARD',
+        self::PAYMENT_METHOD_SCHEMA_APPLE_PAY => 'PAYMENT_METHOD_SCHEMA_APPLE_PAY',
     ];
 
     public static function name($value)

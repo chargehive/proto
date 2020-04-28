@@ -14,6 +14,12 @@ enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_INVALID = 0;
   PAYMENT_METHOD_SCHEMA_ENCRYPTED_CARD = 1;
   PAYMENT_METHOD_SCHEMA_CARD = 2;
+  PAYMENT_METHOD_SCHEMA_APPLE_PAY = 3;
+}
+
+message PaymentMethodSchemaApplePay {
+  string apple_pay_url = 1; //url issued from applePay JS used to confirm merchant identity
+  string initiative_context = 2; //domain that applePay is used on, must match registered apple pay domain
 }
 
 message PaymentMethodSchemaEncryptedCard {
