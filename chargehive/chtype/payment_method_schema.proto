@@ -18,8 +18,10 @@ enum PaymentMethodSchema {
 }
 
 message PaymentMethodSchemaApplePay {
-  string apple_pay_url = 1; //url issued from applePay JS used to confirm merchant identity
+  string session_url = 1; // apple pay session url issued by applePayJS used to identify merchant
   string initiative_context = 2; //domain that applePay is used on, must match registered apple pay domain
+  string token = 3; // token response from applePayJS
+  string session = 4; // session response from apple
 }
 
 message PaymentMethodSchemaEncryptedCard {
