@@ -18,6 +18,7 @@ message PaymentMethod {
   bytes json = 2;
   chtype.PaymentMethodType type = 3;
   chtype.PaymentMethodProvider provider = 4;
+  chtype.PaymentMethodInputType inputType = 5;
 }
 
 enum PaymentMethodVerificationItemType {
@@ -44,4 +45,5 @@ message PaymentMethodInfo {
   chtype.PaymentMethodType type = 6;
   map<string, string> info = 7;
   chtype.PaymentMethodProvider provider = 8;
+  chtype.PaymentMethodInputType inputType = 9;
 }

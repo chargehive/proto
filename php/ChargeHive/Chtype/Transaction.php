@@ -131,6 +131,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider payment_provider = 27;</code>
      */
     protected $payment_provider = 0;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType payment_input_type = 28;</code>
+     */
+    protected $payment_input_type = 0;
 
     /**
      * Constructor.
@@ -170,6 +174,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type string $requested_connector_library
      *     @type \Google\Protobuf\Timestamp $transaction_time
      *     @type int $payment_provider
+     *     @type int $payment_input_type
      * }
      */
     public function __construct($data = NULL) {
@@ -787,6 +792,28 @@ class Transaction extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodProvider::class);
         $this->payment_provider = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType payment_input_type = 28;</code>
+     * @return int
+     */
+    public function getPaymentInputType()
+    {
+        return $this->payment_input_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType payment_input_type = 28;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPaymentInputType($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodInputType::class);
+        $this->payment_input_type = $var;
 
         return $this;
     }
