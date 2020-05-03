@@ -89,7 +89,7 @@ enum PaymentMethodProvider {
   PAYMENT_METHOD_PROVIDER_AMAZONPAY = 5;
 }
 
-enum InputType {
+enum PaymentMethodInputType {
   INPUT_TYPE_INVALID = 0;
   INPUT_TYPE_PHYSICAL = 1;
   INPUT_TYPE_VIRTUAL = 2;
