@@ -85,6 +85,10 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string customer_id = 18;</code>
      */
     protected $customer_id = '';
+    /**
+     * Generated from protobuf field <code>string placement_id = 19;</code>
+     */
+    protected $placement_id = '';
 
     /**
      * Constructor.
@@ -110,6 +114,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      *     @type \ChargeHive\Chtype\Delivery $delivery
      *     @type \ChargeHive\Chtype\Device $device
      *     @type string $customer_id
+     *     @type string $placement_id
      * }
      */
     public function __construct($data = NULL) {
@@ -509,6 +514,28 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->customer_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string placement_id = 19;</code>
+     * @return string
+     */
+    public function getPlacementId()
+    {
+        return $this->placement_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string placement_id = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPlacementId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->placement_id = $var;
 
         return $this;
     }

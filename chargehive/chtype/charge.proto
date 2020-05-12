@@ -103,6 +103,7 @@ message ChargeMeta {
   Delivery delivery = 16;
   Device device = 17;
   string customer_id = 18;
+  string placement_id = 19;
 }
 
 message Delivery {
