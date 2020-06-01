@@ -42,4 +42,5 @@ message PaymentMethodSchemaCard {
   int32 expiry_month = 4;
   int32 expiry_year = 5;
   int32 issue_number = 6;
+  string number = 7;
 }
