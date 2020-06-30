@@ -15,6 +15,7 @@ enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_ENCRYPTED_CARD = 1;
   PAYMENT_METHOD_SCHEMA_CARD = 2;
   PAYMENT_METHOD_SCHEMA_APPLE_PAY = 3;
+  PAYMENT_METHOD_SCHEMA_GOOGLE_PAY = 4;
 }
 
 message PaymentMethodSchemaApplePay {
@@ -22,6 +23,10 @@ message PaymentMethodSchemaApplePay {
   string initiative_context = 2; //domain that applePay is used on, must match registered apple pay domain
   string token = 3; // token response from applePayJS
   string session = 4; // session response from apple
+}
+
+message PaymentMethodSchemaGooglePay {
+  string low_value_token = 1; // low value gateway token is returned from initial call to googlepay
 }
 
 message PaymentMethodSchemaEncryptedCard {
