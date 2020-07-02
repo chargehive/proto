@@ -27,6 +27,10 @@ message PaymentMethodSchemaApplePay {
 
 message PaymentMethodSchemaGooglePay {
   string low_value_token = 1; // low value gateway token is returned from initial call to googlepay
+  string description = 2;
+  string card_details = 3;
+  string card_network = 4;
+  string token = 5;
 }
 
 message PaymentMethodSchemaEncryptedCard {
