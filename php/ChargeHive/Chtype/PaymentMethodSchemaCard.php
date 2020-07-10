@@ -37,6 +37,10 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 issue_number = 6;</code>
      */
     protected $issue_number = 0;
+    /**
+     * Generated from protobuf field <code>string number = 7;</code>
+     */
+    protected $number = '';
 
     /**
      * Constructor.
@@ -50,6 +54,7 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      *     @type int $expiry_month
      *     @type int $expiry_year
      *     @type int $issue_number
+     *     @type string $number
      * }
      */
     public function __construct($data = NULL) {
@@ -185,6 +190,28 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->issue_number = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string number = 7;</code>
+     * @return string
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    /**
+     * Generated from protobuf field <code>string number = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNumber($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->number = $var;
 
         return $this;
     }
