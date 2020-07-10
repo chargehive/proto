@@ -16,6 +16,7 @@ enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_CARD = 2;
   PAYMENT_METHOD_SCHEMA_APPLE_PAY = 3;
   PAYMENT_METHOD_SCHEMA_GOOGLE_PAY = 4;
+  PAYMENT_METHOD_SCHEMA_PAYPAL = 5;
 }
 
 message PaymentMethodSchemaApplePay {
@@ -30,6 +31,9 @@ message PaymentMethodSchemaGooglePay {
   string description = 2;
   string card_details = 3;
   string card_network = 4;
+}
+
+message PaymentMethodSchemaPayPal {
 }
 
 message PaymentMethodSchemaEncryptedCard {
