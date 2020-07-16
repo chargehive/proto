@@ -17,6 +17,7 @@ enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_APPLE_PAY = 3;
   PAYMENT_METHOD_SCHEMA_GOOGLE_PAY = 4;
   PAYMENT_METHOD_SCHEMA_PAYPAL = 5;
+  PAYMENT_METHOD_SCHEMA_DIRECT_DEBIT = 6;
 }
 
 message PaymentMethodSchemaApplePay {
@@ -55,4 +56,23 @@ message PaymentMethodSchemaCard {
   int32 expiry_year = 5;
   int32 issue_number = 6;
   string number = 7;
+}
+
+message PaymentMethodSchemaDirectDebit{
+  string account_number = 1;
+	string sort_code = 2;
+  string account_holders_name = 3;
+  string payer_reference = 4;
+  //below can be gotten from ChargeMeta.Person and ChargeMeta.BillingAddress
+  string title = 5;
+	string firstname = 6;
+  string surname = 7;
+  string email = 8;
+	string phone_number = 9;
+	string post_code = 10;
+	string town = 11;
+	string address1 = 12;
+	string address2  = 13;
+	string address3 = 14;
+	string address4 = 15;
 }
