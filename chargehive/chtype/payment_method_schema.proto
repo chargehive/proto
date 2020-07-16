@@ -63,16 +63,4 @@ message PaymentMethodSchemaDirectDebit{
 	string sort_code = 2;
   string account_holders_name = 3;
   string payer_reference = 4;
-  //below can be gotten from ChargeMeta.Person and ChargeMeta.BillingAddress
-  string title = 5;
-	string firstname = 6;
-  string surname = 7;
-  string email = 8;
-	string phone_number = 9;
-	string post_code = 10;
-	string town = 11;
-	string address1 = 12;
-	string address2  = 13;
-	string address3 = 14;
-	string address4 = 15;
 }
