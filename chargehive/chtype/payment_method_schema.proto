@@ -60,7 +60,7 @@ message PaymentMethodSchemaCard {
 
 message PaymentMethodSchemaDirectDebit{
   string account_number = 1;
-	string sort_code = 2;
+  string sort_code = 2;
   string account_holders_name = 3;
   string payer_reference = 4;
 }
