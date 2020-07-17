@@ -58,7 +58,6 @@ message TransactionDetail {
   google.protobuf.Timestamp start_time = 9; //Request Send Time
   google.protobuf.Timestamp end_time = 10; //Response Receive Time
   bool was_successful = 11;
-  FailureType failure_type = 12;
   Environment environment = 13;
   chtype.ResponseDetail response = 14;
   VerificationResult verification_result = 15;
