@@ -70,10 +70,6 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     protected $was_successful = false;
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 12;</code>
-     */
-    protected $failure_type = 0;
-    /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 13;</code>
      */
     protected $environment = 0;
@@ -105,6 +101,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string connector_id = 20;</code>
      */
     protected $connector_id = '';
+    /**
+     * Generated from protobuf field <code>bool primary = 21;</code>
+     */
+    protected $primary = false;
 
     /**
      * Constructor.
@@ -129,7 +129,6 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $end_time
      *          Response Receive Time
      *     @type bool $was_successful
-     *     @type int $failure_type
      *     @type int $environment
      *     @type \ChargeHive\Chtype\ResponseDetail $response
      *     @type \ChargeHive\Chtype\VerificationResult $verification_result
@@ -138,6 +137,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type int $liability
      *     @type string $connector_library
      *     @type string $connector_id
+     *     @type bool $primary
      * }
      */
     public function __construct($data = NULL) {
@@ -412,28 +412,6 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 12;</code>
-     * @return int
-     */
-    public function getFailureType()
-    {
-        return $this->failure_type;
-    }
-
-    /**
-     * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 12;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setFailureType($var)
-    {
-        GPBUtil::checkEnum($var, \ChargeHive\Chtype\FailureType::class);
-        $this->failure_type = $var;
-
-        return $this;
-    }
-
-    /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 13;</code>
      * @return int
      */
@@ -605,6 +583,28 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->connector_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool primary = 21;</code>
+     * @return bool
+     */
+    public function getPrimary()
+    {
+        return $this->primary;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool primary = 21;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPrimary($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->primary = $var;
 
         return $this;
     }

@@ -66,6 +66,7 @@ message TransactionDetail {
   Liability liability = 18;
   string connector_library = 19;
   string connector_id = 20;
+  bool primary = 21;
 }
 
 message VerifyRequestData {
