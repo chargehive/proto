@@ -35,6 +35,10 @@ class PlacementCapability
      * Generated from protobuf enum <code>PLACEMENT_CAPABILITY_TOKEN = 5;</code>
      */
     const PLACEMENT_CAPABILITY_TOKEN = 5;
+    /**
+     * Generated from protobuf enum <code>PLACEMENT_CAPABILITY_DIRECTDEBIT_FORM = 6;</code>
+     */
+    const PLACEMENT_CAPABILITY_DIRECTDEBIT_FORM = 6;
 
     private static $valueToName = [
         self::PLACEMENT_CAPABILITY_INVALID => 'PLACEMENT_CAPABILITY_INVALID',
@@ -43,6 +47,7 @@ class PlacementCapability
         self::PLACEMENT_CAPABILITY_GOOGLE_PAY => 'PLACEMENT_CAPABILITY_GOOGLE_PAY',
         self::PLACEMENT_CAPABILITY_PAYPAL => 'PLACEMENT_CAPABILITY_PAYPAL',
         self::PLACEMENT_CAPABILITY_TOKEN => 'PLACEMENT_CAPABILITY_TOKEN',
+        self::PLACEMENT_CAPABILITY_DIRECTDEBIT_FORM => 'PLACEMENT_CAPABILITY_DIRECTDEBIT_FORM',
     ];
 
     public static function name($value)
