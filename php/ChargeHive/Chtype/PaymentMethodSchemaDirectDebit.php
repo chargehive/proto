@@ -29,6 +29,10 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string payer_reference = 4;</code>
      */
     protected $payer_reference = '';
+    /**
+     * Generated from protobuf field <code>string transport_key_id = 5;</code>
+     */
+    protected $transport_key_id = '';
 
     /**
      * Constructor.
@@ -40,6 +44,7 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      *     @type string $sort_code
      *     @type string $account_holders_name
      *     @type string $payer_reference
+     *     @type string $transport_key_id
      * }
      */
     public function __construct($data = NULL) {
@@ -131,6 +136,28 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->payer_reference = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string transport_key_id = 5;</code>
+     * @return string
+     */
+    public function getTransportKeyId()
+    {
+        return $this->transport_key_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string transport_key_id = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTransportKeyId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->transport_key_id = $var;
 
         return $this;
     }
