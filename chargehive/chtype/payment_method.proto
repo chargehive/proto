@@ -53,4 +53,5 @@ message PaymentMethodInfo {
   map<string, string> info = 7;
   chtype.PaymentMethodProvider provider = 8;
   chtype.PaymentMethodInputType inputType = 9;
+  chtype.Status status = 10;
 }

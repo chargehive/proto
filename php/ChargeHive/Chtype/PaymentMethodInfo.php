@@ -49,6 +49,10 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType inputType = 9;</code>
      */
     protected $inputType = 0;
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.Status status = 10;</code>
+     */
+    protected $status = 0;
 
     /**
      * Constructor.
@@ -65,6 +69,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      *     @type array|\Google\Protobuf\Internal\MapField $info
      *     @type int $provider
      *     @type int $inputType
+     *     @type int $status
      * }
      */
     public function __construct($data = NULL) {
@@ -266,6 +271,28 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodInputType::class);
         $this->inputType = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.Status status = 10;</code>
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.Status status = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setStatus($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\Status::class);
+        $this->status = $var;
 
         return $this;
     }
