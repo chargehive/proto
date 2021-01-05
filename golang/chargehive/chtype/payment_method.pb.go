@@ -8,7 +8,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	math "math"
 )
 
@@ -225,8 +225,8 @@ type PaymentMethodInfo struct {
 	TokenId              string                 `protobuf:"bytes,1,opt,name=token_id,json=tokenId,proto3" json:"token_id,omitempty"`
 	Name                 string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	PaymentScheme        string                 `protobuf:"bytes,3,opt,name=payment_scheme,json=paymentScheme,proto3" json:"payment_scheme,omitempty"`
-	ValidFrom            *timestamp.Timestamp   `protobuf:"bytes,4,opt,name=valid_from,json=validFrom,proto3" json:"valid_from,omitempty"`
-	Expiry               *timestamp.Timestamp   `protobuf:"bytes,5,opt,name=expiry,proto3" json:"expiry,omitempty"`
+	ValidFrom            *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=valid_from,json=validFrom,proto3" json:"valid_from,omitempty"`
+	Expiry               *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=expiry,proto3" json:"expiry,omitempty"`
 	Type                 PaymentMethodType      `protobuf:"varint,6,opt,name=type,proto3,enum=chargehive.chtype.PaymentMethodType" json:"type,omitempty"`
 	Info                 map[string]string      `protobuf:"bytes,7,rep,name=info,proto3" json:"info,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	Provider             PaymentMethodProvider  `protobuf:"varint,8,opt,name=provider,proto3,enum=chargehive.chtype.PaymentMethodProvider" json:"provider,omitempty"`
@@ -282,14 +282,14 @@ func (m *PaymentMethodInfo) GetPaymentScheme() string {
 	return ""
 }
 
-func (m *PaymentMethodInfo) GetValidFrom() *timestamp.Timestamp {
+func (m *PaymentMethodInfo) GetValidFrom() *timestamppb.Timestamp {
 	if m != nil {
 		return m.ValidFrom
 	}
 	return nil
 }
 
-func (m *PaymentMethodInfo) GetExpiry() *timestamp.Timestamp {
+func (m *PaymentMethodInfo) GetExpiry() *timestamppb.Timestamp {
 	if m != nil {
 		return m.Expiry
 	}

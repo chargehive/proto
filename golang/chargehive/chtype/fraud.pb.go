@@ -8,7 +8,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	math "math"
 )
 
@@ -227,17 +227,17 @@ func (FraudFactor_Factor) EnumDescriptor() ([]byte, []int) {
 }
 
 type FraudResult struct {
-	FraudCheckId         string               `protobuf:"bytes,1,opt,name=fraud_check_id,json=fraudCheckId,proto3" json:"fraud_check_id,omitempty"`
-	OverallScore         *FraudScore          `protobuf:"bytes,2,opt,name=overall_score,json=overallScore,proto3" json:"overall_score,omitempty"`
-	SubScores            []*FraudScore        `protobuf:"bytes,3,rep,name=sub_scores,json=subScores,proto3" json:"sub_scores,omitempty"`
-	SuggestedAction      SuggestedAction      `protobuf:"varint,4,opt,name=suggested_action,json=suggestedAction,proto3,enum=chargehive.chtype.SuggestedAction" json:"suggested_action,omitempty"`
-	ScanTime             *timestamp.Timestamp `protobuf:"bytes,5,opt,name=scan_time,json=scanTime,proto3" json:"scan_time,omitempty"`
-	ConnectorLibrary     string               `protobuf:"bytes,6,opt,name=connector_library,json=connectorLibrary,proto3" json:"connector_library,omitempty"`
-	AdditionalData       map[string]string    `protobuf:"bytes,7,rep,name=additional_data,json=additionalData,proto3" json:"additional_data,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	InfoLinks            map[string]string    `protobuf:"bytes,8,rep,name=info_links,json=infoLinks,proto3" json:"info_links,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	FraudCheckId         string                 `protobuf:"bytes,1,opt,name=fraud_check_id,json=fraudCheckId,proto3" json:"fraud_check_id,omitempty"`
+	OverallScore         *FraudScore            `protobuf:"bytes,2,opt,name=overall_score,json=overallScore,proto3" json:"overall_score,omitempty"`
+	SubScores            []*FraudScore          `protobuf:"bytes,3,rep,name=sub_scores,json=subScores,proto3" json:"sub_scores,omitempty"`
+	SuggestedAction      SuggestedAction        `protobuf:"varint,4,opt,name=suggested_action,json=suggestedAction,proto3,enum=chargehive.chtype.SuggestedAction" json:"suggested_action,omitempty"`
+	ScanTime             *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=scan_time,json=scanTime,proto3" json:"scan_time,omitempty"`
+	ConnectorLibrary     string                 `protobuf:"bytes,6,opt,name=connector_library,json=connectorLibrary,proto3" json:"connector_library,omitempty"`
+	AdditionalData       map[string]string      `protobuf:"bytes,7,rep,name=additional_data,json=additionalData,proto3" json:"additional_data,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	InfoLinks            map[string]string      `protobuf:"bytes,8,rep,name=info_links,json=infoLinks,proto3" json:"info_links,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *FraudResult) Reset()         { *m = FraudResult{} }
@@ -292,7 +292,7 @@ func (m *FraudResult) GetSuggestedAction() SuggestedAction {
 	return SUGGESTED_ACTION_INVALID
 }
 
-func (m *FraudResult) GetScanTime() *timestamp.Timestamp {
+func (m *FraudResult) GetScanTime() *timestamppb.Timestamp {
 	if m != nil {
 		return m.ScanTime
 	}

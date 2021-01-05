@@ -8,7 +8,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	math "math"
 )
 
@@ -50,7 +50,7 @@ type Transaction struct {
 	AncillaryTransactions     []*Transaction         `protobuf:"bytes,23,rep,name=ancillary_transactions,json=ancillaryTransactions,proto3" json:"ancillary_transactions,omitempty"`
 	RequestedConnectorId      string                 `protobuf:"bytes,24,opt,name=requested_connector_id,json=requestedConnectorId,proto3" json:"requested_connector_id,omitempty"`
 	RequestedConnectorLibrary string                 `protobuf:"bytes,25,opt,name=requested_connector_library,json=requestedConnectorLibrary,proto3" json:"requested_connector_library,omitempty"`
-	TransactionTime           *timestamp.Timestamp   `protobuf:"bytes,26,opt,name=transaction_time,json=transactionTime,proto3" json:"transaction_time,omitempty"`
+	TransactionTime           *timestamppb.Timestamp `protobuf:"bytes,26,opt,name=transaction_time,json=transactionTime,proto3" json:"transaction_time,omitempty"`
 	PaymentProvider           PaymentMethodProvider  `protobuf:"varint,27,opt,name=payment_provider,json=paymentProvider,proto3,enum=chargehive.chtype.PaymentMethodProvider" json:"payment_provider,omitempty"`
 	PaymentInputType          PaymentMethodInputType `protobuf:"varint,28,opt,name=payment_input_type,json=paymentInputType,proto3,enum=chargehive.chtype.PaymentMethodInputType" json:"payment_input_type,omitempty"`
 	XXX_NoUnkeyedLiteral      struct{}               `json:"-"`
@@ -257,7 +257,7 @@ func (m *Transaction) GetRequestedConnectorLibrary() string {
 	return ""
 }
 
-func (m *Transaction) GetTransactionTime() *timestamp.Timestamp {
+func (m *Transaction) GetTransactionTime() *timestamppb.Timestamp {
 	if m != nil {
 		return m.TransactionTime
 	}
@@ -279,29 +279,29 @@ func (m *Transaction) GetPaymentInputType() PaymentMethodInputType {
 }
 
 type TransactionDetail struct {
-	ActorId              string               `protobuf:"bytes,1,opt,name=actor_id,json=actorId,proto3" json:"actor_id,omitempty"`
-	ActorVersion         string               `protobuf:"bytes,2,opt,name=actor_version,json=actorVersion,proto3" json:"actor_version,omitempty"`
-	ActorType            ActorType            `protobuf:"varint,3,opt,name=actor_type,json=actorType,proto3,enum=chargehive.chtype.ActorType" json:"actor_type,omitempty"`
-	TransactionId        string               `protobuf:"bytes,4,opt,name=transaction_id,json=transactionId,proto3" json:"transaction_id,omitempty"`
-	RequestedAmount      *Amount              `protobuf:"bytes,5,opt,name=requested_amount,json=requestedAmount,proto3" json:"requested_amount,omitempty"`
-	ProcessedAmount      *Amount              `protobuf:"bytes,6,opt,name=processed_amount,json=processedAmount,proto3" json:"processed_amount,omitempty"`
-	FeeEstimate          *Amount              `protobuf:"bytes,7,opt,name=fee_estimate,json=feeEstimate,proto3" json:"fee_estimate,omitempty"`
-	FeeActual            *Amount              `protobuf:"bytes,8,opt,name=fee_actual,json=feeActual,proto3" json:"fee_actual,omitempty"`
-	StartTime            *timestamp.Timestamp `protobuf:"bytes,9,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
-	EndTime              *timestamp.Timestamp `protobuf:"bytes,10,opt,name=end_time,json=endTime,proto3" json:"end_time,omitempty"`
-	WasSuccessful        bool                 `protobuf:"varint,11,opt,name=was_successful,json=wasSuccessful,proto3" json:"was_successful,omitempty"`
-	Environment          Environment          `protobuf:"varint,13,opt,name=environment,proto3,enum=chargehive.chtype.Environment" json:"environment,omitempty"`
-	Response             *ResponseDetail      `protobuf:"bytes,14,opt,name=response,proto3" json:"response,omitempty"`
-	VerificationResult   *VerificationResult  `protobuf:"bytes,15,opt,name=verification_result,json=verificationResult,proto3" json:"verification_result,omitempty"`
-	AdditionalData       map[string]string    `protobuf:"bytes,16,rep,name=additional_data,json=additionalData,proto3" json:"additional_data,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	AuthorizationCode    string               `protobuf:"bytes,17,opt,name=authorization_code,json=authorizationCode,proto3" json:"authorization_code,omitempty"`
-	Liability            Liability            `protobuf:"varint,18,opt,name=liability,proto3,enum=chargehive.chtype.Liability" json:"liability,omitempty"`
-	ConnectorLibrary     string               `protobuf:"bytes,19,opt,name=connector_library,json=connectorLibrary,proto3" json:"connector_library,omitempty"`
-	ConnectorId          string               `protobuf:"bytes,20,opt,name=connector_id,json=connectorId,proto3" json:"connector_id,omitempty"`
-	Primary              bool                 `protobuf:"varint,21,opt,name=primary,proto3" json:"primary,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	ActorId              string                 `protobuf:"bytes,1,opt,name=actor_id,json=actorId,proto3" json:"actor_id,omitempty"`
+	ActorVersion         string                 `protobuf:"bytes,2,opt,name=actor_version,json=actorVersion,proto3" json:"actor_version,omitempty"`
+	ActorType            ActorType              `protobuf:"varint,3,opt,name=actor_type,json=actorType,proto3,enum=chargehive.chtype.ActorType" json:"actor_type,omitempty"`
+	TransactionId        string                 `protobuf:"bytes,4,opt,name=transaction_id,json=transactionId,proto3" json:"transaction_id,omitempty"`
+	RequestedAmount      *Amount                `protobuf:"bytes,5,opt,name=requested_amount,json=requestedAmount,proto3" json:"requested_amount,omitempty"`
+	ProcessedAmount      *Amount                `protobuf:"bytes,6,opt,name=processed_amount,json=processedAmount,proto3" json:"processed_amount,omitempty"`
+	FeeEstimate          *Amount                `protobuf:"bytes,7,opt,name=fee_estimate,json=feeEstimate,proto3" json:"fee_estimate,omitempty"`
+	FeeActual            *Amount                `protobuf:"bytes,8,opt,name=fee_actual,json=feeActual,proto3" json:"fee_actual,omitempty"`
+	StartTime            *timestamppb.Timestamp `protobuf:"bytes,9,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
+	EndTime              *timestamppb.Timestamp `protobuf:"bytes,10,opt,name=end_time,json=endTime,proto3" json:"end_time,omitempty"`
+	WasSuccessful        bool                   `protobuf:"varint,11,opt,name=was_successful,json=wasSuccessful,proto3" json:"was_successful,omitempty"`
+	Environment          Environment            `protobuf:"varint,13,opt,name=environment,proto3,enum=chargehive.chtype.Environment" json:"environment,omitempty"`
+	Response             *ResponseDetail        `protobuf:"bytes,14,opt,name=response,proto3" json:"response,omitempty"`
+	VerificationResult   *VerificationResult    `protobuf:"bytes,15,opt,name=verification_result,json=verificationResult,proto3" json:"verification_result,omitempty"`
+	AdditionalData       map[string]string      `protobuf:"bytes,16,rep,name=additional_data,json=additionalData,proto3" json:"additional_data,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	AuthorizationCode    string                 `protobuf:"bytes,17,opt,name=authorization_code,json=authorizationCode,proto3" json:"authorization_code,omitempty"`
+	Liability            Liability              `protobuf:"varint,18,opt,name=liability,proto3,enum=chargehive.chtype.Liability" json:"liability,omitempty"`
+	ConnectorLibrary     string                 `protobuf:"bytes,19,opt,name=connector_library,json=connectorLibrary,proto3" json:"connector_library,omitempty"`
+	ConnectorId          string                 `protobuf:"bytes,20,opt,name=connector_id,json=connectorId,proto3" json:"connector_id,omitempty"`
+	Primary              bool                   `protobuf:"varint,21,opt,name=primary,proto3" json:"primary,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *TransactionDetail) Reset()         { *m = TransactionDetail{} }
@@ -384,14 +384,14 @@ func (m *TransactionDetail) GetFeeActual() *Amount {
 	return nil
 }
 
-func (m *TransactionDetail) GetStartTime() *timestamp.Timestamp {
+func (m *TransactionDetail) GetStartTime() *timestamppb.Timestamp {
 	if m != nil {
 		return m.StartTime
 	}
 	return nil
 }
 
-func (m *TransactionDetail) GetEndTime() *timestamp.Timestamp {
+func (m *TransactionDetail) GetEndTime() *timestamppb.Timestamp {
 	if m != nil {
 		return m.EndTime
 	}
@@ -539,26 +539,26 @@ func (m *VerifyRequestData) GetRequired() bool {
 }
 
 type ThreeDSResult struct {
-	Eci                  string               `protobuf:"bytes,1,opt,name=eci,proto3" json:"eci,omitempty"`
-	Cavv                 string               `protobuf:"bytes,2,opt,name=cavv,proto3" json:"cavv,omitempty"`
-	Xid                  string               `protobuf:"bytes,3,opt,name=xid,proto3" json:"xid,omitempty"`
-	Enrollment           string               `protobuf:"bytes,4,opt,name=enrollment,proto3" json:"enrollment,omitempty"`
-	Result               string               `protobuf:"bytes,5,opt,name=result,proto3" json:"result,omitempty"`
-	SignatureStatus      string               `protobuf:"bytes,6,opt,name=signature_status,json=signatureStatus,proto3" json:"signature_status,omitempty"`
-	ServerTransactionId  string               `protobuf:"bytes,7,opt,name=server_transaction_id,json=serverTransactionId,proto3" json:"server_transaction_id,omitempty"`
-	Status               string               `protobuf:"bytes,8,opt,name=status,proto3" json:"status,omitempty"`
-	MajorVersion         int32                `protobuf:"varint,9,opt,name=major_version,json=majorVersion,proto3" json:"major_version,omitempty"`
-	Version              string               `protobuf:"bytes,10,opt,name=version,proto3" json:"version,omitempty"`
-	PaReq                string               `protobuf:"bytes,11,opt,name=pa_req,json=paReq,proto3" json:"pa_req,omitempty"`
-	AcsUrl               string               `protobuf:"bytes,12,opt,name=acs_url,json=acsUrl,proto3" json:"acs_url,omitempty"`
-	PaRes                string               `protobuf:"bytes,13,opt,name=pa_res,json=paRes,proto3" json:"pa_res,omitempty"`
-	Id                   string               `protobuf:"bytes,14,opt,name=id,proto3" json:"id,omitempty"`
-	Timestamp            *timestamp.Timestamp `protobuf:"bytes,15,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Liability            Liability            `protobuf:"varint,16,opt,name=liability,proto3,enum=chargehive.chtype.Liability" json:"liability,omitempty"`
-	SdkResponse          string               `protobuf:"bytes,17,opt,name=sdk_response,json=sdkResponse,proto3" json:"sdk_response,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	Eci                  string                 `protobuf:"bytes,1,opt,name=eci,proto3" json:"eci,omitempty"`
+	Cavv                 string                 `protobuf:"bytes,2,opt,name=cavv,proto3" json:"cavv,omitempty"`
+	Xid                  string                 `protobuf:"bytes,3,opt,name=xid,proto3" json:"xid,omitempty"`
+	Enrollment           string                 `protobuf:"bytes,4,opt,name=enrollment,proto3" json:"enrollment,omitempty"`
+	Result               string                 `protobuf:"bytes,5,opt,name=result,proto3" json:"result,omitempty"`
+	SignatureStatus      string                 `protobuf:"bytes,6,opt,name=signature_status,json=signatureStatus,proto3" json:"signature_status,omitempty"`
+	ServerTransactionId  string                 `protobuf:"bytes,7,opt,name=server_transaction_id,json=serverTransactionId,proto3" json:"server_transaction_id,omitempty"`
+	Status               string                 `protobuf:"bytes,8,opt,name=status,proto3" json:"status,omitempty"`
+	MajorVersion         int32                  `protobuf:"varint,9,opt,name=major_version,json=majorVersion,proto3" json:"major_version,omitempty"`
+	Version              string                 `protobuf:"bytes,10,opt,name=version,proto3" json:"version,omitempty"`
+	PaReq                string                 `protobuf:"bytes,11,opt,name=pa_req,json=paReq,proto3" json:"pa_req,omitempty"`
+	AcsUrl               string                 `protobuf:"bytes,12,opt,name=acs_url,json=acsUrl,proto3" json:"acs_url,omitempty"`
+	PaRes                string                 `protobuf:"bytes,13,opt,name=pa_res,json=paRes,proto3" json:"pa_res,omitempty"`
+	Id                   string                 `protobuf:"bytes,14,opt,name=id,proto3" json:"id,omitempty"`
+	Timestamp            *timestamppb.Timestamp `protobuf:"bytes,15,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
+	Liability            Liability              `protobuf:"varint,16,opt,name=liability,proto3,enum=chargehive.chtype.Liability" json:"liability,omitempty"`
+	SdkResponse          string                 `protobuf:"bytes,17,opt,name=sdk_response,json=sdkResponse,proto3" json:"sdk_response,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *ThreeDSResult) Reset()         { *m = ThreeDSResult{} }
@@ -683,7 +683,7 @@ func (m *ThreeDSResult) GetId() string {
 	return ""
 }
 
-func (m *ThreeDSResult) GetTimestamp() *timestamp.Timestamp {
+func (m *ThreeDSResult) GetTimestamp() *timestamppb.Timestamp {
 	if m != nil {
 		return m.Timestamp
 	}

@@ -322,7 +322,17 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getRequestAmount()
     {
-        return $this->request_amount;
+        return isset($this->request_amount) ? $this->request_amount : null;
+    }
+
+    public function hasRequestAmount()
+    {
+        return isset($this->request_amount);
+    }
+
+    public function clearRequestAmount()
+    {
+        unset($this->request_amount);
     }
 
     /**
@@ -348,7 +358,17 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getTransactedAmount()
     {
-        return $this->transacted_amount;
+        return isset($this->transacted_amount) ? $this->transacted_amount : null;
+    }
+
+    public function hasTransactedAmount()
+    {
+        return isset($this->transacted_amount);
+    }
+
+    public function clearTransactedAmount()
+    {
+        unset($this->transacted_amount);
     }
 
     /**
@@ -438,7 +458,17 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getVerifyRequest()
     {
-        return $this->verify_request;
+        return isset($this->verify_request) ? $this->verify_request : null;
+    }
+
+    public function hasVerifyRequest()
+    {
+        return isset($this->verify_request);
+    }
+
+    public function clearVerifyRequest()
+    {
+        unset($this->verify_request);
     }
 
     /**
@@ -552,7 +582,17 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getAttemptDetail()
     {
-        return $this->attempt_detail;
+        return isset($this->attempt_detail) ? $this->attempt_detail : null;
+    }
+
+    public function hasAttemptDetail()
+    {
+        return isset($this->attempt_detail);
+    }
+
+    public function clearAttemptDetail()
+    {
+        unset($this->attempt_detail);
     }
 
     /**
@@ -596,7 +636,17 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
+    }
+
+    public function hasResponse()
+    {
+        return isset($this->response);
+    }
+
+    public function clearResponse()
+    {
+        unset($this->response);
     }
 
     /**
@@ -758,7 +808,17 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getTransactionTime()
     {
-        return $this->transaction_time;
+        return isset($this->transaction_time) ? $this->transaction_time : null;
+    }
+
+    public function hasTransactionTime()
+    {
+        return isset($this->transaction_time);
+    }
+
+    public function clearTransactionTime()
+    {
+        unset($this->transaction_time);
     }
 
     /**

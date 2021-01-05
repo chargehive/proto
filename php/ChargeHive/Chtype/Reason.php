@@ -85,7 +85,7 @@ class Reason extends \Google\Protobuf\Internal\Message
      */
     public function setReasonType($var)
     {
-        GPBUtil::checkEnum($var, \ChargeHive\Chtype\Reason_ReasonType::class);
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\Reason\ReasonType::class);
         $this->reason_type = $var;
 
         return $this;

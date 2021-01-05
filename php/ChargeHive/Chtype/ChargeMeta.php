@@ -128,7 +128,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getBillingAddress()
     {
-        return $this->billing_address;
+        return isset($this->billing_address) ? $this->billing_address : null;
+    }
+
+    public function hasBillingAddress()
+    {
+        return isset($this->billing_address);
+    }
+
+    public function clearBillingAddress()
+    {
+        unset($this->billing_address);
     }
 
     /**
@@ -150,7 +160,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDeliveryAddress()
     {
-        return $this->delivery_address;
+        return isset($this->delivery_address) ? $this->delivery_address : null;
+    }
+
+    public function hasDeliveryAddress()
+    {
+        return isset($this->delivery_address);
+    }
+
+    public function clearDeliveryAddress()
+    {
+        unset($this->delivery_address);
     }
 
     /**
@@ -260,7 +280,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getInvoiceDate()
     {
-        return $this->invoice_date;
+        return isset($this->invoice_date) ? $this->invoice_date : null;
+    }
+
+    public function hasInvoiceDate()
+    {
+        return isset($this->invoice_date);
+    }
+
+    public function clearInvoiceDate()
+    {
+        unset($this->invoice_date);
     }
 
     /**
@@ -282,7 +312,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDueDate()
     {
-        return $this->due_date;
+        return isset($this->due_date) ? $this->due_date : null;
+    }
+
+    public function hasDueDate()
+    {
+        return isset($this->due_date);
+    }
+
+    public function clearDueDate()
+    {
+        unset($this->due_date);
     }
 
     /**
@@ -304,7 +344,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDiscountAmount()
     {
-        return $this->discount_amount;
+        return isset($this->discount_amount) ? $this->discount_amount : null;
+    }
+
+    public function hasDiscountAmount()
+    {
+        return isset($this->discount_amount);
+    }
+
+    public function clearDiscountAmount()
+    {
+        unset($this->discount_amount);
     }
 
     /**
@@ -326,7 +376,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDeliveryAmount()
     {
-        return $this->delivery_amount;
+        return isset($this->delivery_amount) ? $this->delivery_amount : null;
+    }
+
+    public function hasDeliveryAmount()
+    {
+        return isset($this->delivery_amount);
+    }
+
+    public function clearDeliveryAmount()
+    {
+        unset($this->delivery_amount);
     }
 
     /**
@@ -348,7 +408,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmount()
     {
-        return $this->tax_amount;
+        return isset($this->tax_amount) ? $this->tax_amount : null;
+    }
+
+    public function hasTaxAmount()
+    {
+        return isset($this->tax_amount);
+    }
+
+    public function clearTaxAmount()
+    {
+        unset($this->tax_amount);
     }
 
     /**
@@ -370,7 +440,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmount()
     {
-        return $this->total_amount;
+        return isset($this->total_amount) ? $this->total_amount : null;
+    }
+
+    public function hasTotalAmount()
+    {
+        return isset($this->total_amount);
+    }
+
+    public function clearTotalAmount()
+    {
+        unset($this->total_amount);
     }
 
     /**
@@ -392,7 +472,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getPerson()
     {
-        return $this->person;
+        return isset($this->person) ? $this->person : null;
+    }
+
+    public function hasPerson()
+    {
+        return isset($this->person);
+    }
+
+    public function clearPerson()
+    {
+        unset($this->person);
     }
 
     /**
@@ -414,7 +504,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getCompany()
     {
-        return $this->company;
+        return isset($this->company) ? $this->company : null;
+    }
+
+    public function hasCompany()
+    {
+        return isset($this->company);
+    }
+
+    public function clearCompany()
+    {
+        unset($this->company);
     }
 
     /**
@@ -458,7 +558,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDelivery()
     {
-        return $this->delivery;
+        return isset($this->delivery) ? $this->delivery : null;
+    }
+
+    public function hasDelivery()
+    {
+        return isset($this->delivery);
+    }
+
+    public function clearDelivery()
+    {
+        unset($this->delivery);
     }
 
     /**
@@ -480,7 +590,17 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDevice()
     {
-        return $this->device;
+        return isset($this->device) ? $this->device : null;
+    }
+
+    public function hasDevice()
+    {
+        return isset($this->device);
+    }
+
+    public function clearDevice()
+    {
+        unset($this->device);
     }
 
     /**
