@@ -14,7 +14,7 @@ rm -rf golang
 mkdir -p golang
 
 $PROTOC_PATH -I . \
-  -I $GOPATH/src \
+  -I "$GOPATH"/src \
   --gogo_out=plugins=grpc,paths=source_relative:golang \
   chargehive/**/*.proto
 
@@ -25,11 +25,11 @@ cp -R chargehive genproto
 # php
 rm -rf php
 mkdir -p php
-sed -i'' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' genproto/chargehive/**/*.proto
-sed -i'' -E 's#^option \(gogoproto\..+##g' genproto/chargehive/**/*.proto
+gsed -i'' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' genproto/chargehive/**/*.proto
+gsed -i'' -E 's#^option \(gogoproto\..+##g' genproto/chargehive/**/*.proto
 
 $PROTOC_PATH -I genproto \
-  -I $GOPATH/src \
+  -I "$GOPATH"/src \
   --php_out=php \
   genproto/chargehive/**/*.proto
 
