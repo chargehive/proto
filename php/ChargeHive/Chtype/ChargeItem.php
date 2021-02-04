@@ -189,7 +189,17 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return $this->start_date;
+        return isset($this->start_date) ? $this->start_date : null;
+    }
+
+    public function hasStartDate()
+    {
+        return isset($this->start_date);
+    }
+
+    public function clearStartDate()
+    {
+        unset($this->start_date);
     }
 
     /**
@@ -211,7 +221,17 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return $this->end_date;
+        return isset($this->end_date) ? $this->end_date : null;
+    }
+
+    public function hasEndDate()
+    {
+        return isset($this->end_date);
+    }
+
+    public function clearEndDate()
+    {
+        unset($this->end_date);
     }
 
     /**
@@ -277,7 +297,17 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getDelivery()
     {
-        return $this->delivery;
+        return isset($this->delivery) ? $this->delivery : null;
+    }
+
+    public function hasDelivery()
+    {
+        return isset($this->delivery);
+    }
+
+    public function clearDelivery()
+    {
+        unset($this->delivery);
     }
 
     /**
@@ -321,7 +351,17 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getUnitPrice()
     {
-        return $this->unit_price;
+        return isset($this->unit_price) ? $this->unit_price : null;
+    }
+
+    public function hasUnitPrice()
+    {
+        return isset($this->unit_price);
+    }
+
+    public function clearUnitPrice()
+    {
+        unset($this->unit_price);
     }
 
     /**
@@ -343,7 +383,17 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmount()
     {
-        return $this->tax_amount;
+        return isset($this->tax_amount) ? $this->tax_amount : null;
+    }
+
+    public function hasTaxAmount()
+    {
+        return isset($this->tax_amount);
+    }
+
+    public function clearTaxAmount()
+    {
+        unset($this->tax_amount);
     }
 
     /**
@@ -365,7 +415,17 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getDiscountAmount()
     {
-        return $this->discount_amount;
+        return isset($this->discount_amount) ? $this->discount_amount : null;
+    }
+
+    public function hasDiscountAmount()
+    {
+        return isset($this->discount_amount);
+    }
+
+    public function clearDiscountAmount()
+    {
+        unset($this->discount_amount);
     }
 
     /**

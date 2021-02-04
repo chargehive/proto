@@ -149,7 +149,17 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValidFrom()
     {
-        return $this->valid_from;
+        return isset($this->valid_from) ? $this->valid_from : null;
+    }
+
+    public function hasValidFrom()
+    {
+        return isset($this->valid_from);
+    }
+
+    public function clearValidFrom()
+    {
+        unset($this->valid_from);
     }
 
     /**
@@ -171,7 +181,17 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      */
     public function getExpiry()
     {
-        return $this->expiry;
+        return isset($this->expiry) ? $this->expiry : null;
+    }
+
+    public function hasExpiry()
+    {
+        return isset($this->expiry);
+    }
+
+    public function clearExpiry()
+    {
+        unset($this->expiry);
     }
 
     /**

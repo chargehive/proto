@@ -95,7 +95,17 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      */
     public function getOverallScore()
     {
-        return $this->overall_score;
+        return isset($this->overall_score) ? $this->overall_score : null;
+    }
+
+    public function hasOverallScore()
+    {
+        return isset($this->overall_score);
+    }
+
+    public function clearOverallScore()
+    {
+        unset($this->overall_score);
     }
 
     /**
@@ -161,7 +171,17 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      */
     public function getScanTime()
     {
-        return $this->scan_time;
+        return isset($this->scan_time) ? $this->scan_time : null;
+    }
+
+    public function hasScanTime()
+    {
+        return isset($this->scan_time);
+    }
+
+    public function clearScanTime()
+    {
+        unset($this->scan_time);
     }
 
     /**

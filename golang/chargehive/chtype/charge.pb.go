@@ -8,7 +8,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	math "math"
 )
 
@@ -210,26 +210,26 @@ func (m *StatementDescriptor) GetPhone() string {
 }
 
 type Charge struct {
-	ChargeId             string               `protobuf:"bytes,1,opt,name=charge_id,json=chargeId,proto3" json:"charge_id,omitempty"`
-	Version              string               `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
-	Intent               ChargeIntent         `protobuf:"varint,3,opt,name=intent,proto3,enum=chargehive.chtype.ChargeIntent" json:"intent,omitempty"`
-	Contract             ContractType         `protobuf:"varint,4,opt,name=contract,proto3,enum=chargehive.chtype.ContractType" json:"contract,omitempty"`
-	Amount               *Amount              `protobuf:"bytes,5,opt,name=amount,proto3" json:"amount,omitempty"`
-	PaymentMethodIds     []string             `protobuf:"bytes,6,rep,name=payment_method_ids,json=paymentMethodIds,proto3" json:"payment_method_ids,omitempty"`
-	ExpiryTime           *timestamp.Timestamp `protobuf:"bytes,7,opt,name=expiry_time,json=expiryTime,proto3" json:"expiry_time,omitempty"`
-	MerchantReference    string               `protobuf:"bytes,8,opt,name=merchant_reference,json=merchantReference,proto3" json:"merchant_reference,omitempty"`
-	StatementDescriptor  *StatementDescriptor `protobuf:"bytes,9,opt,name=statement_descriptor,json=statementDescriptor,proto3" json:"statement_descriptor,omitempty"`
-	References           map[string]string    `protobuf:"bytes,10,rep,name=references,proto3" json:"references,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Labels               []*Label             `protobuf:"bytes,11,rep,name=labels,proto3" json:"labels,omitempty"`
-	ChargeKey            string               `protobuf:"bytes,12,opt,name=charge_key,json=chargeKey,proto3" json:"charge_key,omitempty"`
-	UserLocale           string               `protobuf:"bytes,13,opt,name=user_locale,json=userLocale,proto3" json:"user_locale,omitempty"`
-	UserLocation         string               `protobuf:"bytes,14,opt,name=user_location,json=userLocation,proto3" json:"user_location,omitempty"`
-	Environment          ChargeEnvironment    `protobuf:"varint,15,opt,name=environment,proto3,enum=chargehive.chtype.ChargeEnvironment" json:"environment,omitempty"`
-	Language             Language             `protobuf:"varint,16,opt,name=language,proto3,enum=chargehive.chtype.Language" json:"language,omitempty"`
-	PreferredMethodType  PaymentMethodType    `protobuf:"varint,17,opt,name=preferred_method_type,json=preferredMethodType,proto3,enum=chargehive.chtype.PaymentMethodType" json:"preferred_method_type,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	ChargeId             string                 `protobuf:"bytes,1,opt,name=charge_id,json=chargeId,proto3" json:"charge_id,omitempty"`
+	Version              string                 `protobuf:"bytes,2,opt,name=version,proto3" json:"version,omitempty"`
+	Intent               ChargeIntent           `protobuf:"varint,3,opt,name=intent,proto3,enum=chargehive.chtype.ChargeIntent" json:"intent,omitempty"`
+	Contract             ContractType           `protobuf:"varint,4,opt,name=contract,proto3,enum=chargehive.chtype.ContractType" json:"contract,omitempty"`
+	Amount               *Amount                `protobuf:"bytes,5,opt,name=amount,proto3" json:"amount,omitempty"`
+	PaymentMethodIds     []string               `protobuf:"bytes,6,rep,name=payment_method_ids,json=paymentMethodIds,proto3" json:"payment_method_ids,omitempty"`
+	ExpiryTime           *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=expiry_time,json=expiryTime,proto3" json:"expiry_time,omitempty"`
+	MerchantReference    string                 `protobuf:"bytes,8,opt,name=merchant_reference,json=merchantReference,proto3" json:"merchant_reference,omitempty"`
+	StatementDescriptor  *StatementDescriptor   `protobuf:"bytes,9,opt,name=statement_descriptor,json=statementDescriptor,proto3" json:"statement_descriptor,omitempty"`
+	References           map[string]string      `protobuf:"bytes,10,rep,name=references,proto3" json:"references,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Labels               []*Label               `protobuf:"bytes,11,rep,name=labels,proto3" json:"labels,omitempty"`
+	ChargeKey            string                 `protobuf:"bytes,12,opt,name=charge_key,json=chargeKey,proto3" json:"charge_key,omitempty"`
+	UserLocale           string                 `protobuf:"bytes,13,opt,name=user_locale,json=userLocale,proto3" json:"user_locale,omitempty"`
+	UserLocation         string                 `protobuf:"bytes,14,opt,name=user_location,json=userLocation,proto3" json:"user_location,omitempty"`
+	Environment          ChargeEnvironment      `protobuf:"varint,15,opt,name=environment,proto3,enum=chargehive.chtype.ChargeEnvironment" json:"environment,omitempty"`
+	Language             Language               `protobuf:"varint,16,opt,name=language,proto3,enum=chargehive.chtype.Language" json:"language,omitempty"`
+	PreferredMethodType  PaymentMethodType      `protobuf:"varint,17,opt,name=preferred_method_type,json=preferredMethodType,proto3,enum=chargehive.chtype.PaymentMethodType" json:"preferred_method_type,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *Charge) Reset()         { *m = Charge{} }
@@ -298,7 +298,7 @@ func (m *Charge) GetPaymentMethodIds() []string {
 	return nil
 }
 
-func (m *Charge) GetExpiryTime() *timestamp.Timestamp {
+func (m *Charge) GetExpiryTime() *timestamppb.Timestamp {
 	if m != nil {
 		return m.ExpiryTime
 	}
@@ -376,27 +376,27 @@ func (m *Charge) GetPreferredMethodType() PaymentMethodType {
 }
 
 type ChargeItem struct {
-	SubscriptionId       string               `protobuf:"bytes,1,opt,name=subscription_id,json=subscriptionId,proto3" json:"subscription_id,omitempty"`
-	RenewalNumber        int32                `protobuf:"varint,2,opt,name=renewal_number,json=renewalNumber,proto3" json:"renewal_number,omitempty"`
-	Duration             int64                `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
-	StartDate            *timestamp.Timestamp `protobuf:"bytes,4,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
-	EndDate              *timestamp.Timestamp `protobuf:"bytes,5,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
-	ProductType          ProductType          `protobuf:"varint,6,opt,name=product_type,json=productType,proto3,enum=chargehive.chtype.ProductType" json:"product_type,omitempty"`
-	SkuType              SKUType              `protobuf:"varint,7,opt,name=sku_type,json=skuType,proto3,enum=chargehive.chtype.SKUType" json:"sku_type,omitempty"`
-	Delivery             *Delivery            `protobuf:"bytes,8,opt,name=delivery,proto3" json:"delivery,omitempty"`
-	Quantity             int64                `protobuf:"varint,9,opt,name=quantity,proto3" json:"quantity,omitempty"`
-	UnitPrice            *Amount              `protobuf:"bytes,10,opt,name=unit_price,json=unitPrice,proto3" json:"unit_price,omitempty"`
-	TaxAmount            *Amount              `protobuf:"bytes,11,opt,name=tax_amount,json=taxAmount,proto3" json:"tax_amount,omitempty"`
-	DiscountAmount       *Amount              `protobuf:"bytes,12,opt,name=discount_amount,json=discountAmount,proto3" json:"discount_amount,omitempty"`
-	Name                 string               `protobuf:"bytes,13,opt,name=name,proto3" json:"name,omitempty"`
-	Description          string               `protobuf:"bytes,14,opt,name=description,proto3" json:"description,omitempty"`
-	ProductCode          string               `protobuf:"bytes,15,opt,name=product_code,json=productCode,proto3" json:"product_code,omitempty"`
-	SkuCode              string               `protobuf:"bytes,16,opt,name=sku_code,json=skuCode,proto3" json:"sku_code,omitempty"`
-	TermUnits            int64                `protobuf:"varint,17,opt,name=term_units,json=termUnits,proto3" json:"term_units,omitempty"`
-	TermType             TermType             `protobuf:"varint,18,opt,name=term_type,json=termType,proto3,enum=chargehive.chtype.TermType" json:"term_type,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	SubscriptionId       string                 `protobuf:"bytes,1,opt,name=subscription_id,json=subscriptionId,proto3" json:"subscription_id,omitempty"`
+	RenewalNumber        int32                  `protobuf:"varint,2,opt,name=renewal_number,json=renewalNumber,proto3" json:"renewal_number,omitempty"`
+	Duration             int64                  `protobuf:"varint,3,opt,name=duration,proto3" json:"duration,omitempty"`
+	StartDate            *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=start_date,json=startDate,proto3" json:"start_date,omitempty"`
+	EndDate              *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=end_date,json=endDate,proto3" json:"end_date,omitempty"`
+	ProductType          ProductType            `protobuf:"varint,6,opt,name=product_type,json=productType,proto3,enum=chargehive.chtype.ProductType" json:"product_type,omitempty"`
+	SkuType              SKUType                `protobuf:"varint,7,opt,name=sku_type,json=skuType,proto3,enum=chargehive.chtype.SKUType" json:"sku_type,omitempty"`
+	Delivery             *Delivery              `protobuf:"bytes,8,opt,name=delivery,proto3" json:"delivery,omitempty"`
+	Quantity             int64                  `protobuf:"varint,9,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	UnitPrice            *Amount                `protobuf:"bytes,10,opt,name=unit_price,json=unitPrice,proto3" json:"unit_price,omitempty"`
+	TaxAmount            *Amount                `protobuf:"bytes,11,opt,name=tax_amount,json=taxAmount,proto3" json:"tax_amount,omitempty"`
+	DiscountAmount       *Amount                `protobuf:"bytes,12,opt,name=discount_amount,json=discountAmount,proto3" json:"discount_amount,omitempty"`
+	Name                 string                 `protobuf:"bytes,13,opt,name=name,proto3" json:"name,omitempty"`
+	Description          string                 `protobuf:"bytes,14,opt,name=description,proto3" json:"description,omitempty"`
+	ProductCode          string                 `protobuf:"bytes,15,opt,name=product_code,json=productCode,proto3" json:"product_code,omitempty"`
+	SkuCode              string                 `protobuf:"bytes,16,opt,name=sku_code,json=skuCode,proto3" json:"sku_code,omitempty"`
+	TermUnits            int64                  `protobuf:"varint,17,opt,name=term_units,json=termUnits,proto3" json:"term_units,omitempty"`
+	TermType             TermType               `protobuf:"varint,18,opt,name=term_type,json=termType,proto3,enum=chargehive.chtype.TermType" json:"term_type,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *ChargeItem) Reset()         { *m = ChargeItem{} }
@@ -444,14 +444,14 @@ func (m *ChargeItem) GetDuration() int64 {
 	return 0
 }
 
-func (m *ChargeItem) GetStartDate() *timestamp.Timestamp {
+func (m *ChargeItem) GetStartDate() *timestamppb.Timestamp {
 	if m != nil {
 		return m.StartDate
 	}
 	return nil
 }
 
-func (m *ChargeItem) GetEndDate() *timestamp.Timestamp {
+func (m *ChargeItem) GetEndDate() *timestamppb.Timestamp {
 	if m != nil {
 		return m.EndDate
 	}
@@ -550,28 +550,28 @@ func (m *ChargeItem) GetTermType() TermType {
 }
 
 type ChargeMeta struct {
-	BillingAddress       *Address             `protobuf:"bytes,1,opt,name=billing_address,json=billingAddress,proto3" json:"billing_address,omitempty"`
-	DeliveryAddress      *Address             `protobuf:"bytes,2,opt,name=delivery_address,json=deliveryAddress,proto3" json:"delivery_address,omitempty"`
-	Items                []*ChargeItem        `protobuf:"bytes,3,rep,name=items,proto3" json:"items,omitempty"`
-	Terms                string               `protobuf:"bytes,4,opt,name=terms,proto3" json:"terms,omitempty"`
-	Note                 string               `protobuf:"bytes,5,opt,name=note,proto3" json:"note,omitempty"`
-	MerchantMemo         string               `protobuf:"bytes,6,opt,name=merchant_memo,json=merchantMemo,proto3" json:"merchant_memo,omitempty"`
-	InvoiceDate          *timestamp.Timestamp `protobuf:"bytes,7,opt,name=invoice_date,json=invoiceDate,proto3" json:"invoice_date,omitempty"`
-	DueDate              *timestamp.Timestamp `protobuf:"bytes,8,opt,name=due_date,json=dueDate,proto3" json:"due_date,omitempty"`
-	DiscountAmount       *Amount              `protobuf:"bytes,9,opt,name=discount_amount,json=discountAmount,proto3" json:"discount_amount,omitempty"`
-	DeliveryAmount       *Amount              `protobuf:"bytes,10,opt,name=delivery_amount,json=deliveryAmount,proto3" json:"delivery_amount,omitempty"`
-	TaxAmount            *Amount              `protobuf:"bytes,11,opt,name=tax_amount,json=taxAmount,proto3" json:"tax_amount,omitempty"`
-	TotalAmount          *Amount              `protobuf:"bytes,12,opt,name=total_amount,json=totalAmount,proto3" json:"total_amount,omitempty"`
-	Person               *Person              `protobuf:"bytes,13,opt,name=person,proto3" json:"person,omitempty"`
-	Company              *Company             `protobuf:"bytes,14,opt,name=company,proto3" json:"company,omitempty"`
-	IpAddress            string               `protobuf:"bytes,15,opt,name=ip_address,json=ipAddress,proto3" json:"ip_address,omitempty"`
-	Delivery             *Delivery            `protobuf:"bytes,16,opt,name=delivery,proto3" json:"delivery,omitempty"`
-	Device               *Device              `protobuf:"bytes,17,opt,name=device,proto3" json:"device,omitempty"`
-	CustomerId           string               `protobuf:"bytes,18,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
-	PlacementId          string               `protobuf:"bytes,19,opt,name=placement_id,json=placementId,proto3" json:"placement_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	BillingAddress       *Address               `protobuf:"bytes,1,opt,name=billing_address,json=billingAddress,proto3" json:"billing_address,omitempty"`
+	DeliveryAddress      *Address               `protobuf:"bytes,2,opt,name=delivery_address,json=deliveryAddress,proto3" json:"delivery_address,omitempty"`
+	Items                []*ChargeItem          `protobuf:"bytes,3,rep,name=items,proto3" json:"items,omitempty"`
+	Terms                string                 `protobuf:"bytes,4,opt,name=terms,proto3" json:"terms,omitempty"`
+	Note                 string                 `protobuf:"bytes,5,opt,name=note,proto3" json:"note,omitempty"`
+	MerchantMemo         string                 `protobuf:"bytes,6,opt,name=merchant_memo,json=merchantMemo,proto3" json:"merchant_memo,omitempty"`
+	InvoiceDate          *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=invoice_date,json=invoiceDate,proto3" json:"invoice_date,omitempty"`
+	DueDate              *timestamppb.Timestamp `protobuf:"bytes,8,opt,name=due_date,json=dueDate,proto3" json:"due_date,omitempty"`
+	DiscountAmount       *Amount                `protobuf:"bytes,9,opt,name=discount_amount,json=discountAmount,proto3" json:"discount_amount,omitempty"`
+	DeliveryAmount       *Amount                `protobuf:"bytes,10,opt,name=delivery_amount,json=deliveryAmount,proto3" json:"delivery_amount,omitempty"`
+	TaxAmount            *Amount                `protobuf:"bytes,11,opt,name=tax_amount,json=taxAmount,proto3" json:"tax_amount,omitempty"`
+	TotalAmount          *Amount                `protobuf:"bytes,12,opt,name=total_amount,json=totalAmount,proto3" json:"total_amount,omitempty"`
+	Person               *Person                `protobuf:"bytes,13,opt,name=person,proto3" json:"person,omitempty"`
+	Company              *Company               `protobuf:"bytes,14,opt,name=company,proto3" json:"company,omitempty"`
+	IpAddress            string                 `protobuf:"bytes,15,opt,name=ip_address,json=ipAddress,proto3" json:"ip_address,omitempty"`
+	Delivery             *Delivery              `protobuf:"bytes,16,opt,name=delivery,proto3" json:"delivery,omitempty"`
+	Device               *Device                `protobuf:"bytes,17,opt,name=device,proto3" json:"device,omitempty"`
+	CustomerId           string                 `protobuf:"bytes,18,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
+	PlacementId          string                 `protobuf:"bytes,19,opt,name=placement_id,json=placementId,proto3" json:"placement_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *ChargeMeta) Reset()         { *m = ChargeMeta{} }
@@ -640,14 +640,14 @@ func (m *ChargeMeta) GetMerchantMemo() string {
 	return ""
 }
 
-func (m *ChargeMeta) GetInvoiceDate() *timestamp.Timestamp {
+func (m *ChargeMeta) GetInvoiceDate() *timestamppb.Timestamp {
 	if m != nil {
 		return m.InvoiceDate
 	}
 	return nil
 }
 
-func (m *ChargeMeta) GetDueDate() *timestamp.Timestamp {
+func (m *ChargeMeta) GetDueDate() *timestamppb.Timestamp {
 	if m != nil {
 		return m.DueDate
 	}

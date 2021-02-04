@@ -63,7 +63,7 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
      */
     public function setOn($var)
     {
-        GPBUtil::checkEnum($var, \ChargeHive\Chtype\FraudFactor_On::class);
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\FraudFactor\On::class);
         $this->on = $var;
 
         return $this;
@@ -85,7 +85,7 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
      */
     public function setFactor($var)
     {
-        GPBUtil::checkEnum($var, \ChargeHive\Chtype\FraudFactor_Factor::class);
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\FraudFactor\Factor::class);
         $this->factor = $var;
 
         return $this;

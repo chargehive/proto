@@ -241,7 +241,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getRequestedAmount()
     {
-        return $this->requested_amount;
+        return isset($this->requested_amount) ? $this->requested_amount : null;
+    }
+
+    public function hasRequestedAmount()
+    {
+        return isset($this->requested_amount);
+    }
+
+    public function clearRequestedAmount()
+    {
+        unset($this->requested_amount);
     }
 
     /**
@@ -267,7 +277,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getProcessedAmount()
     {
-        return $this->processed_amount;
+        return isset($this->processed_amount) ? $this->processed_amount : null;
+    }
+
+    public function hasProcessedAmount()
+    {
+        return isset($this->processed_amount);
+    }
+
+    public function clearProcessedAmount()
+    {
+        unset($this->processed_amount);
     }
 
     /**
@@ -293,7 +313,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getFeeEstimate()
     {
-        return $this->fee_estimate;
+        return isset($this->fee_estimate) ? $this->fee_estimate : null;
+    }
+
+    public function hasFeeEstimate()
+    {
+        return isset($this->fee_estimate);
+    }
+
+    public function clearFeeEstimate()
+    {
+        unset($this->fee_estimate);
     }
 
     /**
@@ -319,7 +349,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getFeeActual()
     {
-        return $this->fee_actual;
+        return isset($this->fee_actual) ? $this->fee_actual : null;
+    }
+
+    public function hasFeeActual()
+    {
+        return isset($this->fee_actual);
+    }
+
+    public function clearFeeActual()
+    {
+        unset($this->fee_actual);
     }
 
     /**
@@ -345,7 +385,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getStartTime()
     {
-        return $this->start_time;
+        return isset($this->start_time) ? $this->start_time : null;
+    }
+
+    public function hasStartTime()
+    {
+        return isset($this->start_time);
+    }
+
+    public function clearStartTime()
+    {
+        unset($this->start_time);
     }
 
     /**
@@ -371,7 +421,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getEndTime()
     {
-        return $this->end_time;
+        return isset($this->end_time) ? $this->end_time : null;
+    }
+
+    public function hasEndTime()
+    {
+        return isset($this->end_time);
+    }
+
+    public function clearEndTime()
+    {
+        unset($this->end_time);
     }
 
     /**
@@ -439,7 +499,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getResponse()
     {
-        return $this->response;
+        return isset($this->response) ? $this->response : null;
+    }
+
+    public function hasResponse()
+    {
+        return isset($this->response);
+    }
+
+    public function clearResponse()
+    {
+        unset($this->response);
     }
 
     /**
@@ -461,7 +531,17 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getVerificationResult()
     {
-        return $this->verification_result;
+        return isset($this->verification_result) ? $this->verification_result : null;
+    }
+
+    public function hasVerificationResult()
+    {
+        return isset($this->verification_result);
+    }
+
+    public function clearVerificationResult()
+    {
+        unset($this->verification_result);
     }
 
     /**

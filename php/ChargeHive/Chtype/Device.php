@@ -268,7 +268,17 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getScreen()
     {
-        return $this->screen;
+        return isset($this->screen) ? $this->screen : null;
+    }
+
+    public function hasScreen()
+    {
+        return isset($this->screen);
+    }
+
+    public function clearScreen()
+    {
+        unset($this->screen);
     }
 
     /**
@@ -290,7 +300,17 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getScreenAvailable()
     {
-        return $this->screen_available;
+        return isset($this->screen_available) ? $this->screen_available : null;
+    }
+
+    public function hasScreenAvailable()
+    {
+        return isset($this->screen_available);
+    }
+
+    public function clearScreenAvailable()
+    {
+        unset($this->screen_available);
     }
 
     /**
@@ -312,7 +332,17 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getWindowInner()
     {
-        return $this->window_inner;
+        return isset($this->window_inner) ? $this->window_inner : null;
+    }
+
+    public function hasWindowInner()
+    {
+        return isset($this->window_inner);
+    }
+
+    public function clearWindowInner()
+    {
+        unset($this->window_inner);
     }
 
     /**
@@ -334,7 +364,17 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getWindowOuter()
     {
-        return $this->window_outer;
+        return isset($this->window_outer) ? $this->window_outer : null;
+    }
+
+    public function hasWindowOuter()
+    {
+        return isset($this->window_outer);
+    }
+
+    public function clearWindowOuter()
+    {
+        unset($this->window_outer);
     }
 
     /**
