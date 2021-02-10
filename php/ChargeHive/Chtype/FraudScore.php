@@ -102,7 +102,17 @@ class FraudScore extends \Google\Protobuf\Internal\Message
      */
     public function getFactor()
     {
-        return $this->factor;
+        return isset($this->factor) ? $this->factor : null;
+    }
+
+    public function hasFactor()
+    {
+        return isset($this->factor);
+    }
+
+    public function clearFactor()
+    {
+        unset($this->factor);
     }
 
     /**

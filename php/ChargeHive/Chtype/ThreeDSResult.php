@@ -426,7 +426,17 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      */
     public function getTimestamp()
     {
-        return $this->timestamp;
+        return isset($this->timestamp) ? $this->timestamp : null;
+    }
+
+    public function hasTimestamp()
+    {
+        return isset($this->timestamp);
+    }
+
+    public function clearTimestamp()
+    {
+        unset($this->timestamp);
     }
 
     /**
