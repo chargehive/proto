@@ -44,6 +44,7 @@ message Transaction {
   google.protobuf.Timestamp transaction_time = 26;
   PaymentMethodProvider payment_provider = 27;
   PaymentMethodInputType payment_input_type = 28;
+  string auth_code = 29;
 }
 
 message TransactionDetail {
