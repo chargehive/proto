@@ -135,6 +135,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType payment_input_type = 28;</code>
      */
     protected $payment_input_type = 0;
+    /**
+     * Generated from protobuf field <code>string auth_code = 29;</code>
+     */
+    protected $auth_code = '';
 
     /**
      * Constructor.
@@ -175,6 +179,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $transaction_time
      *     @type int $payment_provider
      *     @type int $payment_input_type
+     *     @type string $auth_code
      * }
      */
     public function __construct($data = NULL) {
@@ -874,6 +879,28 @@ class Transaction extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodInputType::class);
         $this->payment_input_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string auth_code = 29;</code>
+     * @return string
+     */
+    public function getAuthCode()
+    {
+        return $this->auth_code;
+    }
+
+    /**
+     * Generated from protobuf field <code>string auth_code = 29;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAuthCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->auth_code = $var;
 
         return $this;
     }
