@@ -12,15 +12,20 @@ use UnexpectedValueException;
 class PaymentMethodUpdateStatus
 {
     /**
-     * Generated from protobuf enum <code>PAYMENT_METHOD_STATUS_ACTIVE = 0;</code>
+     * Generated from protobuf enum <code>PAYMENT_METHOD_STATUS_INVALID = 0;</code>
      */
-    const PAYMENT_METHOD_STATUS_ACTIVE = 0;
+    const PAYMENT_METHOD_STATUS_INVALID = 0;
     /**
-     * Generated from protobuf enum <code>PAYMENT_METHOD_STATUS_SUSPENDED = 1;</code>
+     * Generated from protobuf enum <code>PAYMENT_METHOD_STATUS_ACTIVE = 1;</code>
      */
-    const PAYMENT_METHOD_STATUS_SUSPENDED = 1;
+    const PAYMENT_METHOD_STATUS_ACTIVE = 1;
+    /**
+     * Generated from protobuf enum <code>PAYMENT_METHOD_STATUS_SUSPENDED = 2;</code>
+     */
+    const PAYMENT_METHOD_STATUS_SUSPENDED = 2;
 
     private static $valueToName = [
+        self::PAYMENT_METHOD_STATUS_INVALID => 'PAYMENT_METHOD_STATUS_INVALID',
         self::PAYMENT_METHOD_STATUS_ACTIVE => 'PAYMENT_METHOD_STATUS_ACTIVE',
         self::PAYMENT_METHOD_STATUS_SUSPENDED => 'PAYMENT_METHOD_STATUS_SUSPENDED',
     ];

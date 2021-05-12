@@ -14,8 +14,9 @@ option php_namespace = "ChargeHive\\Chtype";
 option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
 
 enum PaymentMethodUpdateStatus {
-  PAYMENT_METHOD_STATUS_ACTIVE = 0;
-  PAYMENT_METHOD_STATUS_SUSPENDED = 1;
+  PAYMENT_METHOD_STATUS_INVALID = 0;
+  PAYMENT_METHOD_STATUS_ACTIVE = 1;
+  PAYMENT_METHOD_STATUS_SUSPENDED = 2;
 }
 
 message PaymentMethod {
