@@ -91,7 +91,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudScore overall_score = 2;</code>
-     * @return \ChargeHive\Chtype\FraudScore
+     * @return \ChargeHive\Chtype\FraudScore|null
      */
     public function getOverallScore()
     {
@@ -167,7 +167,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp scan_time = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getScanTime()
     {

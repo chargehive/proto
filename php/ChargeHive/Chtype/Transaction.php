@@ -323,7 +323,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *Amount requested
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount request_amount = 7;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getRequestAmount()
     {
@@ -359,7 +359,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *Amount received
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount transacted_amount = 8;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getTransactedAmount()
     {
@@ -459,7 +459,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerifyRequestData verify_request = 12;</code>
-     * @return \ChargeHive\Chtype\VerifyRequestData
+     * @return \ChargeHive\Chtype\VerifyRequestData|null
      */
     public function getVerifyRequest()
     {
@@ -583,7 +583,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.AttemptDetail attempt_detail = 17;</code>
-     * @return \ChargeHive\Chtype\AttemptDetail
+     * @return \ChargeHive\Chtype\AttemptDetail|null
      */
     public function getAttemptDetail()
     {
@@ -637,7 +637,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseDetail response = 19;</code>
-     * @return \ChargeHive\Chtype\ResponseDetail
+     * @return \ChargeHive\Chtype\ResponseDetail|null
      */
     public function getResponse()
     {
@@ -809,7 +809,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp transaction_time = 26;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getTransactionTime()
     {

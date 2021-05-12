@@ -202,7 +202,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount amount = 5;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getAmount()
     {
@@ -256,7 +256,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiry_time = 7;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpiryTime()
     {
@@ -310,7 +310,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.StatementDescriptor statement_descriptor = 9;</code>
-     * @return \ChargeHive\Chtype\StatementDescriptor
+     * @return \ChargeHive\Chtype\StatementDescriptor|null
      */
     public function getStatementDescriptor()
     {

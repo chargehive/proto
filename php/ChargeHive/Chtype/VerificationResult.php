@@ -136,7 +136,7 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ThreeDSResult threeds_result = 5;</code>
-     * @return \ChargeHive\Chtype\ThreeDSResult
+     * @return \ChargeHive\Chtype\ThreeDSResult|null
      */
     public function getThreedsResult()
     {
