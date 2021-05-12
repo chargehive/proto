@@ -13,12 +13,18 @@ option go_package = "github.com/chargehive/proto/golang/chargehive/chtype";
 option php_namespace = "ChargeHive\\Chtype";
 option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";
 
+enum PaymentMethodUpdateStatus {
+  PAYMENT_METHOD_STATUS_ACTIVE = 0;
+  PAYMENT_METHOD_STATUS_SUSPENDED = 1;
+}
+
 message PaymentMethod {
   chtype.PaymentMethodSchema schema = 1;
   bytes json = 2;
   chtype.PaymentMethodType type = 3;
   chtype.PaymentMethodProvider provider = 4;
   chtype.PaymentMethodInputType inputType = 5;
+  PaymentMethodUpdateStatus status = 6;
 }
 
 enum PaymentMethodUpdateReason {
