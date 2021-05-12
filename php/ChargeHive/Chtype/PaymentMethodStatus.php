@@ -7,9 +7,9 @@ namespace ChargeHive\Chtype;
 use UnexpectedValueException;
 
 /**
- * Protobuf type <code>chargehive.chtype.PaymentMethodUpdateStatus</code>
+ * Protobuf type <code>chargehive.chtype.PaymentMethodStatus</code>
  */
-class PaymentMethodUpdateStatus
+class PaymentMethodStatus
 {
     /**
      * Generated from protobuf enum <code>PAYMENT_METHOD_STATUS_INVALID = 0;</code>

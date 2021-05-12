@@ -34,7 +34,7 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
      */
     protected $inputType = 0;
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodUpdateStatus status = 6;</code>
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodStatus status = 6;</code>
      */
     protected $status = 0;
 
@@ -168,7 +168,7 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodUpdateStatus status = 6;</code>
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodStatus status = 6;</code>
      * @return int
      */
     public function getStatus()
@@ -177,13 +177,13 @@ class PaymentMethod extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodUpdateStatus status = 6;</code>
+     * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodStatus status = 6;</code>
      * @param int $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodUpdateStatus::class);
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodStatus::class);
         $this->status = $var;
 
         return $this;
