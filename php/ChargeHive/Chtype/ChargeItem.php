@@ -185,7 +185,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_date = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getStartDate()
     {
@@ -217,7 +217,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_date = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getEndDate()
     {
@@ -293,7 +293,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Delivery delivery = 8;</code>
-     * @return \ChargeHive\Chtype\Delivery
+     * @return \ChargeHive\Chtype\Delivery|null
      */
     public function getDelivery()
     {
@@ -347,7 +347,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount unit_price = 10;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getUnitPrice()
     {
@@ -379,7 +379,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount tax_amount = 11;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getTaxAmount()
     {
@@ -411,7 +411,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount discount_amount = 12;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getDiscountAmount()
     {

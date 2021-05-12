@@ -98,7 +98,7 @@ class FraudScore extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor factor = 4;</code>
-     * @return \ChargeHive\Chtype\FraudFactor
+     * @return \ChargeHive\Chtype\FraudFactor|null
      */
     public function getFactor()
     {

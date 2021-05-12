@@ -237,7 +237,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *Amount sent in the request
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount requested_amount = 5;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getRequestedAmount()
     {
@@ -273,7 +273,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *Amount received in the result
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount processed_amount = 6;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getProcessedAmount()
     {
@@ -309,7 +309,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *Amount charged for the transaction
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount fee_estimate = 7;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getFeeEstimate()
     {
@@ -345,7 +345,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *Amount charged for the transaction
      *
      * Generated from protobuf field <code>.chargehive.chtype.Amount fee_actual = 8;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getFeeActual()
     {
@@ -381,7 +381,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *Request Send Time
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_time = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getStartTime()
     {
@@ -417,7 +417,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *Response Receive Time
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_time = 10;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getEndTime()
     {
@@ -495,7 +495,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseDetail response = 14;</code>
-     * @return \ChargeHive\Chtype\ResponseDetail
+     * @return \ChargeHive\Chtype\ResponseDetail|null
      */
     public function getResponse()
     {
@@ -527,7 +527,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerificationResult verification_result = 15;</code>
-     * @return \ChargeHive\Chtype\VerificationResult
+     * @return \ChargeHive\Chtype\VerificationResult|null
      */
     public function getVerificationResult()
     {

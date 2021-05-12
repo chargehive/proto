@@ -124,7 +124,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Address billing_address = 1;</code>
-     * @return \ChargeHive\Chtype\Address
+     * @return \ChargeHive\Chtype\Address|null
      */
     public function getBillingAddress()
     {
@@ -156,7 +156,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Address delivery_address = 2;</code>
-     * @return \ChargeHive\Chtype\Address
+     * @return \ChargeHive\Chtype\Address|null
      */
     public function getDeliveryAddress()
     {
@@ -276,7 +276,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp invoice_date = 7;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getInvoiceDate()
     {
@@ -308,7 +308,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp due_date = 8;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDueDate()
     {
@@ -340,7 +340,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount discount_amount = 9;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getDiscountAmount()
     {
@@ -372,7 +372,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount delivery_amount = 10;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getDeliveryAmount()
     {
@@ -404,7 +404,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount tax_amount = 11;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getTaxAmount()
     {
@@ -436,7 +436,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Amount total_amount = 12;</code>
-     * @return \ChargeHive\Chtype\Amount
+     * @return \ChargeHive\Chtype\Amount|null
      */
     public function getTotalAmount()
     {
@@ -468,7 +468,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Person person = 13;</code>
-     * @return \ChargeHive\Chtype\Person
+     * @return \ChargeHive\Chtype\Person|null
      */
     public function getPerson()
     {
@@ -500,7 +500,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Company company = 14;</code>
-     * @return \ChargeHive\Chtype\Company
+     * @return \ChargeHive\Chtype\Company|null
      */
     public function getCompany()
     {
@@ -554,7 +554,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Delivery delivery = 16;</code>
-     * @return \ChargeHive\Chtype\Delivery
+     * @return \ChargeHive\Chtype\Delivery|null
      */
     public function getDelivery()
     {
@@ -586,7 +586,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Device device = 17;</code>
-     * @return \ChargeHive\Chtype\Device
+     * @return \ChargeHive\Chtype\Device|null
      */
     public function getDevice()
     {

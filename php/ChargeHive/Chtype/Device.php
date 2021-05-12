@@ -264,7 +264,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension screen = 6;</code>
-     * @return \ChargeHive\Chtype\Dimension
+     * @return \ChargeHive\Chtype\Dimension|null
      */
     public function getScreen()
     {
@@ -296,7 +296,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension screen_available = 7;</code>
-     * @return \ChargeHive\Chtype\Dimension
+     * @return \ChargeHive\Chtype\Dimension|null
      */
     public function getScreenAvailable()
     {
@@ -328,7 +328,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension window_inner = 8;</code>
-     * @return \ChargeHive\Chtype\Dimension
+     * @return \ChargeHive\Chtype\Dimension|null
      */
     public function getWindowInner()
     {
@@ -360,7 +360,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Dimension window_outer = 9;</code>
-     * @return \ChargeHive\Chtype\Dimension
+     * @return \ChargeHive\Chtype\Dimension|null
      */
     public function getWindowOuter()
     {

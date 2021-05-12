@@ -69,7 +69,7 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.AuthenticationChain parent = 1;</code>
-     * @return \ChargeHive\Chtype\AuthenticationChain
+     * @return \ChargeHive\Chtype\AuthenticationChain|null
      */
     public function getParent()
     {
