@@ -268,7 +268,7 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getScreen()
     {
-        return isset($this->screen) ? $this->screen : null;
+        return $this->screen;
     }
 
     public function hasScreen()
@@ -300,7 +300,7 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getScreenAvailable()
     {
-        return isset($this->screen_available) ? $this->screen_available : null;
+        return $this->screen_available;
     }
 
     public function hasScreenAvailable()
@@ -332,7 +332,7 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getWindowInner()
     {
-        return isset($this->window_inner) ? $this->window_inner : null;
+        return $this->window_inner;
     }
 
     public function hasWindowInner()
@@ -364,7 +364,7 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     public function getWindowOuter()
     {
-        return isset($this->window_outer) ? $this->window_outer : null;
+        return $this->window_outer;
     }
 
     public function hasWindowOuter()

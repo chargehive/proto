@@ -149,7 +149,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValidFrom()
     {
-        return isset($this->valid_from) ? $this->valid_from : null;
+        return $this->valid_from;
     }
 
     public function hasValidFrom()
@@ -181,7 +181,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      */
     public function getExpiry()
     {
-        return isset($this->expiry) ? $this->expiry : null;
+        return $this->expiry;
     }
 
     public function hasExpiry()

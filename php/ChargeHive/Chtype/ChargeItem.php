@@ -189,7 +189,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return isset($this->start_date) ? $this->start_date : null;
+        return $this->start_date;
     }
 
     public function hasStartDate()
@@ -221,7 +221,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->end_date) ? $this->end_date : null;
+        return $this->end_date;
     }
 
     public function hasEndDate()
@@ -297,7 +297,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getDelivery()
     {
-        return isset($this->delivery) ? $this->delivery : null;
+        return $this->delivery;
     }
 
     public function hasDelivery()
@@ -351,7 +351,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getUnitPrice()
     {
-        return isset($this->unit_price) ? $this->unit_price : null;
+        return $this->unit_price;
     }
 
     public function hasUnitPrice()
@@ -383,7 +383,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmount()
     {
-        return isset($this->tax_amount) ? $this->tax_amount : null;
+        return $this->tax_amount;
     }
 
     public function hasTaxAmount()
@@ -415,7 +415,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      */
     public function getDiscountAmount()
     {
-        return isset($this->discount_amount) ? $this->discount_amount : null;
+        return $this->discount_amount;
     }
 
     public function hasDiscountAmount()
