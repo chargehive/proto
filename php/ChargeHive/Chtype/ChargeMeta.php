@@ -128,7 +128,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getBillingAddress()
     {
-        return isset($this->billing_address) ? $this->billing_address : null;
+        return $this->billing_address;
     }
 
     public function hasBillingAddress()
@@ -160,7 +160,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDeliveryAddress()
     {
-        return isset($this->delivery_address) ? $this->delivery_address : null;
+        return $this->delivery_address;
     }
 
     public function hasDeliveryAddress()
@@ -280,7 +280,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getInvoiceDate()
     {
-        return isset($this->invoice_date) ? $this->invoice_date : null;
+        return $this->invoice_date;
     }
 
     public function hasInvoiceDate()
@@ -312,7 +312,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDueDate()
     {
-        return isset($this->due_date) ? $this->due_date : null;
+        return $this->due_date;
     }
 
     public function hasDueDate()
@@ -344,7 +344,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDiscountAmount()
     {
-        return isset($this->discount_amount) ? $this->discount_amount : null;
+        return $this->discount_amount;
     }
 
     public function hasDiscountAmount()
@@ -376,7 +376,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDeliveryAmount()
     {
-        return isset($this->delivery_amount) ? $this->delivery_amount : null;
+        return $this->delivery_amount;
     }
 
     public function hasDeliveryAmount()
@@ -408,7 +408,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmount()
     {
-        return isset($this->tax_amount) ? $this->tax_amount : null;
+        return $this->tax_amount;
     }
 
     public function hasTaxAmount()
@@ -440,7 +440,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmount()
     {
-        return isset($this->total_amount) ? $this->total_amount : null;
+        return $this->total_amount;
     }
 
     public function hasTotalAmount()
@@ -472,7 +472,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getPerson()
     {
-        return isset($this->person) ? $this->person : null;
+        return $this->person;
     }
 
     public function hasPerson()
@@ -504,7 +504,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getCompany()
     {
-        return isset($this->company) ? $this->company : null;
+        return $this->company;
     }
 
     public function hasCompany()
@@ -558,7 +558,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDelivery()
     {
-        return isset($this->delivery) ? $this->delivery : null;
+        return $this->delivery;
     }
 
     public function hasDelivery()
@@ -590,7 +590,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      */
     public function getDevice()
     {
-        return isset($this->device) ? $this->device : null;
+        return $this->device;
     }
 
     public function hasDevice()

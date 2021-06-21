@@ -241,7 +241,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getRequestedAmount()
     {
-        return isset($this->requested_amount) ? $this->requested_amount : null;
+        return $this->requested_amount;
     }
 
     public function hasRequestedAmount()
@@ -277,7 +277,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getProcessedAmount()
     {
-        return isset($this->processed_amount) ? $this->processed_amount : null;
+        return $this->processed_amount;
     }
 
     public function hasProcessedAmount()
@@ -313,7 +313,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getFeeEstimate()
     {
-        return isset($this->fee_estimate) ? $this->fee_estimate : null;
+        return $this->fee_estimate;
     }
 
     public function hasFeeEstimate()
@@ -349,7 +349,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getFeeActual()
     {
-        return isset($this->fee_actual) ? $this->fee_actual : null;
+        return $this->fee_actual;
     }
 
     public function hasFeeActual()
@@ -385,7 +385,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getStartTime()
     {
-        return isset($this->start_time) ? $this->start_time : null;
+        return $this->start_time;
     }
 
     public function hasStartTime()
@@ -421,7 +421,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getEndTime()
     {
-        return isset($this->end_time) ? $this->end_time : null;
+        return $this->end_time;
     }
 
     public function hasEndTime()
@@ -499,7 +499,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()
@@ -531,7 +531,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     public function getVerificationResult()
     {
-        return isset($this->verification_result) ? $this->verification_result : null;
+        return $this->verification_result;
     }
 
     public function hasVerificationResult()

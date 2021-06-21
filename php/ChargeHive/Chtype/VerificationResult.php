@@ -140,7 +140,7 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
      */
     public function getThreedsResult()
     {
-        return isset($this->threeds_result) ? $this->threeds_result : null;
+        return $this->threeds_result;
     }
 
     public function hasThreedsResult()

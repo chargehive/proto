@@ -327,7 +327,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getRequestAmount()
     {
-        return isset($this->request_amount) ? $this->request_amount : null;
+        return $this->request_amount;
     }
 
     public function hasRequestAmount()
@@ -363,7 +363,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getTransactedAmount()
     {
-        return isset($this->transacted_amount) ? $this->transacted_amount : null;
+        return $this->transacted_amount;
     }
 
     public function hasTransactedAmount()
@@ -463,7 +463,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getVerifyRequest()
     {
-        return isset($this->verify_request) ? $this->verify_request : null;
+        return $this->verify_request;
     }
 
     public function hasVerifyRequest()
@@ -587,7 +587,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getAttemptDetail()
     {
-        return isset($this->attempt_detail) ? $this->attempt_detail : null;
+        return $this->attempt_detail;
     }
 
     public function hasAttemptDetail()
@@ -641,7 +641,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getResponse()
     {
-        return isset($this->response) ? $this->response : null;
+        return $this->response;
     }
 
     public function hasResponse()
@@ -813,7 +813,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getTransactionTime()
     {
-        return isset($this->transaction_time) ? $this->transaction_time : null;
+        return $this->transaction_time;
     }
 
     public function hasTransactionTime()

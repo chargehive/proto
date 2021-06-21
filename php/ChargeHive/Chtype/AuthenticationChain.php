@@ -73,7 +73,7 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      */
     public function getParent()
     {
-        return isset($this->parent) ? $this->parent : null;
+        return $this->parent;
     }
 
     public function hasParent()

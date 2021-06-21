@@ -206,7 +206,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      */
     public function getAmount()
     {
-        return isset($this->amount) ? $this->amount : null;
+        return $this->amount;
     }
 
     public function hasAmount()
@@ -260,7 +260,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryTime()
     {
-        return isset($this->expiry_time) ? $this->expiry_time : null;
+        return $this->expiry_time;
     }
 
     public function hasExpiryTime()
@@ -314,7 +314,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      */
     public function getStatementDescriptor()
     {
-        return isset($this->statement_descriptor) ? $this->statement_descriptor : null;
+        return $this->statement_descriptor;
     }
 
     public function hasStatementDescriptor()
