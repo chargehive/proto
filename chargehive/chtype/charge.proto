@@ -113,6 +113,11 @@ message Delivery {
   string courier = 4;
 }
 
+message ChargeSummary {
+  Amount amount = 1;
+  Status status = 2;
+}
+
 enum DeviceType {
   DEVICE_TYPE_INVALID = 0;
   DEVICE_TYPE_MOBILE = 1;
