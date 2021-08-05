@@ -9,6 +9,12 @@ if [[ "$PROTOC_PATH" == "" ]]; then
   exit 1
 fi
 
+GO_PLUGIN_PATH=$(command -v protoc-gen-gogo 2>&1)
+if [[ "$GO_PLUGIN_PATH" == "" ]]; then
+  echo "'protoc-gen-go' tool is required but missing." >&2
+  exit 1
+fi
+
 # go
 rm -rf golang && mkdir -p golang
 
