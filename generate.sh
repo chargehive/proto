@@ -19,17 +19,17 @@ $PROTOC_PATH \
   chargehive/**/*.proto
 
 # php - remove gogo registration from php
-mkdir -p genproto
-cp -R chargehive genproto
+rm -rf tmp_php_proto && mkdir -p tmp_php_proto
+cp -R chargehive tmp_php_proto
 rm -rf php && mkdir -p php
-gsed -i'' -E 's#^import "github.com/gogo/protobuf([^/]+)?/gogoproto/gogo.proto";$##g' genproto/chargehive/**/*.proto
-gsed -i'' -E 's#^option \(gogoproto\..+##g' genproto/chargehive/**/*.proto
+gsed -i'' -E 's#^import "github.com/gogo/protobuf([^/]+)?/gogoproto/gogo.proto";$##g' tmp_php_proto/chargehive/**/*.proto
+gsed -i'' -E 's#^option \(gogoproto\..+##g' tmp_php_proto/chargehive/**/*.proto
 
 $PROTOC_PATH \
   -I "$GOPATH"/pkg/mod \
-  -I ./genproto \
+  -I ./tmp_php_proto \
   --php_out=php \
-  genproto/chargehive/**/*.proto
+  tmp_php_proto/chargehive/**/*.proto
 
 # cleanup
-rm -Rf genproto
+rm -Rf tmp_php_proto
