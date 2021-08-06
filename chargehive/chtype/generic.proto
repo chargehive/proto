@@ -3,7 +3,7 @@ syntax = "proto3";
 package chargehive.chtype;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
-import "chargehive/chtype/enum.proto";
+import "github.com/chargehive/proto/chargehive/chtype/enum.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
 option (gogoproto.goproto_registration) = true;

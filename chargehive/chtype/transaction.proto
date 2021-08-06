@@ -3,10 +3,10 @@ syntax = "proto3";
 package chargehive.chtype;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
-import "chargehive/chtype/generic.proto";
-import "chargehive/chtype/enum.proto";
-import "chargehive/chtype/fraud.proto";
-import "chargehive/chtype/response_codes.proto";
+import "github.com/chargehive/proto/chargehive/chtype/generic.proto";
+import "github.com/chargehive/proto/chargehive/chtype/enum.proto";
+import "github.com/chargehive/proto/chargehive/chtype/fraud.proto";
+import "github.com/chargehive/proto/chargehive/chtype/response_codes.proto";
 import "google/protobuf/timestamp.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
