@@ -15,11 +15,13 @@ if [[ "$GO_PLUGIN_PATH" == "" ]]; then
   exit 1
 fi
 
+go mod vendor
+
 # go
 rm -rf golang && mkdir -p golang
 
 $PROTOC_PATH \
-  -I "$GOPATH"/pkg/mod \
+  -I ./vendor \
   -I . \
   --gogo_out=plugins=grpc,paths=source_relative:golang \
   chargehive/**/*.proto
@@ -32,7 +34,7 @@ gsed -i'' -E 's#^import "github.com/gogo/protobuf([^/]+)?/gogoproto/gogo.proto";
 gsed -i'' -E 's#^option \(gogoproto\..+##g' tmp_php_proto/chargehive/**/*.proto
 
 $PROTOC_PATH \
-  -I "$GOPATH"/pkg/mod \
+  -I ./vendor \
   -I ./tmp_php_proto \
   --php_out=php \
   tmp_php_proto/chargehive/**/*.proto
