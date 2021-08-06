@@ -9,29 +9,44 @@ if [[ "$PROTOC_PATH" == "" ]]; then
   exit 1
 fi
 
-# go
-rm -rf golang
-mkdir -p golang
+VER=$(protoc --version)
+EXPECT="libprotoc 3.17.3"
+if [[ "$VER" != "$EXPECT" ]]; then
+  echo "'protoc' tool is version [$VER], expected [$EXPECT]." >&2
+  exit 1
+fi
 
-$PROTOC_PATH -I . \
-  -I "$GOPATH"/src \
+GO_PLUGIN_PATH=$(command -v protoc-gen-gogo 2>&1)
+if [[ "$GO_PLUGIN_PATH" == "" ]]; then
+  echo "'protoc-gen-go' tool is required but missing." >&2
+  exit 1
+fi
+
+go mod vendor
+
+# global - change absolute path to relative
+rm -rf tmp_php_proto && mkdir -p tmp_php_proto
+cp -R chargehive tmp_php_proto
+gsed -i'' -E 's#^import "github.com/chargehive/proto/chargehive/#import "chargehive/#g' tmp_php_proto/chargehive/**/*.proto
+
+# go
+rm -rf golang && mkdir -p golang
+$PROTOC_PATH \
+  -I ./vendor \
+  -I ./tmp_php_proto \
   --gogo_out=plugins=grpc,paths=source_relative:golang \
   chargehive/**/*.proto
 
-# init
-mkdir -p genproto
-cp -R chargehive genproto
+# php - remove gogo registration from php
+gsed -i'' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' tmp_php_proto/chargehive/**/*.proto
+gsed -i'' -E 's#^option \(gogoproto\..+##g' tmp_php_proto/chargehive/**/*.proto
 
-# php
-rm -rf php
-mkdir -p php
-gsed -i'' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' genproto/chargehive/**/*.proto
-gsed -i'' -E 's#^option \(gogoproto\..+##g' genproto/chargehive/**/*.proto
-
-$PROTOC_PATH -I genproto \
-  -I "$GOPATH"/src \
+rm -rf php && mkdir -p php
+$PROTOC_PATH \
+  -I ./vendor \
+  -I ./tmp_php_proto \
   --php_out=php \
-  genproto/chargehive/**/*.proto
+  tmp_php_proto/chargehive/**/*.proto
 
 # cleanup
-rm -Rf genproto
+rm -Rf tmp_php_proto
