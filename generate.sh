@@ -9,6 +9,13 @@ if [[ "$PROTOC_PATH" == "" ]]; then
   exit 1
 fi
 
+VER=$(protoc --version)
+EXPECT="libprotoc 3.17.3"
+if [[ "$VER" != "$EXPECT" ]]; then
+  echo "'protoc' tool is version [$VER], expected [$EXPECT]." >&2
+  exit 1
+fi
+
 GO_PLUGIN_PATH=$(command -v protoc-gen-gogo 2>&1)
 if [[ "$GO_PLUGIN_PATH" == "" ]]; then
   echo "'protoc-gen-go' tool is required but missing." >&2
@@ -30,7 +37,7 @@ $PROTOC_PATH \
 rm -rf tmp_php_proto && mkdir -p tmp_php_proto
 cp -R chargehive tmp_php_proto
 rm -rf php && mkdir -p php
-gsed -i'' -E 's#^import "github.com/gogo/protobuf([^/]+)?/gogoproto/gogo.proto";$##g' tmp_php_proto/chargehive/**/*.proto
+gsed -i'' -E 's#^import "github.com/gogo/protobuf/gogoproto/gogo.proto";$##g' tmp_php_proto/chargehive/**/*.proto
 gsed -i'' -E 's#^option \(gogoproto\..+##g' tmp_php_proto/chargehive/**/*.proto
 
 $PROTOC_PATH \
