@@ -10,10 +10,10 @@ if [[ "$PROTOC_PATH" == "" ]]; then
 fi
 
 VER=$(protoc --version)
-EXPECT="libprotoc 3.19.4"
+EXPECT="libprotoc 3.17.3"
 if [[ "$VER" != "$EXPECT" ]]; then
   echo "'protoc' tool is version [$VER], expected [$EXPECT]." >&2
-  exit 1
+  #exit 1 # this is not a critical error
 fi
 
 GO_PLUGIN_PATH=$(command -v protoc-gen-gogo 2>&1)
