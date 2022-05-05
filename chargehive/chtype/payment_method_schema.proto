@@ -18,6 +18,7 @@ enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_GOOGLE_PAY = 4;
   PAYMENT_METHOD_SCHEMA_PAYPAL = 5;
   PAYMENT_METHOD_SCHEMA_DIRECT_DEBIT = 6;
+  PAYMENT_METHOD_SCHEMA_PCIB = 7;
 }
 
 message PaymentMethodSchemaApplePay {
@@ -58,7 +59,11 @@ message PaymentMethodSchemaCard {
   string number = 7;
 }
 
-message PaymentMethodSchemaEncryptedDirectDebit{
+message PaymentMethodSchemaRaw {
+  bytes raw = 1;
+}
+
+message PaymentMethodSchemaEncryptedDirectDebit {
   bytes account_number = 1;
   bytes sort_code = 2;
   bytes account_holders_name = 3;
@@ -66,7 +71,7 @@ message PaymentMethodSchemaEncryptedDirectDebit{
   string transport_key_id = 5;
 }
 
-message PaymentMethodSchemaDirectDebit{
+message PaymentMethodSchemaDirectDebit {
   string account_number = 1;
   string sort_code = 2;
   string account_holders_name = 3;
