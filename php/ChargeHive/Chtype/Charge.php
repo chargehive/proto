@@ -81,6 +81,10 @@ class Charge extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType preferred_method_type = 17;</code>
      */
     protected $preferred_method_type = 0;
+    /**
+     * Generated from protobuf field <code>string billing_profile_id = 18;</code>
+     */
+    protected $billing_profile_id = '';
 
     /**
      * Constructor.
@@ -105,6 +109,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      *     @type int $environment
      *     @type int $language
      *     @type int $preferred_method_type
+     *     @type string $billing_profile_id
      * }
      */
     public function __construct($data = NULL) {
@@ -512,6 +517,28 @@ class Charge extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
         $this->preferred_method_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string billing_profile_id = 18;</code>
+     * @return string
+     */
+    public function getBillingProfileId()
+    {
+        return $this->billing_profile_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string billing_profile_id = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBillingProfileId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->billing_profile_id = $var;
 
         return $this;
     }
