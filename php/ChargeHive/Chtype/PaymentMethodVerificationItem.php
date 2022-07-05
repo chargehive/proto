@@ -29,6 +29,10 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_error = 5;</code>
      */
     protected $is_error = false;
+    /**
+     * Generated from protobuf field <code>string name = 6;</code>
+     */
+    protected $name = '';
 
     /**
      * Constructor.
@@ -40,6 +44,7 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
      *     @type string $value
      *     @type string $transport_key_id
      *     @type bool $is_error
+     *     @type string $name
      * }
      */
     public function __construct($data = NULL) {
@@ -131,6 +136,28 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_error = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string name = 6;</code>
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string name = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->name = $var;
 
         return $this;
     }
