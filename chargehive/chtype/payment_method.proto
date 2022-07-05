@@ -36,6 +36,7 @@ enum PaymentMethodVerificationItemType {
   PAYMENT_METHOD_VERIFICATION_ITEM_TYPE_DEVICE_DETAILS = 2;
   PAYMENT_METHOD_VERIFICATION_ITEM_TYPE_IDENTIFY_RESPONSE = 3;
   PAYMENT_METHOD_VERIFICATION_ITEM_TYPE_CHALLENGE_RESPONSE = 4;
+  PAYMENT_METHOD_VERIFICATION_ITEM_TYPE_NAMED = 5;
 }
 
 message PaymentMethodVerificationItem {
@@ -43,6 +44,7 @@ message PaymentMethodVerificationItem {
   bytes value = 2;
   string transport_key_id = 4;
   bool is_error = 5;
+  string name = 6;
 }
 
 message PaymentMethodInfo {
