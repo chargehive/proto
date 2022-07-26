@@ -64,7 +64,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      *     @type int $error_type
      *     @type array|\Google\Protobuf\Internal\MapField $error_properties
      *     @type string $originating_code
-     *     @type \ChargeHive\Chtype\ResponseDetail[]|\Google\Protobuf\Internal\RepeatedField $specific_errors
+     *     @type array<\ChargeHive\Chtype\ResponseDetail>|\Google\Protobuf\Internal\RepeatedField $specific_errors
      * }
      */
     public function __construct($data = NULL) {
@@ -259,7 +259,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ResponseDetail specific_errors = 9;</code>
-     * @param \ChargeHive\Chtype\ResponseDetail[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\ChargeHive\Chtype\ResponseDetail>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSpecificErrors($var)

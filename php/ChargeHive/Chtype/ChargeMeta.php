@@ -98,7 +98,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      *
      *     @type \ChargeHive\Chtype\Address $billing_address
      *     @type \ChargeHive\Chtype\Address $delivery_address
-     *     @type \ChargeHive\Chtype\ChargeItem[]|\Google\Protobuf\Internal\RepeatedField $items
+     *     @type array<\ChargeHive\Chtype\ChargeItem>|\Google\Protobuf\Internal\RepeatedField $items
      *     @type string $terms
      *     @type string $note
      *     @type string $merchant_memo
@@ -197,7 +197,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ChargeItem items = 3;</code>
-     * @param \ChargeHive\Chtype\ChargeItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\ChargeHive\Chtype\ChargeItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setItems($var)
