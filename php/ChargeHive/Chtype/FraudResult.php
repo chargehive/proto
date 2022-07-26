@@ -54,7 +54,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      *
      *     @type string $fraud_check_id
      *     @type \ChargeHive\Chtype\FraudScore $overall_score
-     *     @type \ChargeHive\Chtype\FraudScore[]|\Google\Protobuf\Internal\RepeatedField $sub_scores
+     *     @type array<\ChargeHive\Chtype\FraudScore>|\Google\Protobuf\Internal\RepeatedField $sub_scores
      *     @type int $suggested_action
      *     @type \Google\Protobuf\Timestamp $scan_time
      *     @type string $connector_library
@@ -132,7 +132,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.FraudScore sub_scores = 3;</code>
-     * @param \ChargeHive\Chtype\FraudScore[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\ChargeHive\Chtype\FraudScore>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSubScores($var)

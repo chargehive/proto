@@ -21,7 +21,7 @@ class Transaction
         \GPBMetadata\Google\Protobuf\Timestamp::initOnce();
         $pool->internalAddGeneratedFile(
             '
-«
+†
 #chargehive/chtype/transaction.protochargehive.chtypechargehive/chtype/enum.protochargehive/chtype/fraud.proto&chargehive/chtype/response_codes.protogoogle/protobuf/timestamp.proto"Ù
 
 Transaction
@@ -124,7 +124,11 @@ enrollment (	
 AttemptTransactionNumber (
 AttemptMethodCascade (
 AttemptConnectorCascade (
-IsPrimaryMethod (BgZ4github.com/chargehive/proto/golang/chargehive/chtypeÊChargeHive\\ChtypeâChargeHive\\Chtype\\Metadatabproto3'
+IsPrimaryMethod ("Y
+InitialTransactionData
+	charge_id (	
+transaction_id (	
+connector_id (	BgZ4github.com/chargehive/proto/golang/chargehive/chtypeÊChargeHive\\ChtypeâChargeHive\\Chtype\\Metadatabproto3'
         , true);
 
         static::$is_initialized = true;

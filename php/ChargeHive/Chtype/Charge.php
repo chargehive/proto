@@ -85,6 +85,10 @@ class Charge extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string billing_profile_id = 18;</code>
      */
     protected $billing_profile_id = '';
+    /**
+     * Generated from protobuf field <code>repeated .chargehive.chtype.InitialTransactionData initial_transaction = 19;</code>
+     */
+    private $initial_transaction;
 
     /**
      * Constructor.
@@ -97,12 +101,12 @@ class Charge extends \Google\Protobuf\Internal\Message
      *     @type int $intent
      *     @type int $contract
      *     @type \ChargeHive\Chtype\Amount $amount
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $payment_method_ids
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $payment_method_ids
      *     @type \Google\Protobuf\Timestamp $expiry_time
      *     @type string $merchant_reference
      *     @type \ChargeHive\Chtype\StatementDescriptor $statement_descriptor
      *     @type array|\Google\Protobuf\Internal\MapField $references
-     *     @type \ChargeHive\Chtype\Label[]|\Google\Protobuf\Internal\RepeatedField $labels
+     *     @type array<\ChargeHive\Chtype\Label>|\Google\Protobuf\Internal\RepeatedField $labels
      *     @type string $charge_key
      *     @type string $user_locale
      *     @type string $user_location
@@ -110,6 +114,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      *     @type int $language
      *     @type int $preferred_method_type
      *     @type string $billing_profile_id
+     *     @type array<\ChargeHive\Chtype\InitialTransactionData>|\Google\Protobuf\Internal\RepeatedField $initial_transaction
      * }
      */
     public function __construct($data = NULL) {
@@ -248,7 +253,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string payment_method_ids = 6;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPaymentMethodIds($var)
@@ -378,7 +383,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.Label labels = 11;</code>
-     * @param \ChargeHive\Chtype\Label[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\ChargeHive\Chtype\Label>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLabels($var)
@@ -539,6 +544,28 @@ class Charge extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->billing_profile_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .chargehive.chtype.InitialTransactionData initial_transaction = 19;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getInitialTransaction()
+    {
+        return $this->initial_transaction;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .chargehive.chtype.InitialTransactionData initial_transaction = 19;</code>
+     * @param array<\ChargeHive\Chtype\InitialTransactionData>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setInitialTransaction($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\InitialTransactionData::class);
+        $this->initial_transaction = $arr;
 
         return $this;
     }

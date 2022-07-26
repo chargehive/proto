@@ -113,3 +113,9 @@ message AttemptDetail {
   int64 AttemptConnectorCascade = 5;
   bool IsPrimaryMethod = 6;
 }
+
+message InitialTransactionData {
+  string charge_id = 1;
+  string transaction_id = 2;
+  string connector_id = 3;
+}

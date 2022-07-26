@@ -7,6 +7,7 @@ import "github.com/chargehive/proto/chargehive/chtype/generic.proto";
 import "github.com/chargehive/proto/chargehive/chtype/contact.proto";
 import "github.com/chargehive/proto/chargehive/chtype/language.proto";
 import "github.com/chargehive/proto/chargehive/chtype/enum.proto";
+import "github.com/chargehive/proto/chargehive/chtype/transaction.proto";
 import "google/protobuf/timestamp.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
@@ -62,6 +63,7 @@ message Charge {
   chtype.Language language = 16;
   chtype.PaymentMethodType preferred_method_type = 17;
   string billing_profile_id = 18;
+  repeated InitialTransactionData initial_transaction = 19;
 }
 
 message ChargeItem {
