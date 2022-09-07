@@ -76,6 +76,7 @@ message VerifyRequestData {
   string connector_library = 3;
   Environment environment = 4;
   bool required = 5;
+  map<string, string> methodData = 6;
 }
 
 message ThreeDSResult {

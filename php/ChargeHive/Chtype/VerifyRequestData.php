@@ -33,6 +33,10 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool required = 5;</code>
      */
     protected $required = false;
+    /**
+     * Generated from protobuf field <code>map<string, string> methodData = 6;</code>
+     */
+    private $methodData;
 
     /**
      * Constructor.
@@ -45,6 +49,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      *     @type string $connector_library
      *     @type int $environment
      *     @type bool $required
+     *     @type array|\Google\Protobuf\Internal\MapField $methodData
      * }
      */
     public function __construct($data = NULL) {
@@ -158,6 +163,28 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->required = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<string, string> methodData = 6;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getMethodData()
+    {
+        return $this->methodData;
+    }
+
+    /**
+     * Generated from protobuf field <code>map<string, string> methodData = 6;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setMethodData($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->methodData = $arr;
 
         return $this;
     }
