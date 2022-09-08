@@ -10,7 +10,7 @@ if [[ "$PROTOC_PATH" == "" ]]; then
 fi
 
 VER=$(protoc --version)
-EXPECT="libprotoc 3.17.3"
+EXPECT="libprotoc 3.21.5"
 if [[ "$VER" != "$EXPECT" ]]; then
   echo "'protoc' tool is version [$VER], expected [$EXPECT]." >&2
   #exit 1 # this is not a critical error
