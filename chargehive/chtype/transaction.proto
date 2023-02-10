@@ -45,6 +45,7 @@ message Transaction {
   PaymentMethodProvider payment_provider = 27;
   PaymentMethodInputType payment_input_type = 28;
   string auth_code = 29;
+  string subscription_id = 30;
 }
 
 message TransactionDetail {
@@ -68,6 +69,8 @@ message TransactionDetail {
   string connector_library = 19;
   string connector_id = 20;
   bool primary = 21;
+  string network_id = 22; // Network ID returned by the PSP
+  string psp_transaction_id = 23; // Transaction ID returned by the PSP to replace transaction_id which is ambiguous
 }
 
 message VerifyRequestData {
