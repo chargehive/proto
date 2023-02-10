@@ -64,6 +64,7 @@ message Charge {
   chtype.PaymentMethodType preferred_method_type = 17;
   string billing_profile_id = 18;
   repeated InitialTransactionData initial_transaction = 19;
+  string subscription_id = 20;
 }
 
 message ChargeItem {
