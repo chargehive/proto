@@ -105,6 +105,18 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool primary = 21;</code>
      */
     protected $primary = false;
+    /**
+     * Network ID returned by the PSP
+     *
+     * Generated from protobuf field <code>string network_id = 22;</code>
+     */
+    protected $network_id = '';
+    /**
+     * Transaction ID returned by the PSP to replace transaction_id which is ambiguous
+     *
+     * Generated from protobuf field <code>string psp_transaction_id = 23;</code>
+     */
+    protected $psp_transaction_id = '';
 
     /**
      * Constructor.
@@ -138,6 +150,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type string $connector_library
      *     @type string $connector_id
      *     @type bool $primary
+     *     @type string $network_id
+     *           Network ID returned by the PSP
+     *     @type string $psp_transaction_id
+     *           Transaction ID returned by the PSP to replace transaction_id which is ambiguous
      * }
      */
     public function __construct($data = NULL) {
@@ -685,6 +701,58 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->primary = $var;
+
+        return $this;
+    }
+
+    /**
+     * Network ID returned by the PSP
+     *
+     * Generated from protobuf field <code>string network_id = 22;</code>
+     * @return string
+     */
+    public function getNetworkId()
+    {
+        return $this->network_id;
+    }
+
+    /**
+     * Network ID returned by the PSP
+     *
+     * Generated from protobuf field <code>string network_id = 22;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNetworkId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->network_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Transaction ID returned by the PSP to replace transaction_id which is ambiguous
+     *
+     * Generated from protobuf field <code>string psp_transaction_id = 23;</code>
+     * @return string
+     */
+    public function getPspTransactionId()
+    {
+        return $this->psp_transaction_id;
+    }
+
+    /**
+     * Transaction ID returned by the PSP to replace transaction_id which is ambiguous
+     *
+     * Generated from protobuf field <code>string psp_transaction_id = 23;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPspTransactionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->psp_transaction_id = $var;
 
         return $this;
     }
