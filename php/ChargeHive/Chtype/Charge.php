@@ -89,6 +89,10 @@ class Charge extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .chargehive.chtype.InitialTransactionData initial_transaction = 19;</code>
      */
     private $initial_transaction;
+    /**
+     * Generated from protobuf field <code>string subscription_id = 20;</code>
+     */
+    protected $subscription_id = '';
 
     /**
      * Constructor.
@@ -115,6 +119,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      *     @type int $preferred_method_type
      *     @type string $billing_profile_id
      *     @type array<\ChargeHive\Chtype\InitialTransactionData>|\Google\Protobuf\Internal\RepeatedField $initial_transaction
+     *     @type string $subscription_id
      * }
      */
     public function __construct($data = NULL) {
@@ -566,6 +571,28 @@ class Charge extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\InitialTransactionData::class);
         $this->initial_transaction = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string subscription_id = 20;</code>
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscription_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string subscription_id = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSubscriptionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->subscription_id = $var;
 
         return $this;
     }

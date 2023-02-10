@@ -45,7 +45,6 @@ message Transaction {
   PaymentMethodProvider payment_provider = 27;
   PaymentMethodInputType payment_input_type = 28;
   string auth_code = 29;
-  string subscription_id = 30;
 }
 
 message TransactionDetail {
