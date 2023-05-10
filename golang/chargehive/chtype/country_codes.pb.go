@@ -23,7 +23,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
-//ISO 3166 Country Code
+// ISO 3166 Country Code
 type CountryCode int32
 
 const (
