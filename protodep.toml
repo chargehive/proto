@@ -8,11 +8,6 @@ includes = [
 ]
 
 [[dependencies]]
-target = "github.com/gogo/protobuf/gogoproto"
-revision = "v1.3.2"
-path = "gogoproto"
-
-[[dependencies]]
 target = "github.com/googleapis/googleapis/google"
 revision = "latest"
 path = "google"
