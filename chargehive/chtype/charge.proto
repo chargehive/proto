@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package chargehive.chtype;
 
-import "github.com/gogo/protobuf/gogoproto/gogo.proto";
-import "github.com/chargehive/proto/chargehive/chtype/generic.proto";
-import "github.com/chargehive/proto/chargehive/chtype/contact.proto";
-import "github.com/chargehive/proto/chargehive/chtype/language.proto";
-import "github.com/chargehive/proto/chargehive/chtype/enum.proto";
-import "github.com/chargehive/proto/chargehive/chtype/transaction.proto";
+import "gogoproto/gogo.proto";
+import "chargehive/chtype/generic.proto";
+import "chargehive/chtype/contact.proto";
+import "chargehive/chtype/language.proto";
+import "chargehive/chtype/enum.proto";
+import "chargehive/chtype/transaction.proto";
 import "google/protobuf/timestamp.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
