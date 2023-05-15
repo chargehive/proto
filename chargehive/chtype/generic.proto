@@ -2,11 +2,8 @@ syntax = "proto3";
 
 package chargehive.chtype;
 
-import "github.com/gogo/protobuf/gogoproto/gogo.proto";
-import "github.com/chargehive/proto/chargehive/chtype/enum.proto";
+import "chargehive/chtype/enum.proto";
 
-option (gogoproto.goproto_enum_prefix_all) = false;
-option (gogoproto.goproto_registration) = true;
 option go_package = "github.com/chargehive/proto/golang/chargehive/chtype";
 option php_namespace = "ChargeHive\\Chtype";
 option php_metadata_namespace = "ChargeHive\\Chtype\\Metadata";

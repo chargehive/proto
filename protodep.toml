@@ -1,0 +1,16 @@
+proto_outdir = "./protodep"
+
+[[dependencies]]
+target = "github.com/grpc-ecosystem/grpc-gateway"
+revision = "v1.16.0"
+includes = [
+    "/protoc-gen-swagger"
+]
+
+[[dependencies]]
+target = "github.com/googleapis/googleapis/google"
+revision = "latest"
+path = "google"
+includes = [
+    "/api"
+]
