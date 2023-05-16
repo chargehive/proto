@@ -30,6 +30,6 @@ $PROTOC_PATH \
   -I . \
   -I ./protodep \
   --php_out=php \
-  --go-enums_out=paths=source_relative:golang \
+  --go-enums_out=paths=source_relative,include_nested=true:golang \
   --go_out=paths=source_relative:golang \
   ./chargehive/**/*.proto
