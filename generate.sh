@@ -16,6 +16,8 @@ if [[ "$VER" != "$EXPECT" ]]; then
   #exit 1 # this is not a critical error
 fi
 
+# go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+# go install github.com/utilitywarehouse/protoc-gen-go-enums@latest
 GO_PLUGIN_PATH=$(command -v protoc-gen-go-enums 2>&1)
 if [[ "$GO_PLUGIN_PATH" == "" ]]; then
   echo "'protoc-gen-go' tool is required but missing." >&2
