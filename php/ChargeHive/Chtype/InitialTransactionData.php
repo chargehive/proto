@@ -25,6 +25,10 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string connector_id = 3;</code>
      */
     protected $connector_id = '';
+    /**
+     * Generated from protobuf field <code>string network_id = 4;</code>
+     */
+    protected $network_id = '';
 
     /**
      * Constructor.
@@ -35,6 +39,7 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      *     @type string $charge_id
      *     @type string $transaction_id
      *     @type string $connector_id
+     *     @type string $network_id
      * }
      */
     public function __construct($data = NULL) {
@@ -104,6 +109,28 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->connector_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string network_id = 4;</code>
+     * @return string
+     */
+    public function getNetworkId()
+    {
+        return $this->network_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string network_id = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNetworkId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->network_id = $var;
 
         return $this;
     }
