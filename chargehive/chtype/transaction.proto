@@ -118,4 +118,5 @@ message InitialTransactionData {
   string charge_id = 1;
   string transaction_id = 2;
   string connector_id = 3;
+  string network_id = 4;
 }
