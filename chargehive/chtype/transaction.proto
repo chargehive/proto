@@ -120,4 +120,5 @@ message InitialTransactionData {
   string transaction_id = 2;
   string connector_id = 3;
   string network_id = 4;
+  TransactionType transaction_type = 5;
 }
