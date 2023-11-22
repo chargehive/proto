@@ -117,6 +117,12 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string psp_transaction_id = 23;</code>
      */
     protected $psp_transaction_id = '';
+    /**
+     * Request ID returned by PSP
+     *
+     * Generated from protobuf field <code>string psp_request_id = 24;</code>
+     */
+    protected $psp_request_id = '';
 
     /**
      * Constructor.
@@ -154,6 +160,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *           Network ID returned by the PSP
      *     @type string $psp_transaction_id
      *           Transaction ID returned by the PSP to replace transaction_id which is ambiguous
+     *     @type string $psp_request_id
+     *           Request ID returned by PSP
      * }
      */
     public function __construct($data = NULL) {
@@ -753,6 +761,32 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->psp_transaction_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Request ID returned by PSP
+     *
+     * Generated from protobuf field <code>string psp_request_id = 24;</code>
+     * @return string
+     */
+    public function getPspRequestId()
+    {
+        return $this->psp_request_id;
+    }
+
+    /**
+     * Request ID returned by PSP
+     *
+     * Generated from protobuf field <code>string psp_request_id = 24;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPspRequestId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->psp_request_id = $var;
 
         return $this;
     }
