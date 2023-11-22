@@ -29,6 +29,10 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string network_id = 4;</code>
      */
     protected $network_id = '';
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 5;</code>
+     */
+    protected $transaction_type = 0;
 
     /**
      * Constructor.
@@ -40,6 +44,7 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      *     @type string $transaction_id
      *     @type string $connector_id
      *     @type string $network_id
+     *     @type int $transaction_type
      * }
      */
     public function __construct($data = NULL) {
@@ -131,6 +136,28 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->network_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 5;</code>
+     * @return int
+     */
+    public function getTransactionType()
+    {
+        return $this->transaction_type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTransactionType($var)
+    {
+        GPBUtil::checkEnum($var, \ChargeHive\Chtype\TransactionType::class);
+        $this->transaction_type = $var;
 
         return $this;
     }
