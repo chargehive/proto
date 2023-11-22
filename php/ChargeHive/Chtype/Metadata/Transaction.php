@@ -21,7 +21,7 @@ class Transaction
         \GPBMetadata\Google\Protobuf\Timestamp::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Ç
+ß
 #chargehive/chtype/transaction.protochargehive.chtypechargehive/chtype/enum.protochargehive/chtype/fraud.proto&chargehive/chtype/response_codes.protogoogle/protobuf/timestamp.proto"Ù
 
 Transaction
@@ -54,7 +54,7 @@ class Transaction
 transaction_time (2.google.protobuf.TimestampB
 payment_provider (2(.chargehive.chtype.PaymentMethodProviderE
 payment_input_type (2).chargehive.chtype.PaymentMethodInputType
-	auth_code (	"½
+	auth_code (	"Õ
 TransactionDetail
 actor_id (	
 actor_version (	0
@@ -82,7 +82,8 @@ start_time	 (2.google.protobuf.Timestamp,
 primary (
 
 network_id (	
-psp_transaction_id (	5
+psp_transaction_id (	
+psp_request_id (	5
 AdditionalDataEntry
 key (	
 value (	:8"‘
