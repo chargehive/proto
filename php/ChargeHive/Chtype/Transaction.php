@@ -140,9 +140,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     protected $auth_code = '';
     /**
-     * Generated from protobuf field <code>string payment_Method_issuer = 30;</code>
+     * Generated from protobuf field <code>string payment_method_issuer = 30;</code>
      */
-    protected $payment_Method_issuer = '';
+    protected $payment_method_issuer = '';
 
     /**
      * Constructor.
@@ -184,7 +184,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *     @type int $payment_provider
      *     @type int $payment_input_type
      *     @type string $auth_code
-     *     @type string $payment_Method_issuer
+     *     @type string $payment_method_issuer
      * }
      */
     public function __construct($data = NULL) {
@@ -911,23 +911,23 @@ class Transaction extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string payment_Method_issuer = 30;</code>
+     * Generated from protobuf field <code>string payment_method_issuer = 30;</code>
      * @return string
      */
     public function getPaymentMethodIssuer()
     {
-        return $this->payment_Method_issuer;
+        return $this->payment_method_issuer;
     }
 
     /**
-     * Generated from protobuf field <code>string payment_Method_issuer = 30;</code>
+     * Generated from protobuf field <code>string payment_method_issuer = 30;</code>
      * @param string $var
      * @return $this
      */
     public function setPaymentMethodIssuer($var)
     {
         GPBUtil::checkString($var, True);
-        $this->payment_Method_issuer = $var;
+        $this->payment_method_issuer = $var;
 
         return $this;
     }

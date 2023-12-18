@@ -55,7 +55,7 @@ class Transaction
 payment_provider (2(.chargehive.chtype.PaymentMethodProviderE
 payment_input_type (2).chargehive.chtype.PaymentMethodInputType
 	auth_code (	
-payment_Method_issuer (	"Õ
+payment_method_issuer (	"Õ
 TransactionDetail
 actor_id (	
 actor_version (	0
