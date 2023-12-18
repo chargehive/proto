@@ -10,17 +10,9 @@ proto_outdir = "./protodep"
   protocol = ""
 
 [[dependencies]]
-  target = "github.com/gogo/protobuf/gogoproto"
-  subgroup = ""
-  revision = "b03c65ea87cdc3521ede29f62fe3ce239267c1bc"
-  branch = ""
-  path = "gogoproto"
-  protocol = ""
-
-[[dependencies]]
   target = "github.com/googleapis/googleapis/google"
   subgroup = ""
-  revision = "8a4cc94afcb9ecf3c604ebefbfab2c645e977e7d"
+  revision = "db5ce67d735d2ceb6fe925f3e317a3f30835cfd6"
   branch = ""
   path = "google"
   includes = ["/api"]
