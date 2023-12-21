@@ -123,6 +123,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string psp_request_id = 24;</code>
      */
     protected $psp_request_id = '';
+    /**
+     * Generated from protobuf field <code>string issuer_name = 25;</code>
+     */
+    protected $issuer_name = '';
 
     /**
      * Constructor.
@@ -162,6 +166,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *           Transaction ID returned by the PSP to replace transaction_id which is ambiguous
      *     @type string $psp_request_id
      *           Request ID returned by PSP
+     *     @type string $issuer_name
      * }
      */
     public function __construct($data = NULL) {
@@ -787,6 +792,28 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->psp_request_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string issuer_name = 25;</code>
+     * @return string
+     */
+    public function getIssuerName()
+    {
+        return $this->issuer_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string issuer_name = 25;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setIssuerName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->issuer_name = $var;
 
         return $this;
     }
