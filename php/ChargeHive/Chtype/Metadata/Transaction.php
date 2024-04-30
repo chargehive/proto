@@ -21,7 +21,7 @@ class Transaction
         \GPBMetadata\Google\Protobuf\Timestamp::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Ò
+è
 #chargehive/chtype/transaction.protochargehive.chtypechargehive/chtype/enum.protochargehive/chtype/fraud.proto&chargehive/chtype/response_codes.protogoogle/protobuf/timestamp.proto"ø
 
 Transaction
@@ -102,7 +102,7 @@ methodData (24.chargehive.chtype.VerifyRequestData.MethodDataEntry+
 value (	:81
 MethodDataEntry
 key (	
-value (	:8"ÿ
+value (	:8"•
 ThreeDSResult
 eci (	
 cavv (	
@@ -123,7 +123,8 @@ enrollment (	
 id (	-
 	timestamp (2.google.protobuf.Timestamp/
 	liability (2.chargehive.chtype.Liability
-sdk_response (	"ª
+sdk_response (	
+acs_trans_id (	"ª
 VerificationResult#
 address_verification_result (	
 cvv_verification_result (	
