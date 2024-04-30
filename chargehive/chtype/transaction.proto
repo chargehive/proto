@@ -99,6 +99,7 @@ message ThreeDSResult {
   google.protobuf.Timestamp timestamp = 15;
   Liability liability = 16;
   string sdk_response = 17;
+  string acs_trans_id = 18;
 }
 
 message VerificationResult {

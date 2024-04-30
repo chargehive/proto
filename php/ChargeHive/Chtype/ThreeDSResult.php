@@ -81,6 +81,10 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string sdk_response = 17;</code>
      */
     protected $sdk_response = '';
+    /**
+     * Generated from protobuf field <code>string acs_trans_id = 18;</code>
+     */
+    protected $acs_trans_id = '';
 
     /**
      * Constructor.
@@ -105,6 +109,7 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $timestamp
      *     @type int $liability
      *     @type string $sdk_response
+     *     @type string $acs_trans_id
      * }
      */
     public function __construct($data = NULL) {
@@ -492,6 +497,28 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->sdk_response = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string acs_trans_id = 18;</code>
+     * @return string
+     */
+    public function getAcsTransId()
+    {
+        return $this->acs_trans_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string acs_trans_id = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAcsTransId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->acs_trans_id = $var;
 
         return $this;
     }
