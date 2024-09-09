@@ -62,6 +62,7 @@ message Charge {
   string billing_profile_id = 18;
   repeated InitialTransactionData initial_transaction = 19;
   string subscription_id = 20;
+  string challenge_window_size = 21;
 }
 
 message ChargeItem {
