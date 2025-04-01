@@ -161,4 +161,5 @@ message Device {
   string fingerprint = 23;
   DeviceType type = 24;
   string timezone = 25;
+  map<string, StringValues> request_headers = 26;
 }

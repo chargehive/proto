@@ -46,3 +46,7 @@ message Configuration {
   bytes spec = 2;
   string spec_version = 3;
 }
+
+message StringValues{
+  repeated string values = 1;
+}
