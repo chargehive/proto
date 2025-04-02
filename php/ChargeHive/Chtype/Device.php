@@ -115,7 +115,7 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     protected $timezone = '';
     /**
-     * Generated from protobuf field <code>map<string, .chargehive.chtype.StringValues> request_headers = 26;</code>
+     * Generated from protobuf field <code>map<string, string> request_headers = 26;</code>
      */
     private $request_headers;
 
@@ -749,7 +749,7 @@ class Device extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<string, .chargehive.chtype.StringValues> request_headers = 26;</code>
+     * Generated from protobuf field <code>map<string, string> request_headers = 26;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getRequestHeaders()
@@ -758,13 +758,13 @@ class Device extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<string, .chargehive.chtype.StringValues> request_headers = 26;</code>
+     * Generated from protobuf field <code>map<string, string> request_headers = 26;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
     public function setRequestHeaders($var)
     {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\StringValues::class);
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->request_headers = $arr;
 
         return $this;
