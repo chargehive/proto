@@ -136,6 +136,11 @@ message Dimension {
 }
 
 message Device {
+  message Header {
+    string name = 1;
+    string value = 2;
+  }
+
   string browser_accept_header = 1;
   int32 color_depth = 2;
   bool java_enabled = 3;
@@ -161,5 +166,5 @@ message Device {
   string fingerprint = 23;
   DeviceType type = 24;
   string timezone = 25;
-  map<string, StringValues> request_headers = 26;
+  repeated Header request_headers = 26;
 }

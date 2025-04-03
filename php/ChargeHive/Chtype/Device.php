@@ -115,7 +115,7 @@ class Device extends \Google\Protobuf\Internal\Message
      */
     protected $timezone = '';
     /**
-     * Generated from protobuf field <code>map<string, .chargehive.chtype.StringValues> request_headers = 26;</code>
+     * Generated from protobuf field <code>repeated .chargehive.chtype.Device.Header request_headers = 26;</code>
      */
     private $request_headers;
 
@@ -150,7 +150,7 @@ class Device extends \Google\Protobuf\Internal\Message
      *     @type string $fingerprint
      *     @type int $type
      *     @type string $timezone
-     *     @type array|\Google\Protobuf\Internal\MapField $request_headers
+     *     @type array<\ChargeHive\Chtype\Device\Header>|\Google\Protobuf\Internal\RepeatedField $request_headers
      * }
      */
     public function __construct($data = NULL) {
@@ -749,8 +749,8 @@ class Device extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<string, .chargehive.chtype.StringValues> request_headers = 26;</code>
-     * @return \Google\Protobuf\Internal\MapField
+     * Generated from protobuf field <code>repeated .chargehive.chtype.Device.Header request_headers = 26;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRequestHeaders()
     {
@@ -758,13 +758,13 @@ class Device extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>map<string, .chargehive.chtype.StringValues> request_headers = 26;</code>
-     * @param array|\Google\Protobuf\Internal\MapField $var
+     * Generated from protobuf field <code>repeated .chargehive.chtype.Device.Header request_headers = 26;</code>
+     * @param array<\ChargeHive\Chtype\Device\Header>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequestHeaders($var)
     {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\StringValues::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\Device\Header::class);
         $this->request_headers = $arr;
 
         return $this;
