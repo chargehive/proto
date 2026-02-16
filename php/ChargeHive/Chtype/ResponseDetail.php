@@ -6,8 +6,8 @@
 namespace ChargeHive\Chtype;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>chargehive.chtype.ResponseDetail</code>
@@ -65,7 +65,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      *     @type int $error_type
      *     @type array|\Google\Protobuf\Internal\MapField $error_properties
      *     @type string $originating_code
-     *     @type array<\ChargeHive\Chtype\ResponseDetail>|\Google\Protobuf\Internal\RepeatedField $specific_errors
+     *     @type \ChargeHive\Chtype\ResponseDetail[] $specific_errors
      * }
      */
     public function __construct($data = NULL) {
@@ -251,7 +251,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ResponseDetail specific_errors = 9;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\ChargeHive\Chtype\ResponseDetail>
      */
     public function getSpecificErrors()
     {
@@ -260,7 +260,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ResponseDetail specific_errors = 9;</code>
-     * @param array<\ChargeHive\Chtype\ResponseDetail>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \ChargeHive\Chtype\ResponseDetail[] $var
      * @return $this
      */
     public function setSpecificErrors($var)

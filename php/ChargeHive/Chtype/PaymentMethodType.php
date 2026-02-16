@@ -32,6 +32,10 @@ class PaymentMethodType
      * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_CRYPTOCURRENCY = 4;</code>
      */
     const PAYMENT_METHOD_TYPE_CRYPTOCURRENCY = 4;
+    /**
+     * Generated from protobuf enum <code>PAYMENT_METHOD_TYPE_CONNECTOR_TOKEN = 5;</code>
+     */
+    const PAYMENT_METHOD_TYPE_CONNECTOR_TOKEN = 5;
 
     private static $valueToName = [
         self::PAYMENT_METHOD_TYPE_INVALID => 'PAYMENT_METHOD_TYPE_INVALID',
@@ -39,6 +43,7 @@ class PaymentMethodType
         self::PAYMENT_METHOD_TYPE_DIGITALWALLET => 'PAYMENT_METHOD_TYPE_DIGITALWALLET',
         self::PAYMENT_METHOD_TYPE_DIRECTDEBIT => 'PAYMENT_METHOD_TYPE_DIRECTDEBIT',
         self::PAYMENT_METHOD_TYPE_CRYPTOCURRENCY => 'PAYMENT_METHOD_TYPE_CRYPTOCURRENCY',
+        self::PAYMENT_METHOD_TYPE_CONNECTOR_TOKEN => 'PAYMENT_METHOD_TYPE_CONNECTOR_TOKEN',
     ];
 
     public static function name($value)

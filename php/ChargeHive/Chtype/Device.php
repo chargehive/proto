@@ -6,8 +6,8 @@
 namespace ChargeHive\Chtype;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>chargehive.chtype.Device</code>
@@ -150,7 +150,7 @@ class Device extends \Google\Protobuf\Internal\Message
      *     @type string $fingerprint
      *     @type int $type
      *     @type string $timezone
-     *     @type array<\ChargeHive\Chtype\Device\Header>|\Google\Protobuf\Internal\RepeatedField $request_headers
+     *     @type \ChargeHive\Chtype\Device\Header[] $request_headers
      * }
      */
     public function __construct($data = NULL) {
@@ -750,7 +750,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.Device.Header request_headers = 26;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\ChargeHive\Chtype\Device\Header>
      */
     public function getRequestHeaders()
     {
@@ -759,7 +759,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.Device.Header request_headers = 26;</code>
-     * @param array<\ChargeHive\Chtype\Device\Header>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \ChargeHive\Chtype\Device\Header[] $var
      * @return $this
      */
     public function setRequestHeaders($var)
