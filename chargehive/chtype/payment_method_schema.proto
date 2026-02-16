@@ -15,6 +15,7 @@ enum PaymentMethodSchema {
   PAYMENT_METHOD_SCHEMA_PAYPAL = 5;
   PAYMENT_METHOD_SCHEMA_DIRECT_DEBIT = 6;
   PAYMENT_METHOD_SCHEMA_PCIB = 7;
+  PAYMENT_METHOD_SCHEMA_RAW = 8;
 }
 
 message PaymentMethodSchemaApplePay {

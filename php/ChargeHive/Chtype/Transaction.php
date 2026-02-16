@@ -6,8 +6,8 @@
 namespace ChargeHive\Chtype;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>chargehive.chtype.Transaction</code>
@@ -153,7 +153,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *
      *     @type string $token_id
      *     @type string $transaction_id
-     *     @type array<\ChargeHive\Chtype\TransactionDetail>|\Google\Protobuf\Internal\RepeatedField $details
+     *     @type \ChargeHive\Chtype\TransactionDetail[] $details
      *     @type int $payment_type
      *     @type string $payment_scheme
      *     @type int $transaction_type
@@ -171,14 +171,14 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *          Additional Verification provided and passed
      *     @type int $liability
      *     @type \ChargeHive\Chtype\AttemptDetail $attempt_detail
-     *     @type array<\ChargeHive\Chtype\FraudResult>|\Google\Protobuf\Internal\RepeatedField $fraud_results
+     *     @type \ChargeHive\Chtype\FraudResult[] $fraud_results
      *     @type \ChargeHive\Chtype\ResponseDetail $response
      *     @type string $source_transaction_id
      *          Auth Trans ID for captureAuth, Capture Trans ID for Refund
      *     @type string $payment_method_id
      *           Potential duplicate of token_id (1)
      *     @type int $transaction_sub_type
-     *     @type array<\ChargeHive\Chtype\Transaction>|\Google\Protobuf\Internal\RepeatedField $ancillary_transactions
+     *     @type \ChargeHive\Chtype\Transaction[] $ancillary_transactions
      *     @type string $requested_connector_id
      *     @type string $requested_connector_library
      *     @type \Google\Protobuf\Timestamp $transaction_time
@@ -239,7 +239,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.TransactionDetail details = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\ChargeHive\Chtype\TransactionDetail>
      */
     public function getDetails()
     {
@@ -248,7 +248,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.TransactionDetail details = 3;</code>
-     * @param array<\ChargeHive\Chtype\TransactionDetail>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \ChargeHive\Chtype\TransactionDetail[] $var
      * @return $this
      */
     public function setDetails($var)
@@ -621,7 +621,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.FraudResult fraud_results = 18;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\ChargeHive\Chtype\FraudResult>
      */
     public function getFraudResults()
     {
@@ -630,7 +630,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.FraudResult fraud_results = 18;</code>
-     * @param array<\ChargeHive\Chtype\FraudResult>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \ChargeHive\Chtype\FraudResult[] $var
      * @return $this
      */
     public function setFraudResults($var)
@@ -749,7 +749,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.Transaction ancillary_transactions = 23;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\ChargeHive\Chtype\Transaction>
      */
     public function getAncillaryTransactions()
     {
@@ -758,7 +758,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.Transaction ancillary_transactions = 23;</code>
-     * @param array<\ChargeHive\Chtype\Transaction>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \ChargeHive\Chtype\Transaction[] $var
      * @return $this
      */
     public function setAncillaryTransactions($var)

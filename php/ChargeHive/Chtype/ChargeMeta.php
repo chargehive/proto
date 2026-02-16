@@ -6,8 +6,8 @@
 namespace ChargeHive\Chtype;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>chargehive.chtype.ChargeMeta</code>
@@ -99,7 +99,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      *
      *     @type \ChargeHive\Chtype\Address $billing_address
      *     @type \ChargeHive\Chtype\Address $delivery_address
-     *     @type array<\ChargeHive\Chtype\ChargeItem>|\Google\Protobuf\Internal\RepeatedField $items
+     *     @type \ChargeHive\Chtype\ChargeItem[] $items
      *     @type string $terms
      *     @type string $note
      *     @type string $merchant_memo
@@ -189,7 +189,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ChargeItem items = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\ChargeHive\Chtype\ChargeItem>
      */
     public function getItems()
     {
@@ -198,7 +198,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .chargehive.chtype.ChargeItem items = 3;</code>
-     * @param array<\ChargeHive\Chtype\ChargeItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \ChargeHive\Chtype\ChargeItem[] $var
      * @return $this
      */
     public function setItems($var)

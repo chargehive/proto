@@ -40,6 +40,10 @@ class PaymentMethodProvider
      * Generated from protobuf enum <code>PAYMENT_METHOD_PROVIDER_METHOD_UPDATE = 10;</code>
      */
     const PAYMENT_METHOD_PROVIDER_METHOD_UPDATE = 10;
+    /**
+     * Generated from protobuf enum <code>PAYMENT_METHOD_PROVIDER_IMPORT = 15;</code>
+     */
+    const PAYMENT_METHOD_PROVIDER_IMPORT = 15;
 
     private static $valueToName = [
         self::PAYMENT_METHOD_PROVIDER_INVALID => 'PAYMENT_METHOD_PROVIDER_INVALID',
@@ -49,6 +53,7 @@ class PaymentMethodProvider
         self::PAYMENT_METHOD_PROVIDER_GOOGLEPAY => 'PAYMENT_METHOD_PROVIDER_GOOGLEPAY',
         self::PAYMENT_METHOD_PROVIDER_AMAZONPAY => 'PAYMENT_METHOD_PROVIDER_AMAZONPAY',
         self::PAYMENT_METHOD_PROVIDER_METHOD_UPDATE => 'PAYMENT_METHOD_PROVIDER_METHOD_UPDATE',
+        self::PAYMENT_METHOD_PROVIDER_IMPORT => 'PAYMENT_METHOD_PROVIDER_IMPORT',
     ];
 
     public static function name($value)
