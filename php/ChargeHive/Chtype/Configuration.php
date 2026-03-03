@@ -57,9 +57,9 @@ class Configuration extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setKind($var)
+    public function setKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->kind = $var;
 
         return $this;
@@ -79,9 +79,9 @@ class Configuration extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSpec($var)
+    public function setSpec(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->spec = $var;
 
         return $this;
@@ -101,9 +101,9 @@ class Configuration extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSpecVersion($var)
+    public function setSpecVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->spec_version = $var;
 
         return $this;

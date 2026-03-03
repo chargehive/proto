@@ -50,7 +50,7 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor.On on = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\FraudFactor\On}
      */
     public function getOn()
     {
@@ -59,10 +59,10 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor.On on = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\FraudFactor\On}
      * @return $this
      */
-    public function setOn($var)
+    public function setOn(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\FraudFactor\On::class);
         $this->on = $var;
@@ -72,7 +72,7 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor.Factor factor = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\FraudFactor\Factor}
      */
     public function getFactor()
     {
@@ -81,10 +81,10 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FraudFactor.Factor factor = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\FraudFactor\Factor}
      * @return $this
      */
-    public function setFactor($var)
+    public function setFactor(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\FraudFactor\Factor::class);
         $this->factor = $var;
@@ -106,9 +106,9 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOtherOn($var)
+    public function setOtherOn(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->other_on = $var;
 
         return $this;
@@ -128,9 +128,9 @@ class FraudFactor extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOtherFactor($var)
+    public function setOtherFactor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->other_factor = $var;
 
         return $this;

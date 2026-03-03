@@ -55,7 +55,7 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodVerificationItemType type = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodVerificationItemType}
      */
     public function getType()
     {
@@ -64,10 +64,10 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodVerificationItemType type = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodVerificationItemType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodVerificationItemType::class);
         $this->type = $var;
@@ -89,9 +89,9 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setValue($var)
+    public function setValue(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->value = $var;
 
         return $this;
@@ -111,9 +111,9 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransportKeyId($var)
+    public function setTransportKeyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transport_key_id = $var;
 
         return $this;
@@ -133,9 +133,8 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsError($var)
+    public function setIsError(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->is_error = $var;
 
         return $this;
@@ -155,9 +154,9 @@ class PaymentMethodVerificationItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;

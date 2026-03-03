@@ -72,7 +72,7 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setChargeTransactionNumber($var)
+    public function setChargeTransactionNumber(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->ChargeTransactionNumber = $var;
@@ -94,7 +94,7 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setChargeAttemptNumber($var)
+    public function setChargeAttemptNumber(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->ChargeAttemptNumber = $var;
@@ -116,7 +116,7 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setAttemptTransactionNumber($var)
+    public function setAttemptTransactionNumber(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->AttemptTransactionNumber = $var;
@@ -138,7 +138,7 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setAttemptMethodCascade($var)
+    public function setAttemptMethodCascade(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->AttemptMethodCascade = $var;
@@ -160,7 +160,7 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setAttemptConnectorCascade($var)
+    public function setAttemptConnectorCascade(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->AttemptConnectorCascade = $var;
@@ -182,9 +182,8 @@ class AttemptDetail extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsPrimaryMethod($var)
+    public function setIsPrimaryMethod(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->IsPrimaryMethod = $var;
 
         return $this;

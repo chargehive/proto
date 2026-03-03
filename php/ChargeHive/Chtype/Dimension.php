@@ -52,7 +52,7 @@ class Dimension extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setWidth($var)
+    public function setWidth(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->width = $var;
@@ -74,7 +74,7 @@ class Dimension extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setHeight($var)
+    public function setHeight(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->height = $var;

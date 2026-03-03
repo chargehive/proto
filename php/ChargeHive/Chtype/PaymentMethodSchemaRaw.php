@@ -47,9 +47,9 @@ class PaymentMethodSchemaRaw extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRaw($var)
+    public function setRaw(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->raw = $var;
 
         return $this;

@@ -147,9 +147,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setChargeId($var)
+    public function setChargeId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->charge_id = $var;
 
         return $this;
@@ -169,9 +169,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setVersion($var)
+    public function setVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->version = $var;
 
         return $this;
@@ -179,7 +179,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ChargeIntent intent = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ChargeIntent}
      */
     public function getIntent()
     {
@@ -188,10 +188,10 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ChargeIntent intent = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ChargeIntent}
      * @return $this
      */
-    public function setIntent($var)
+    public function setIntent(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ChargeIntent::class);
         $this->intent = $var;
@@ -201,7 +201,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ContractType contract = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ContractType}
      */
     public function getContract()
     {
@@ -210,10 +210,10 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ContractType contract = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ContractType}
      * @return $this
      */
-    public function setContract($var)
+    public function setContract(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ContractType::class);
         $this->contract = $var;
@@ -245,9 +245,8 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setAmount($var)
+    public function setAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->amount = $var;
 
         return $this;
@@ -267,7 +266,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setPaymentMethodIds($var)
+    public function setPaymentMethodIds(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->payment_method_ids = $arr;
@@ -299,9 +298,8 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setExpiryTime($var)
+    public function setExpiryTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->expiry_time = $var;
 
         return $this;
@@ -321,9 +319,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setMerchantReference($var)
+    public function setMerchantReference(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->merchant_reference = $var;
 
         return $this;
@@ -353,9 +351,8 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\StatementDescriptor $var
      * @return $this
      */
-    public function setStatementDescriptor($var)
+    public function setStatementDescriptor(\ChargeHive\Chtype\StatementDescriptor|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\StatementDescriptor::class);
         $this->statement_descriptor = $var;
 
         return $this;
@@ -375,7 +372,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setReferences($var)
+    public function setReferences(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->references = $arr;
@@ -397,7 +394,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Label[] $var
      * @return $this
      */
-    public function setLabels($var)
+    public function setLabels(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\Label::class);
         $this->labels = $arr;
@@ -419,9 +416,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setChargeKey($var)
+    public function setChargeKey(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->charge_key = $var;
 
         return $this;
@@ -441,9 +438,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUserLocale($var)
+    public function setUserLocale(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->user_locale = $var;
 
         return $this;
@@ -463,9 +460,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUserLocation($var)
+    public function setUserLocation(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->user_location = $var;
 
         return $this;
@@ -473,7 +470,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ChargeEnvironment environment = 15;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ChargeEnvironment}
      */
     public function getEnvironment()
     {
@@ -482,10 +479,10 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ChargeEnvironment environment = 15;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ChargeEnvironment}
      * @return $this
      */
-    public function setEnvironment($var)
+    public function setEnvironment(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ChargeEnvironment::class);
         $this->environment = $var;
@@ -495,7 +492,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Language language = 16;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Language}
      */
     public function getLanguage()
     {
@@ -504,10 +501,10 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Language language = 16;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Language}
      * @return $this
      */
-    public function setLanguage($var)
+    public function setLanguage(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Language::class);
         $this->language = $var;
@@ -517,7 +514,7 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType preferred_method_type = 17;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodType}
      */
     public function getPreferredMethodType()
     {
@@ -526,10 +523,10 @@ class Charge extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType preferred_method_type = 17;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodType}
      * @return $this
      */
-    public function setPreferredMethodType($var)
+    public function setPreferredMethodType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
         $this->preferred_method_type = $var;
@@ -551,9 +548,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBillingProfileId($var)
+    public function setBillingProfileId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->billing_profile_id = $var;
 
         return $this;
@@ -573,7 +570,7 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\InitialTransactionData[] $var
      * @return $this
      */
-    public function setInitialTransaction($var)
+    public function setInitialTransaction(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\InitialTransactionData::class);
         $this->initial_transaction = $arr;
@@ -595,9 +592,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSubscriptionId($var)
+    public function setSubscriptionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->subscription_id = $var;
 
         return $this;
@@ -617,9 +614,9 @@ class Charge extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setChallengeWindowSize($var)
+    public function setChallengeWindowSize(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->challenge_window_size = $var;
 
         return $this;

@@ -34,6 +34,14 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 5;</code>
      */
     protected $transaction_type = 0;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp transaction_time = 6;</code>
+     */
+    protected $transaction_time = null;
+    /**
+     * Generated from protobuf field <code>string method_id = 7;</code>
+     */
+    protected $method_id = '';
 
     /**
      * Constructor.
@@ -46,6 +54,8 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      *     @type string $connector_id
      *     @type string $network_id
      *     @type int $transaction_type
+     *     @type \Google\Protobuf\Timestamp $transaction_time
+     *     @type string $method_id
      * }
      */
     public function __construct($data = NULL) {
@@ -67,9 +77,9 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setChargeId($var)
+    public function setChargeId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->charge_id = $var;
 
         return $this;
@@ -89,9 +99,9 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransactionId($var)
+    public function setTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transaction_id = $var;
 
         return $this;
@@ -111,9 +121,9 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorId($var)
+    public function setConnectorId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->connector_id = $var;
 
         return $this;
@@ -133,9 +143,9 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNetworkId($var)
+    public function setNetworkId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->network_id = $var;
 
         return $this;
@@ -143,7 +153,7 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\TransactionType}
      */
     public function getTransactionType()
     {
@@ -152,13 +162,66 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\TransactionType}
      * @return $this
      */
-    public function setTransactionType($var)
+    public function setTransactionType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\TransactionType::class);
         $this->transaction_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp transaction_time = 6;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getTransactionTime()
+    {
+        return $this->transaction_time;
+    }
+
+    public function hasTransactionTime()
+    {
+        return isset($this->transaction_time);
+    }
+
+    public function clearTransactionTime()
+    {
+        unset($this->transaction_time);
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp transaction_time = 6;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setTransactionTime(\Google\Protobuf\Timestamp|null $var)
+    {
+        $this->transaction_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string method_id = 7;</code>
+     * @return string
+     */
+    public function getMethodId()
+    {
+        return $this->method_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string method_id = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMethodId(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->method_id = $var;
 
         return $this;
     }

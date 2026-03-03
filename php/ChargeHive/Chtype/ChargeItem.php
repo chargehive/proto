@@ -132,9 +132,9 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSubscriptionId($var)
+    public function setSubscriptionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->subscription_id = $var;
 
         return $this;
@@ -154,7 +154,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setRenewalNumber($var)
+    public function setRenewalNumber(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->renewal_number = $var;
@@ -176,7 +176,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setDuration($var)
+    public function setDuration(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->duration = $var;
@@ -208,9 +208,8 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setStartDate($var)
+    public function setStartDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->start_date = $var;
 
         return $this;
@@ -240,9 +239,8 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEndDate($var)
+    public function setEndDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->end_date = $var;
 
         return $this;
@@ -250,7 +248,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ProductType product_type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ProductType}
      */
     public function getProductType()
     {
@@ -259,10 +257,10 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ProductType product_type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ProductType}
      * @return $this
      */
-    public function setProductType($var)
+    public function setProductType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ProductType::class);
         $this->product_type = $var;
@@ -272,7 +270,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.SKUType sku_type = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\SKUType}
      */
     public function getSkuType()
     {
@@ -281,10 +279,10 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.SKUType sku_type = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\SKUType}
      * @return $this
      */
-    public function setSkuType($var)
+    public function setSkuType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\SKUType::class);
         $this->sku_type = $var;
@@ -316,9 +314,8 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Delivery $var
      * @return $this
      */
-    public function setDelivery($var)
+    public function setDelivery(\ChargeHive\Chtype\Delivery|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Delivery::class);
         $this->delivery = $var;
 
         return $this;
@@ -338,7 +335,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -370,9 +367,8 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setUnitPrice($var)
+    public function setUnitPrice(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->unit_price = $var;
 
         return $this;
@@ -402,9 +398,8 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setTaxAmount($var)
+    public function setTaxAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->tax_amount = $var;
 
         return $this;
@@ -434,9 +429,8 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setDiscountAmount($var)
+    public function setDiscountAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->discount_amount = $var;
 
         return $this;
@@ -456,9 +450,9 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -478,9 +472,9 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDescription($var)
+    public function setDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->description = $var;
 
         return $this;
@@ -500,9 +494,9 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setProductCode($var)
+    public function setProductCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->product_code = $var;
 
         return $this;
@@ -522,9 +516,9 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSkuCode($var)
+    public function setSkuCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->sku_code = $var;
 
         return $this;
@@ -544,7 +538,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setTermUnits($var)
+    public function setTermUnits(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->term_units = $var;
@@ -554,7 +548,7 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TermType term_type = 18;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\TermType}
      */
     public function getTermType()
     {
@@ -563,10 +557,10 @@ class ChargeItem extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TermType term_type = 18;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\TermType}
      * @return $this
      */
-    public function setTermType($var)
+    public function setTermType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\TermType::class);
         $this->term_type = $var;

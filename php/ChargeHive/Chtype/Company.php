@@ -57,9 +57,9 @@ class Company extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -79,9 +79,9 @@ class Company extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setEmail($var)
+    public function setEmail(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->email = $var;
 
         return $this;
@@ -101,9 +101,9 @@ class Company extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPhoneNumber($var)
+    public function setPhoneNumber(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->phone_number = $var;
 
         return $this;

@@ -82,9 +82,9 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFraudCheckId($var)
+    public function setFraudCheckId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->fraud_check_id = $var;
 
         return $this;
@@ -114,9 +114,8 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\FraudScore $var
      * @return $this
      */
-    public function setOverallScore($var)
+    public function setOverallScore(\ChargeHive\Chtype\FraudScore|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\FraudScore::class);
         $this->overall_score = $var;
 
         return $this;
@@ -136,7 +135,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\FraudScore[] $var
      * @return $this
      */
-    public function setSubScores($var)
+    public function setSubScores(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\FraudScore::class);
         $this->sub_scores = $arr;
@@ -146,7 +145,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.SuggestedAction suggested_action = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\SuggestedAction}
      */
     public function getSuggestedAction()
     {
@@ -155,10 +154,10 @@ class FraudResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.SuggestedAction suggested_action = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\SuggestedAction}
      * @return $this
      */
-    public function setSuggestedAction($var)
+    public function setSuggestedAction(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\SuggestedAction::class);
         $this->suggested_action = $var;
@@ -190,9 +189,8 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setScanTime($var)
+    public function setScanTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->scan_time = $var;
 
         return $this;
@@ -212,9 +210,9 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorLibrary($var)
+    public function setConnectorLibrary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->connector_library = $var;
 
         return $this;
@@ -234,7 +232,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setAdditionalData($var)
+    public function setAdditionalData(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->additional_data = $arr;
@@ -256,7 +254,7 @@ class FraudResult extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setInfoLinks($var)
+    public function setInfoLinks(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->info_links = $arr;

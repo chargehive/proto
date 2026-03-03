@@ -92,9 +92,9 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTokenId($var)
+    public function setTokenId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->token_id = $var;
 
         return $this;
@@ -114,9 +114,9 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -136,9 +136,9 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaymentScheme($var)
+    public function setPaymentScheme(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->payment_scheme = $var;
 
         return $this;
@@ -168,9 +168,8 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setValidFrom($var)
+    public function setValidFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->valid_from = $var;
 
         return $this;
@@ -200,9 +199,8 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setExpiry($var)
+    public function setExpiry(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->expiry = $var;
 
         return $this;
@@ -210,7 +208,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodType}
      */
     public function getType()
     {
@@ -219,10 +217,10 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
         $this->type = $var;
@@ -244,7 +242,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setInfo($var)
+    public function setInfo(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->info = $arr;
@@ -254,7 +252,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 8;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodProvider}
      */
     public function getProvider()
     {
@@ -263,10 +261,10 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider provider = 8;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodProvider}
      * @return $this
      */
-    public function setProvider($var)
+    public function setProvider(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodProvider::class);
         $this->provider = $var;
@@ -276,7 +274,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType inputType = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodInputType}
      */
     public function getInputType()
     {
@@ -285,10 +283,10 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType inputType = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodInputType}
      * @return $this
      */
-    public function setInputType($var)
+    public function setInputType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodInputType::class);
         $this->inputType = $var;
@@ -298,7 +296,7 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Status status = 10;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Status}
      */
     public function getStatus()
     {
@@ -307,10 +305,10 @@ class PaymentMethodInfo extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Status status = 10;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Status}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Status::class);
         $this->status = $var;

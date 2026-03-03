@@ -75,9 +75,9 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAddressVerificationResult($var)
+    public function setAddressVerificationResult(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->address_verification_result = $var;
 
         return $this;
@@ -101,9 +101,9 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCvvVerificationResult($var)
+    public function setCvvVerificationResult(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->cvv_verification_result = $var;
 
         return $this;
@@ -127,9 +127,9 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFraudResult($var)
+    public function setFraudResult(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->fraud_result = $var;
 
         return $this;
@@ -159,9 +159,8 @@ class VerificationResult extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\ThreeDSResult $var
      * @return $this
      */
-    public function setThreedsResult($var)
+    public function setThreedsResult(\ChargeHive\Chtype\ThreeDSResult|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\ThreeDSResult::class);
         $this->threeds_result = $var;
 
         return $this;

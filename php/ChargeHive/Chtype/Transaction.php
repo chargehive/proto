@@ -207,9 +207,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTokenId($var)
+    public function setTokenId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->token_id = $var;
 
         return $this;
@@ -229,9 +229,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransactionId($var)
+    public function setTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transaction_id = $var;
 
         return $this;
@@ -251,7 +251,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\TransactionDetail[] $var
      * @return $this
      */
-    public function setDetails($var)
+    public function setDetails(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\TransactionDetail::class);
         $this->details = $arr;
@@ -261,7 +261,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType payment_type = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodType}
      */
     public function getPaymentType()
     {
@@ -270,10 +270,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodType payment_type = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodType}
      * @return $this
      */
-    public function setPaymentType($var)
+    public function setPaymentType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodType::class);
         $this->payment_type = $var;
@@ -295,9 +295,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaymentScheme($var)
+    public function setPaymentScheme(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->payment_scheme = $var;
 
         return $this;
@@ -305,7 +305,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\TransactionType}
      */
     public function getTransactionType()
     {
@@ -314,10 +314,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionType transaction_type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\TransactionType}
      * @return $this
      */
-    public function setTransactionType($var)
+    public function setTransactionType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\TransactionType::class);
         $this->transaction_type = $var;
@@ -353,9 +353,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setRequestAmount($var)
+    public function setRequestAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->request_amount = $var;
 
         return $this;
@@ -389,9 +388,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setTransactedAmount($var)
+    public function setTransactedAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->transacted_amount = $var;
 
         return $this;
@@ -399,7 +397,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ContractType contract = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ContractType}
      */
     public function getContract()
     {
@@ -408,10 +406,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ContractType contract = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ContractType}
      * @return $this
      */
-    public function setContract($var)
+    public function setContract(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ContractType::class);
         $this->contract = $var;
@@ -433,9 +431,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStatementDescriptor($var)
+    public function setStatementDescriptor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->statement_descriptor = $var;
 
         return $this;
@@ -443,7 +441,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionResult result = 11;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\TransactionResult}
      */
     public function getResult()
     {
@@ -452,10 +450,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionResult result = 11;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\TransactionResult}
      * @return $this
      */
-    public function setResult($var)
+    public function setResult(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\TransactionResult::class);
         $this->result = $var;
@@ -487,9 +485,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\VerifyRequestData $var
      * @return $this
      */
-    public function setVerifyRequest($var)
+    public function setVerifyRequest(\ChargeHive\Chtype\VerifyRequestData|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\VerifyRequestData::class);
         $this->verify_request = $var;
 
         return $this;
@@ -497,7 +494,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 13;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\FailureType}
      */
     public function getFailureType()
     {
@@ -506,10 +503,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 13;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\FailureType}
      * @return $this
      */
-    public function setFailureType($var)
+    public function setFailureType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\FailureType::class);
         $this->failure_type = $var;
@@ -531,9 +528,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setArn($var)
+    public function setArn(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->arn = $var;
 
         return $this;
@@ -543,7 +540,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *Additional Verification provided and passed
      *
      * Generated from protobuf field <code>.chargehive.chtype.VerificationStatus verified = 15;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\VerificationStatus}
      */
     public function getVerified()
     {
@@ -554,10 +551,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *Additional Verification provided and passed
      *
      * Generated from protobuf field <code>.chargehive.chtype.VerificationStatus verified = 15;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\VerificationStatus}
      * @return $this
      */
-    public function setVerified($var)
+    public function setVerified(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\VerificationStatus::class);
         $this->verified = $var;
@@ -567,7 +564,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 16;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Liability}
      */
     public function getLiability()
     {
@@ -576,10 +573,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 16;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Liability}
      * @return $this
      */
-    public function setLiability($var)
+    public function setLiability(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Liability::class);
         $this->liability = $var;
@@ -611,9 +608,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\AttemptDetail $var
      * @return $this
      */
-    public function setAttemptDetail($var)
+    public function setAttemptDetail(\ChargeHive\Chtype\AttemptDetail|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\AttemptDetail::class);
         $this->attempt_detail = $var;
 
         return $this;
@@ -633,7 +629,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\FraudResult[] $var
      * @return $this
      */
-    public function setFraudResults($var)
+    public function setFraudResults(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\FraudResult::class);
         $this->fraud_results = $arr;
@@ -665,9 +661,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\ResponseDetail $var
      * @return $this
      */
-    public function setResponse($var)
+    public function setResponse(\ChargeHive\Chtype\ResponseDetail|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\ResponseDetail::class);
         $this->response = $var;
 
         return $this;
@@ -691,9 +686,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSourceTransactionId($var)
+    public function setSourceTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->source_transaction_id = $var;
 
         return $this;
@@ -717,9 +712,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaymentMethodId($var)
+    public function setPaymentMethodId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->payment_method_id = $var;
 
         return $this;
@@ -727,7 +722,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionSubType transaction_sub_type = 22;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\TransactionSubType}
      */
     public function getTransactionSubType()
     {
@@ -736,10 +731,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.TransactionSubType transaction_sub_type = 22;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\TransactionSubType}
      * @return $this
      */
-    public function setTransactionSubType($var)
+    public function setTransactionSubType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\TransactionSubType::class);
         $this->transaction_sub_type = $var;
@@ -761,7 +756,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Transaction[] $var
      * @return $this
      */
-    public function setAncillaryTransactions($var)
+    public function setAncillaryTransactions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\Transaction::class);
         $this->ancillary_transactions = $arr;
@@ -783,9 +778,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRequestedConnectorId($var)
+    public function setRequestedConnectorId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->requested_connector_id = $var;
 
         return $this;
@@ -805,9 +800,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRequestedConnectorLibrary($var)
+    public function setRequestedConnectorLibrary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->requested_connector_library = $var;
 
         return $this;
@@ -837,9 +832,8 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTransactionTime($var)
+    public function setTransactionTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->transaction_time = $var;
 
         return $this;
@@ -847,7 +841,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider payment_provider = 27;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodProvider}
      */
     public function getPaymentProvider()
     {
@@ -856,10 +850,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodProvider payment_provider = 27;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodProvider}
      * @return $this
      */
-    public function setPaymentProvider($var)
+    public function setPaymentProvider(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodProvider::class);
         $this->payment_provider = $var;
@@ -869,7 +863,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType payment_input_type = 28;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\PaymentMethodInputType}
      */
     public function getPaymentInputType()
     {
@@ -878,10 +872,10 @@ class Transaction extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.PaymentMethodInputType payment_input_type = 28;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\PaymentMethodInputType}
      * @return $this
      */
-    public function setPaymentInputType($var)
+    public function setPaymentInputType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\PaymentMethodInputType::class);
         $this->payment_input_type = $var;
@@ -903,9 +897,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAuthCode($var)
+    public function setAuthCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->auth_code = $var;
 
         return $this;
@@ -925,9 +919,9 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaymentMethodIssuer($var)
+    public function setPaymentMethodIssuer(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->payment_method_issuer = $var;
 
         return $this;

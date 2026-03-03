@@ -67,9 +67,9 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountNumber($var)
+    public function setAccountNumber(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_number = $var;
 
         return $this;
@@ -89,9 +89,9 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSortCode($var)
+    public function setSortCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->sort_code = $var;
 
         return $this;
@@ -111,9 +111,9 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountHoldersName($var)
+    public function setAccountHoldersName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_holders_name = $var;
 
         return $this;
@@ -133,9 +133,9 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPayerReference($var)
+    public function setPayerReference(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->payer_reference = $var;
 
         return $this;
@@ -155,9 +155,9 @@ class PaymentMethodSchemaDirectDebit extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransportKeyId($var)
+    public function setTransportKeyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transport_key_id = $var;
 
         return $this;

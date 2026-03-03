@@ -172,9 +172,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrowserAcceptHeader($var)
+    public function setBrowserAcceptHeader(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->browser_accept_header = $var;
 
         return $this;
@@ -194,7 +194,7 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setColorDepth($var)
+    public function setColorDepth(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->color_depth = $var;
@@ -216,9 +216,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setJavaEnabled($var)
+    public function setJavaEnabled(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->java_enabled = $var;
 
         return $this;
@@ -238,9 +237,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setJavascriptEnabled($var)
+    public function setJavascriptEnabled(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->javascript_enabled = $var;
 
         return $this;
@@ -260,9 +258,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLanguage($var)
+    public function setLanguage(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->language = $var;
 
         return $this;
@@ -292,9 +290,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Dimension $var
      * @return $this
      */
-    public function setScreen($var)
+    public function setScreen(\ChargeHive\Chtype\Dimension|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Dimension::class);
         $this->screen = $var;
 
         return $this;
@@ -324,9 +321,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Dimension $var
      * @return $this
      */
-    public function setScreenAvailable($var)
+    public function setScreenAvailable(\ChargeHive\Chtype\Dimension|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Dimension::class);
         $this->screen_available = $var;
 
         return $this;
@@ -356,9 +352,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Dimension $var
      * @return $this
      */
-    public function setWindowInner($var)
+    public function setWindowInner(\ChargeHive\Chtype\Dimension|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Dimension::class);
         $this->window_inner = $var;
 
         return $this;
@@ -388,9 +383,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Dimension $var
      * @return $this
      */
-    public function setWindowOuter($var)
+    public function setWindowOuter(\ChargeHive\Chtype\Dimension|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Dimension::class);
         $this->window_outer = $var;
 
         return $this;
@@ -410,7 +404,7 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setTimezoneOffsetMins($var)
+    public function setTimezoneOffsetMins(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->timezone_offset_mins = $var;
@@ -432,9 +426,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUserAgent($var)
+    public function setUserAgent(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->user_agent = $var;
 
         return $this;
@@ -454,9 +448,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIpAddress($var)
+    public function setIpAddress(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ip_address = $var;
 
         return $this;
@@ -476,9 +470,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setCookiesEnabled($var)
+    public function setCookiesEnabled(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->cookies_enabled = $var;
 
         return $this;
@@ -498,9 +491,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFlashVersion($var)
+    public function setFlashVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->flash_version = $var;
 
         return $this;
@@ -520,9 +513,8 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsTouch($var)
+    public function setIsTouch(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->is_touch = $var;
 
         return $this;
@@ -542,9 +534,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOs($var)
+    public function setOs(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->os = $var;
 
         return $this;
@@ -564,9 +556,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOsVersion($var)
+    public function setOsVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->os_version = $var;
 
         return $this;
@@ -586,9 +578,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrowser($var)
+    public function setBrowser(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->browser = $var;
 
         return $this;
@@ -608,9 +600,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrowserVersion($var)
+    public function setBrowserVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->browser_version = $var;
 
         return $this;
@@ -630,9 +622,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDeviceManufacturer($var)
+    public function setDeviceManufacturer(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->device_manufacturer = $var;
 
         return $this;
@@ -652,9 +644,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDeviceName($var)
+    public function setDeviceName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->device_name = $var;
 
         return $this;
@@ -674,9 +666,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDeviceVersion($var)
+    public function setDeviceVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->device_version = $var;
 
         return $this;
@@ -696,9 +688,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFingerprint($var)
+    public function setFingerprint(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->fingerprint = $var;
 
         return $this;
@@ -706,7 +698,7 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeviceType type = 24;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\DeviceType}
      */
     public function getType()
     {
@@ -715,10 +707,10 @@ class Device extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeviceType type = 24;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\DeviceType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\DeviceType::class);
         $this->type = $var;
@@ -740,9 +732,9 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTimezone($var)
+    public function setTimezone(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->timezone = $var;
 
         return $this;
@@ -762,7 +754,7 @@ class Device extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Device\Header[] $var
      * @return $this
      */
-    public function setRequestHeaders($var)
+    public function setRequestHeaders(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\Device\Header::class);
         $this->request_headers = $arr;

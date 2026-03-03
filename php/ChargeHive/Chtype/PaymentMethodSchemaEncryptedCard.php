@@ -82,9 +82,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNameOnCard($var)
+    public function setNameOnCard(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->name_on_card = $var;
 
         return $this;
@@ -104,9 +104,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNumber($var)
+    public function setNumber(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->number = $var;
 
         return $this;
@@ -126,9 +126,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setValidFromMonth($var)
+    public function setValidFromMonth(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->valid_from_month = $var;
 
         return $this;
@@ -148,9 +148,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setValidFromYear($var)
+    public function setValidFromYear(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->valid_from_year = $var;
 
         return $this;
@@ -170,9 +170,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExpiryMonth($var)
+    public function setExpiryMonth(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->expiry_month = $var;
 
         return $this;
@@ -192,9 +192,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExpiryYear($var)
+    public function setExpiryYear(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->expiry_year = $var;
 
         return $this;
@@ -214,9 +214,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssueNumber($var)
+    public function setIssueNumber(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->issue_number = $var;
 
         return $this;
@@ -236,9 +236,9 @@ class PaymentMethodSchemaEncryptedCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransportKeyId($var)
+    public function setTransportKeyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transport_key_id = $var;
 
         return $this;

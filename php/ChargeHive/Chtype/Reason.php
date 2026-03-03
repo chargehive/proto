@@ -62,9 +62,9 @@ class Reason extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDescription($var)
+    public function setDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->description = $var;
 
         return $this;
@@ -72,7 +72,7 @@ class Reason extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Reason.ReasonType reason_type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Reason\ReasonType}
      */
     public function getReasonType()
     {
@@ -81,10 +81,10 @@ class Reason extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Reason.ReasonType reason_type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Reason\ReasonType}
      * @return $this
      */
-    public function setReasonType($var)
+    public function setReasonType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Reason\ReasonType::class);
         $this->reason_type = $var;
@@ -106,9 +106,9 @@ class Reason extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRequestorComment($var)
+    public function setRequestorComment(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->requestor_comment = $var;
 
         return $this;
@@ -116,7 +116,7 @@ class Reason extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ActorType requested_by = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ActorType}
      */
     public function getRequestedBy()
     {
@@ -125,10 +125,10 @@ class Reason extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ActorType requested_by = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ActorType}
      * @return $this
      */
-    public function setRequestedBy($var)
+    public function setRequestedBy(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ActorType::class);
         $this->requested_by = $var;

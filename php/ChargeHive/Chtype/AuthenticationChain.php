@@ -92,9 +92,8 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\AuthenticationChain $var
      * @return $this
      */
-    public function setParent($var)
+    public function setParent(\ChargeHive\Chtype\AuthenticationChain|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\AuthenticationChain::class);
         $this->parent = $var;
 
         return $this;
@@ -114,9 +113,9 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setVerificationHash($var)
+    public function setVerificationHash(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->verification_hash = $var;
 
         return $this;
@@ -124,7 +123,7 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.HandlerType handler_type = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\HandlerType}
      */
     public function getHandlerType()
     {
@@ -133,10 +132,10 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.HandlerType handler_type = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\HandlerType}
      * @return $this
      */
-    public function setHandlerType($var)
+    public function setHandlerType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\HandlerType::class);
         $this->handler_type = $var;
@@ -158,9 +157,9 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setHandler($var)
+    public function setHandler(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->handler = $var;
 
         return $this;
@@ -180,9 +179,9 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setProjectId($var)
+    public function setProjectId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->project_id = $var;
 
         return $this;
@@ -202,9 +201,9 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUserId($var)
+    public function setUserId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->user_id = $var;
 
         return $this;
@@ -224,9 +223,9 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUserAgent($var)
+    public function setUserAgent(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->user_agent = $var;
 
         return $this;
@@ -246,9 +245,9 @@ class AuthenticationChain extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIpAddress($var)
+    public function setIpAddress(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ip_address = $var;
 
         return $this;

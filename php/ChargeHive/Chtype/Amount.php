@@ -52,7 +52,7 @@ class Amount extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setUnits($var)
+    public function setUnits(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->units = $var;
@@ -74,9 +74,9 @@ class Amount extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;

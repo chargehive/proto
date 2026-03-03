@@ -67,9 +67,8 @@ class FraudScore extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setScore($var)
+    public function setScore(float $var)
     {
-        GPBUtil::checkFloat($var);
         $this->score = $var;
 
         return $this;
@@ -77,7 +76,7 @@ class FraudScore extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.RiskLevel risk_level = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\RiskLevel}
      */
     public function getRiskLevel()
     {
@@ -86,10 +85,10 @@ class FraudScore extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.RiskLevel risk_level = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\RiskLevel}
      * @return $this
      */
-    public function setRiskLevel($var)
+    public function setRiskLevel(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\RiskLevel::class);
         $this->risk_level = $var;
@@ -121,9 +120,8 @@ class FraudScore extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\FraudFactor $var
      * @return $this
      */
-    public function setFactor($var)
+    public function setFactor(\ChargeHive\Chtype\FraudFactor|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\FraudFactor::class);
         $this->factor = $var;
 
         return $this;
@@ -143,9 +141,9 @@ class FraudScore extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSummary($var)
+    public function setSummary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->summary = $var;
 
         return $this;
@@ -165,7 +163,7 @@ class FraudScore extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setData($var)
+    public function setData(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->data = $arr;

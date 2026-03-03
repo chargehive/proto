@@ -87,9 +87,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLineOne($var)
+    public function setLineOne(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->line_one = $var;
 
         return $this;
@@ -109,9 +109,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLineTwo($var)
+    public function setLineTwo(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->line_two = $var;
 
         return $this;
@@ -131,9 +131,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLineThree($var)
+    public function setLineThree(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->line_three = $var;
 
         return $this;
@@ -153,9 +153,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTown($var)
+    public function setTown(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->town = $var;
 
         return $this;
@@ -175,9 +175,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCounty($var)
+    public function setCounty(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->county = $var;
 
         return $this;
@@ -197,9 +197,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountry($var)
+    public function setCountry(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country = $var;
 
         return $this;
@@ -219,9 +219,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPostalCode($var)
+    public function setPostalCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->postal_code = $var;
 
         return $this;
@@ -241,9 +241,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFao($var)
+    public function setFao(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->fao = $var;
 
         return $this;
@@ -263,9 +263,9 @@ class Address extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCompanyName($var)
+    public function setCompanyName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->company_name = $var;
 
         return $this;

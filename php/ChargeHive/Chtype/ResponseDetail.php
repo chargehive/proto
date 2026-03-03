@@ -87,9 +87,9 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setResponseCode($var)
+    public function setResponseCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->response_code = $var;
 
         return $this;
@@ -109,9 +109,9 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConsumerMessage($var)
+    public function setConsumerMessage(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->consumer_message = $var;
 
         return $this;
@@ -131,9 +131,9 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setMerchantMessage($var)
+    public function setMerchantMessage(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->merchant_message = $var;
 
         return $this;
@@ -141,7 +141,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\FailureType}
      */
     public function getFailureType()
     {
@@ -150,10 +150,10 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.FailureType failure_type = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\FailureType}
      * @return $this
      */
-    public function setFailureType($var)
+    public function setFailureType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\FailureType::class);
         $this->failure_type = $var;
@@ -163,7 +163,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseCategory category = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ResponseCategory}
      */
     public function getCategory()
     {
@@ -172,10 +172,10 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseCategory category = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ResponseCategory}
      * @return $this
      */
-    public function setCategory($var)
+    public function setCategory(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ResponseCategory::class);
         $this->category = $var;
@@ -185,7 +185,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseError error_type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ResponseError}
      */
     public function getErrorType()
     {
@@ -194,10 +194,10 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ResponseError error_type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ResponseError}
      * @return $this
      */
-    public function setErrorType($var)
+    public function setErrorType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ResponseError::class);
         $this->error_type = $var;
@@ -219,7 +219,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setErrorProperties($var)
+    public function setErrorProperties(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->error_properties = $arr;
@@ -241,9 +241,9 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOriginatingCode($var)
+    public function setOriginatingCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->originating_code = $var;
 
         return $this;
@@ -263,7 +263,7 @@ class ResponseDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\ResponseDetail[] $var
      * @return $this
      */
-    public function setSpecificErrors($var)
+    public function setSpecificErrors(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\ResponseDetail::class);
         $this->specific_errors = $arr;

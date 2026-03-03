@@ -50,7 +50,7 @@ class Delivery extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeliveryStandard standard = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\DeliveryStandard}
      */
     public function getStandard()
     {
@@ -59,10 +59,10 @@ class Delivery extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeliveryStandard standard = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\DeliveryStandard}
      * @return $this
      */
-    public function setStandard($var)
+    public function setStandard(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\DeliveryStandard::class);
         $this->standard = $var;
@@ -72,7 +72,7 @@ class Delivery extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeliveryType type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\DeliveryType}
      */
     public function getType()
     {
@@ -81,10 +81,10 @@ class Delivery extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.DeliveryType type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\DeliveryType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\DeliveryType::class);
         $this->type = $var;
@@ -106,9 +106,9 @@ class Delivery extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingCode($var)
+    public function setTrackingCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_code = $var;
 
         return $this;
@@ -128,9 +128,9 @@ class Delivery extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCourier($var)
+    public function setCourier(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->courier = $var;
 
         return $this;

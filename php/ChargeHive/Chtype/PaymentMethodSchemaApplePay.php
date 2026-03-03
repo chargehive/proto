@@ -78,9 +78,9 @@ class PaymentMethodSchemaApplePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSessionUrl($var)
+    public function setSessionUrl(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->session_url = $var;
 
         return $this;
@@ -104,9 +104,9 @@ class PaymentMethodSchemaApplePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInitiativeContext($var)
+    public function setInitiativeContext(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->initiative_context = $var;
 
         return $this;
@@ -130,9 +130,9 @@ class PaymentMethodSchemaApplePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setToken($var)
+    public function setToken(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->token = $var;
 
         return $this;
@@ -156,9 +156,9 @@ class PaymentMethodSchemaApplePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSession($var)
+    public function setSession(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->session = $var;
 
         return $this;

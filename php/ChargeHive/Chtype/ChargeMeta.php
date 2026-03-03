@@ -147,9 +147,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Address $var
      * @return $this
      */
-    public function setBillingAddress($var)
+    public function setBillingAddress(\ChargeHive\Chtype\Address|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Address::class);
         $this->billing_address = $var;
 
         return $this;
@@ -179,9 +178,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Address $var
      * @return $this
      */
-    public function setDeliveryAddress($var)
+    public function setDeliveryAddress(\ChargeHive\Chtype\Address|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Address::class);
         $this->delivery_address = $var;
 
         return $this;
@@ -201,7 +199,7 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\ChargeItem[] $var
      * @return $this
      */
-    public function setItems($var)
+    public function setItems(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ChargeHive\Chtype\ChargeItem::class);
         $this->items = $arr;
@@ -223,9 +221,9 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTerms($var)
+    public function setTerms(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->terms = $var;
 
         return $this;
@@ -245,9 +243,9 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNote($var)
+    public function setNote(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->note = $var;
 
         return $this;
@@ -267,9 +265,9 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setMerchantMemo($var)
+    public function setMerchantMemo(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->merchant_memo = $var;
 
         return $this;
@@ -299,9 +297,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setInvoiceDate($var)
+    public function setInvoiceDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->invoice_date = $var;
 
         return $this;
@@ -331,9 +328,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDueDate($var)
+    public function setDueDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->due_date = $var;
 
         return $this;
@@ -363,9 +359,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setDiscountAmount($var)
+    public function setDiscountAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->discount_amount = $var;
 
         return $this;
@@ -395,9 +390,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setDeliveryAmount($var)
+    public function setDeliveryAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->delivery_amount = $var;
 
         return $this;
@@ -427,9 +421,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setTaxAmount($var)
+    public function setTaxAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->tax_amount = $var;
 
         return $this;
@@ -459,9 +452,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setTotalAmount($var)
+    public function setTotalAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->total_amount = $var;
 
         return $this;
@@ -491,9 +483,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Person $var
      * @return $this
      */
-    public function setPerson($var)
+    public function setPerson(\ChargeHive\Chtype\Person|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Person::class);
         $this->person = $var;
 
         return $this;
@@ -523,9 +514,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Company $var
      * @return $this
      */
-    public function setCompany($var)
+    public function setCompany(\ChargeHive\Chtype\Company|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Company::class);
         $this->company = $var;
 
         return $this;
@@ -545,9 +535,9 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIpAddress($var)
+    public function setIpAddress(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ip_address = $var;
 
         return $this;
@@ -577,9 +567,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Delivery $var
      * @return $this
      */
-    public function setDelivery($var)
+    public function setDelivery(\ChargeHive\Chtype\Delivery|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Delivery::class);
         $this->delivery = $var;
 
         return $this;
@@ -609,9 +598,8 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Device $var
      * @return $this
      */
-    public function setDevice($var)
+    public function setDevice(\ChargeHive\Chtype\Device|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Device::class);
         $this->device = $var;
 
         return $this;
@@ -631,9 +619,9 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCustomerId($var)
+    public function setCustomerId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->customer_id = $var;
 
         return $this;
@@ -653,9 +641,9 @@ class ChargeMeta extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPlacementId($var)
+    public function setPlacementId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->placement_id = $var;
 
         return $this;

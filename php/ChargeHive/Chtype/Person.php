@@ -77,9 +77,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTitle($var)
+    public function setTitle(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->title = $var;
 
         return $this;
@@ -99,9 +99,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFirstName($var)
+    public function setFirstName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->first_name = $var;
 
         return $this;
@@ -121,9 +121,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLastName($var)
+    public function setLastName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->last_name = $var;
 
         return $this;
@@ -143,9 +143,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFullName($var)
+    public function setFullName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->full_name = $var;
 
         return $this;
@@ -165,9 +165,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setEmail($var)
+    public function setEmail(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->email = $var;
 
         return $this;
@@ -187,9 +187,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPhoneNumber($var)
+    public function setPhoneNumber(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->phone_number = $var;
 
         return $this;
@@ -209,9 +209,9 @@ class Person extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLanguage($var)
+    public function setLanguage(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->language = $var;
 
         return $this;

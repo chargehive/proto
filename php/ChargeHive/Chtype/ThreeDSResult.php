@@ -132,9 +132,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setEci($var)
+    public function setEci(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->eci = $var;
 
         return $this;
@@ -154,9 +154,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCavv($var)
+    public function setCavv(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->cavv = $var;
 
         return $this;
@@ -176,9 +176,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setXid($var)
+    public function setXid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->xid = $var;
 
         return $this;
@@ -198,9 +198,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setEnrollment($var)
+    public function setEnrollment(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->enrollment = $var;
 
         return $this;
@@ -220,9 +220,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setResult($var)
+    public function setResult(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->result = $var;
 
         return $this;
@@ -242,9 +242,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSignatureStatus($var)
+    public function setSignatureStatus(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->signature_status = $var;
 
         return $this;
@@ -264,9 +264,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setServerTransactionId($var)
+    public function setServerTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->server_transaction_id = $var;
 
         return $this;
@@ -286,9 +286,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->status = $var;
 
         return $this;
@@ -308,7 +308,7 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setMajorVersion($var)
+    public function setMajorVersion(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->major_version = $var;
@@ -330,9 +330,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setVersion($var)
+    public function setVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->version = $var;
 
         return $this;
@@ -352,9 +352,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaReq($var)
+    public function setPaReq(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->pa_req = $var;
 
         return $this;
@@ -374,9 +374,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAcsUrl($var)
+    public function setAcsUrl(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->acs_url = $var;
 
         return $this;
@@ -396,9 +396,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaRes($var)
+    public function setPaRes(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->pa_res = $var;
 
         return $this;
@@ -418,9 +418,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->id = $var;
 
         return $this;
@@ -450,9 +450,8 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTimestamp($var)
+    public function setTimestamp(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->timestamp = $var;
 
         return $this;
@@ -460,7 +459,7 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 16;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Liability}
      */
     public function getLiability()
     {
@@ -469,10 +468,10 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 16;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Liability}
      * @return $this
      */
-    public function setLiability($var)
+    public function setLiability(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Liability::class);
         $this->liability = $var;
@@ -494,9 +493,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSdkResponse($var)
+    public function setSdkResponse(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->sdk_response = $var;
 
         return $this;
@@ -516,9 +515,9 @@ class ThreeDSResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAcsTransId($var)
+    public function setAcsTransId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->acs_trans_id = $var;
 
         return $this;

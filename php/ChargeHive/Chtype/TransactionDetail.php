@@ -189,9 +189,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setActorId($var)
+    public function setActorId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->actor_id = $var;
 
         return $this;
@@ -211,9 +211,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setActorVersion($var)
+    public function setActorVersion(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->actor_version = $var;
 
         return $this;
@@ -221,7 +221,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ActorType actor_type = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\ActorType}
      */
     public function getActorType()
     {
@@ -230,10 +230,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.ActorType actor_type = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\ActorType}
      * @return $this
      */
-    public function setActorType($var)
+    public function setActorType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\ActorType::class);
         $this->actor_type = $var;
@@ -255,9 +255,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransactionId($var)
+    public function setTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transaction_id = $var;
 
         return $this;
@@ -291,9 +291,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setRequestedAmount($var)
+    public function setRequestedAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->requested_amount = $var;
 
         return $this;
@@ -327,9 +326,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setProcessedAmount($var)
+    public function setProcessedAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->processed_amount = $var;
 
         return $this;
@@ -363,9 +361,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setFeeEstimate($var)
+    public function setFeeEstimate(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->fee_estimate = $var;
 
         return $this;
@@ -399,9 +396,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setFeeActual($var)
+    public function setFeeActual(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->fee_actual = $var;
 
         return $this;
@@ -435,9 +431,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setStartTime($var)
+    public function setStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->start_time = $var;
 
         return $this;
@@ -471,9 +466,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEndTime($var)
+    public function setEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->end_time = $var;
 
         return $this;
@@ -493,9 +487,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWasSuccessful($var)
+    public function setWasSuccessful(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->was_successful = $var;
 
         return $this;
@@ -503,7 +496,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 13;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Environment}
      */
     public function getEnvironment()
     {
@@ -512,10 +505,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 13;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Environment}
      * @return $this
      */
-    public function setEnvironment($var)
+    public function setEnvironment(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Environment::class);
         $this->environment = $var;
@@ -547,9 +540,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\ResponseDetail $var
      * @return $this
      */
-    public function setResponse($var)
+    public function setResponse(\ChargeHive\Chtype\ResponseDetail|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\ResponseDetail::class);
         $this->response = $var;
 
         return $this;
@@ -579,9 +571,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\VerificationResult $var
      * @return $this
      */
-    public function setVerificationResult($var)
+    public function setVerificationResult(\ChargeHive\Chtype\VerificationResult|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\VerificationResult::class);
         $this->verification_result = $var;
 
         return $this;
@@ -601,7 +592,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setAdditionalData($var)
+    public function setAdditionalData(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->additional_data = $arr;
@@ -623,9 +614,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAuthorizationCode($var)
+    public function setAuthorizationCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->authorization_code = $var;
 
         return $this;
@@ -633,7 +624,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 18;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Liability}
      */
     public function getLiability()
     {
@@ -642,10 +633,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Liability liability = 18;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Liability}
      * @return $this
      */
-    public function setLiability($var)
+    public function setLiability(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Liability::class);
         $this->liability = $var;
@@ -667,9 +658,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorLibrary($var)
+    public function setConnectorLibrary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->connector_library = $var;
 
         return $this;
@@ -689,9 +680,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorId($var)
+    public function setConnectorId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->connector_id = $var;
 
         return $this;
@@ -711,9 +702,8 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setPrimary($var)
+    public function setPrimary(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->primary = $var;
 
         return $this;
@@ -737,9 +727,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNetworkId($var)
+    public function setNetworkId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->network_id = $var;
 
         return $this;
@@ -763,9 +753,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPspTransactionId($var)
+    public function setPspTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->psp_transaction_id = $var;
 
         return $this;
@@ -789,9 +779,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPspRequestId($var)
+    public function setPspRequestId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->psp_request_id = $var;
 
         return $this;
@@ -811,9 +801,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssuerName($var)
+    public function setIssuerName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issuer_name = $var;
 
         return $this;

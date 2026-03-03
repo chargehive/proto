@@ -82,9 +82,9 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNameOnCard($var)
+    public function setNameOnCard(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name_on_card = $var;
 
         return $this;
@@ -104,7 +104,7 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setValidFromMonth($var)
+    public function setValidFromMonth(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->valid_from_month = $var;
@@ -126,7 +126,7 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setValidFromYear($var)
+    public function setValidFromYear(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->valid_from_year = $var;
@@ -148,7 +148,7 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setExpiryMonth($var)
+    public function setExpiryMonth(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->expiry_month = $var;
@@ -170,7 +170,7 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setExpiryYear($var)
+    public function setExpiryYear(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->expiry_year = $var;
@@ -192,7 +192,7 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setIssueNumber($var)
+    public function setIssueNumber(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->issue_number = $var;
@@ -214,9 +214,9 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNumber($var)
+    public function setNumber(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->number = $var;
 
         return $this;
@@ -236,9 +236,9 @@ class PaymentMethodSchemaCard extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setScheme($var)
+    public function setScheme(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->scheme = $var;
 
         return $this;

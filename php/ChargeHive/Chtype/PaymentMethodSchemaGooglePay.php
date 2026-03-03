@@ -69,9 +69,9 @@ class PaymentMethodSchemaGooglePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLowValueToken($var)
+    public function setLowValueToken(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->low_value_token = $var;
 
         return $this;
@@ -91,9 +91,9 @@ class PaymentMethodSchemaGooglePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDescription($var)
+    public function setDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->description = $var;
 
         return $this;
@@ -113,9 +113,9 @@ class PaymentMethodSchemaGooglePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCardDetails($var)
+    public function setCardDetails(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->card_details = $var;
 
         return $this;
@@ -135,9 +135,9 @@ class PaymentMethodSchemaGooglePay extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCardNetwork($var)
+    public function setCardNetwork(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->card_network = $var;
 
         return $this;

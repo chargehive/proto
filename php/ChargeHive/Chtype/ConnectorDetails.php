@@ -52,9 +52,9 @@ class ConnectorDetails extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorLibrary($var)
+    public function setConnectorLibrary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->connector_library = $var;
 
         return $this;
@@ -74,9 +74,9 @@ class ConnectorDetails extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorCredentialsJson($var)
+    public function setConnectorCredentialsJson(string $var)
     {
-        GPBUtil::checkString($var, False);
+        GPBUtil::checkString($var, false);
         $this->connector_credentials_json = $var;
 
         return $this;

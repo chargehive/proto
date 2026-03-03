@@ -60,7 +60,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerifyRequestType type = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\VerifyRequestType}
      */
     public function getType()
     {
@@ -69,10 +69,10 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.VerifyRequestType type = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\VerifyRequestType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\VerifyRequestType::class);
         $this->type = $var;
@@ -94,7 +94,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setData($var)
+    public function setData(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->data = $arr;
@@ -116,9 +116,9 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConnectorLibrary($var)
+    public function setConnectorLibrary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->connector_library = $var;
 
         return $this;
@@ -126,7 +126,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Environment}
      */
     public function getEnvironment()
     {
@@ -135,10 +135,10 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Environment environment = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Environment}
      * @return $this
      */
-    public function setEnvironment($var)
+    public function setEnvironment(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Environment::class);
         $this->environment = $var;
@@ -160,9 +160,8 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setRequired($var)
+    public function setRequired(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->required = $var;
 
         return $this;
@@ -182,7 +181,7 @@ class VerifyRequestData extends \Google\Protobuf\Internal\Message
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */
-    public function setMethodData($var)
+    public function setMethodData(array|\Google\Protobuf\Internal\MapField $var)
     {
         $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
         $this->methodData = $arr;

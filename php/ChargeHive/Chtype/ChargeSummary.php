@@ -62,9 +62,8 @@ class ChargeSummary extends \Google\Protobuf\Internal\Message
      * @param \ChargeHive\Chtype\Amount $var
      * @return $this
      */
-    public function setAmount($var)
+    public function setAmount(\ChargeHive\Chtype\Amount|null $var)
     {
-        GPBUtil::checkMessage($var, \ChargeHive\Chtype\Amount::class);
         $this->amount = $var;
 
         return $this;
@@ -72,7 +71,7 @@ class ChargeSummary extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Status status = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \ChargeHive\Chtype\Status}
      */
     public function getStatus()
     {
@@ -81,10 +80,10 @@ class ChargeSummary extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.chargehive.chtype.Status status = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \ChargeHive\Chtype\Status}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \ChargeHive\Chtype\Status::class);
         $this->status = $var;
