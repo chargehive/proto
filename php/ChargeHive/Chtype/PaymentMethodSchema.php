@@ -48,6 +48,10 @@ class PaymentMethodSchema
      * Generated from protobuf enum <code>PAYMENT_METHOD_SCHEMA_RAW = 8;</code>
      */
     const PAYMENT_METHOD_SCHEMA_RAW = 8;
+    /**
+     * Generated from protobuf enum <code>PAYMENT_METHOD_SCHEMA_CONNECTOR_TOKEN = 9;</code>
+     */
+    const PAYMENT_METHOD_SCHEMA_CONNECTOR_TOKEN = 9;
 
     private static $valueToName = [
         self::PAYMENT_METHOD_SCHEMA_INVALID => 'PAYMENT_METHOD_SCHEMA_INVALID',
@@ -59,6 +63,7 @@ class PaymentMethodSchema
         self::PAYMENT_METHOD_SCHEMA_DIRECT_DEBIT => 'PAYMENT_METHOD_SCHEMA_DIRECT_DEBIT',
         self::PAYMENT_METHOD_SCHEMA_PCIB => 'PAYMENT_METHOD_SCHEMA_PCIB',
         self::PAYMENT_METHOD_SCHEMA_RAW => 'PAYMENT_METHOD_SCHEMA_RAW',
+        self::PAYMENT_METHOD_SCHEMA_CONNECTOR_TOKEN => 'PAYMENT_METHOD_SCHEMA_CONNECTOR_TOKEN',
     ];
 
     public static function name($value)
