@@ -70,6 +70,7 @@ message TransactionDetail {
   string psp_transaction_id = 23; // Transaction ID returned by the PSP to replace transaction_id which is ambiguous
   string psp_request_id = 24; // Request ID returned by PSP
   string issuer_name = 25;
+  string tlid = 26; // MasterCard transaction link id
 }
 
 message VerifyRequestData {
@@ -126,4 +127,5 @@ message InitialTransactionData {
   TransactionType transaction_type = 5;
   google.protobuf.Timestamp transaction_time = 6;
   string method_id = 7;
+  string tlid = 8;
 }

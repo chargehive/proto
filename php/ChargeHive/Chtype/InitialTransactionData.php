@@ -42,6 +42,10 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string method_id = 7;</code>
      */
     protected $method_id = '';
+    /**
+     * Generated from protobuf field <code>string tlid = 8;</code>
+     */
+    protected $tlid = '';
 
     /**
      * Constructor.
@@ -56,6 +60,7 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      *     @type int $transaction_type
      *     @type \Google\Protobuf\Timestamp $transaction_time
      *     @type string $method_id
+     *     @type string $tlid
      * }
      */
     public function __construct($data = NULL) {
@@ -222,6 +227,28 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->method_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string tlid = 8;</code>
+     * @return string
+     */
+    public function getTlid()
+    {
+        return $this->tlid;
+    }
+
+    /**
+     * Generated from protobuf field <code>string tlid = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTlid(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->tlid = $var;
 
         return $this;
     }
