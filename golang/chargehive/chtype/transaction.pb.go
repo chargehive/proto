@@ -324,7 +324,7 @@ type TransactionDetail struct {
 	PspTransactionId   string                 `protobuf:"bytes,23,opt,name=psp_transaction_id,json=pspTransactionId,proto3" json:"psp_transaction_id,omitempty"` // Transaction ID returned by the PSP to replace transaction_id which is ambiguous
 	PspRequestId       string                 `protobuf:"bytes,24,opt,name=psp_request_id,json=pspRequestId,proto3" json:"psp_request_id,omitempty"`             // Request ID returned by PSP
 	IssuerName         string                 `protobuf:"bytes,25,opt,name=issuer_name,json=issuerName,proto3" json:"issuer_name,omitempty"`
-	Tlid               string                 `protobuf:"bytes,26,opt,name=tlid,proto3" json:"tlid,omitempty"` // MasterCard transaction link id
+	TransactionLinkId  string                 `protobuf:"bytes,26,opt,name=transaction_link_id,json=transactionLinkId,proto3" json:"transaction_link_id,omitempty"` // MasterCard transaction link id
 	unknownFields      protoimpl.UnknownFields
 	sizeCache          protoimpl.SizeCache
 }
@@ -527,9 +527,9 @@ func (x *TransactionDetail) GetIssuerName() string {
 	return ""
 }
 
-func (x *TransactionDetail) GetTlid() string {
+func (x *TransactionDetail) GetTransactionLinkId() string {
 	if x != nil {
-		return x.Tlid
+		return x.TransactionLinkId
 	}
 	return ""
 }
@@ -951,17 +951,17 @@ func (x *AttemptDetail) GetIsPrimaryMethod() bool {
 }
 
 type InitialTransactionData struct {
-	state           protoimpl.MessageState `protogen:"open.v1"`
-	ChargeId        string                 `protobuf:"bytes,1,opt,name=charge_id,json=chargeId,proto3" json:"charge_id,omitempty"`
-	TransactionId   string                 `protobuf:"bytes,2,opt,name=transaction_id,json=transactionId,proto3" json:"transaction_id,omitempty"`
-	ConnectorId     string                 `protobuf:"bytes,3,opt,name=connector_id,json=connectorId,proto3" json:"connector_id,omitempty"`
-	NetworkId       string                 `protobuf:"bytes,4,opt,name=network_id,json=networkId,proto3" json:"network_id,omitempty"`
-	TransactionType TransactionType        `protobuf:"varint,5,opt,name=transaction_type,json=transactionType,proto3,enum=chargehive.chtype.TransactionType" json:"transaction_type,omitempty"`
-	TransactionTime *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=transaction_time,json=transactionTime,proto3" json:"transaction_time,omitempty"`
-	MethodId        string                 `protobuf:"bytes,7,opt,name=method_id,json=methodId,proto3" json:"method_id,omitempty"`
-	Tlid            string                 `protobuf:"bytes,8,opt,name=tlid,proto3" json:"tlid,omitempty"`
-	unknownFields   protoimpl.UnknownFields
-	sizeCache       protoimpl.SizeCache
+	state             protoimpl.MessageState `protogen:"open.v1"`
+	ChargeId          string                 `protobuf:"bytes,1,opt,name=charge_id,json=chargeId,proto3" json:"charge_id,omitempty"`
+	TransactionId     string                 `protobuf:"bytes,2,opt,name=transaction_id,json=transactionId,proto3" json:"transaction_id,omitempty"`
+	ConnectorId       string                 `protobuf:"bytes,3,opt,name=connector_id,json=connectorId,proto3" json:"connector_id,omitempty"`
+	NetworkId         string                 `protobuf:"bytes,4,opt,name=network_id,json=networkId,proto3" json:"network_id,omitempty"`
+	TransactionType   TransactionType        `protobuf:"varint,5,opt,name=transaction_type,json=transactionType,proto3,enum=chargehive.chtype.TransactionType" json:"transaction_type,omitempty"`
+	TransactionTime   *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=transaction_time,json=transactionTime,proto3" json:"transaction_time,omitempty"`
+	MethodId          string                 `protobuf:"bytes,7,opt,name=method_id,json=methodId,proto3" json:"method_id,omitempty"`
+	TransactionLinkId string                 `protobuf:"bytes,8,opt,name=transaction_link_id,json=transactionLinkId,proto3" json:"transaction_link_id,omitempty"`
+	unknownFields     protoimpl.UnknownFields
+	sizeCache         protoimpl.SizeCache
 }
 
 func (x *InitialTransactionData) Reset() {
@@ -1043,9 +1043,9 @@ func (x *InitialTransactionData) GetMethodId() string {
 	return ""
 }
 
-func (x *InitialTransactionData) GetTlid() string {
+func (x *InitialTransactionData) GetTransactionLinkId() string {
 	if x != nil {
-		return x.Tlid
+		return x.TransactionLinkId
 	}
 	return ""
 }
@@ -1086,7 +1086,7 @@ const file_chargehive_chtype_transaction_proto_rawDesc = "" +
 	"\x10payment_provider\x18\x1b \x01(\x0e2(.chargehive.chtype.PaymentMethodProviderR\x0fpaymentProvider\x12W\n" +
 	"\x12payment_input_type\x18\x1c \x01(\x0e2).chargehive.chtype.PaymentMethodInputTypeR\x10paymentInputType\x12\x1b\n" +
 	"\tauth_code\x18\x1d \x01(\tR\bauthCode\x122\n" +
-	"\x15payment_method_issuer\x18\x1e \x01(\tR\x13paymentMethodIssuer\"\xd0\n" +
+	"\x15payment_method_issuer\x18\x1e \x01(\tR\x13paymentMethodIssuer\"\xec\n" +
 	"\n" +
 	"\x11TransactionDetail\x12\x19\n" +
 	"\bactor_id\x18\x01 \x01(\tR\aactorId\x12#\n" +
@@ -1118,8 +1118,8 @@ const file_chargehive_chtype_transaction_proto_rawDesc = "" +
 	"\x12psp_transaction_id\x18\x17 \x01(\tR\x10pspTransactionId\x12$\n" +
 	"\x0epsp_request_id\x18\x18 \x01(\tR\fpspRequestId\x12\x1f\n" +
 	"\vissuer_name\x18\x19 \x01(\tR\n" +
-	"issuerName\x12\x12\n" +
-	"\x04tlid\x18\x1a \x01(\tR\x04tlid\x1aA\n" +
+	"issuerName\x12.\n" +
+	"\x13transaction_link_id\x18\x1a \x01(\tR\x11transactionLinkId\x1aA\n" +
 	"\x13AdditionalDataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\"\xea\x03\n" +
@@ -1172,7 +1172,7 @@ const file_chargehive_chtype_transaction_proto_rawDesc = "" +
 	"\x18AttemptTransactionNumber\x18\x03 \x01(\x03R\x18AttemptTransactionNumber\x122\n" +
 	"\x14AttemptMethodCascade\x18\x04 \x01(\x03R\x14AttemptMethodCascade\x128\n" +
 	"\x17AttemptConnectorCascade\x18\x05 \x01(\x03R\x17AttemptConnectorCascade\x12(\n" +
-	"\x0fIsPrimaryMethod\x18\x06 \x01(\bR\x0fIsPrimaryMethod\"\xe5\x02\n" +
+	"\x0fIsPrimaryMethod\x18\x06 \x01(\bR\x0fIsPrimaryMethod\"\x81\x03\n" +
 	"\x16InitialTransactionData\x12\x1b\n" +
 	"\tcharge_id\x18\x01 \x01(\tR\bchargeId\x12%\n" +
 	"\x0etransaction_id\x18\x02 \x01(\tR\rtransactionId\x12!\n" +
@@ -1181,8 +1181,8 @@ const file_chargehive_chtype_transaction_proto_rawDesc = "" +
 	"network_id\x18\x04 \x01(\tR\tnetworkId\x12M\n" +
 	"\x10transaction_type\x18\x05 \x01(\x0e2\".chargehive.chtype.TransactionTypeR\x0ftransactionType\x12E\n" +
 	"\x10transaction_time\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\x0ftransactionTime\x12\x1b\n" +
-	"\tmethod_id\x18\a \x01(\tR\bmethodId\x12\x12\n" +
-	"\x04tlid\x18\b \x01(\tR\x04tlidBgZ4github.com/chargehive/proto/golang/chargehive/chtype\xca\x02\x11ChargeHive\\Chtype\xe2\x02\x1aChargeHive\\Chtype\\Metadatab\x06proto3"
+	"\tmethod_id\x18\a \x01(\tR\bmethodId\x12.\n" +
+	"\x13transaction_link_id\x18\b \x01(\tR\x11transactionLinkIdBgZ4github.com/chargehive/proto/golang/chargehive/chtype\xca\x02\x11ChargeHive\\Chtype\xe2\x02\x1aChargeHive\\Chtype\\Metadatab\x06proto3"
 
 var (
 	file_chargehive_chtype_transaction_proto_rawDescOnce sync.Once

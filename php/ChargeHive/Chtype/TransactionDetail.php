@@ -131,9 +131,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     /**
      * MasterCard transaction link id
      *
-     * Generated from protobuf field <code>string tlid = 26;</code>
+     * Generated from protobuf field <code>string transaction_link_id = 26;</code>
      */
-    protected $tlid = '';
+    protected $transaction_link_id = '';
 
     /**
      * Constructor.
@@ -174,7 +174,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type string $psp_request_id
      *           Request ID returned by PSP
      *     @type string $issuer_name
-     *     @type string $tlid
+     *     @type string $transaction_link_id
      *           MasterCard transaction link id
      * }
      */
@@ -820,25 +820,25 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     /**
      * MasterCard transaction link id
      *
-     * Generated from protobuf field <code>string tlid = 26;</code>
+     * Generated from protobuf field <code>string transaction_link_id = 26;</code>
      * @return string
      */
-    public function getTlid()
+    public function getTransactionLinkId()
     {
-        return $this->tlid;
+        return $this->transaction_link_id;
     }
 
     /**
      * MasterCard transaction link id
      *
-     * Generated from protobuf field <code>string tlid = 26;</code>
+     * Generated from protobuf field <code>string transaction_link_id = 26;</code>
      * @param string $var
      * @return $this
      */
-    public function setTlid(string $var)
+    public function setTransactionLinkId(string $var)
     {
         GPBUtil::checkString($var, true);
-        $this->tlid = $var;
+        $this->transaction_link_id = $var;
 
         return $this;
     }
