@@ -42,6 +42,10 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string method_id = 7;</code>
      */
     protected $method_id = '';
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 8;</code>
+     */
+    protected $transaction_links = null;
 
     /**
      * Constructor.
@@ -56,6 +60,7 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      *     @type int $transaction_type
      *     @type \Google\Protobuf\Timestamp $transaction_time
      *     @type string $method_id
+     *     @type \ChargeHive\Chtype\TransactionLinks $transaction_links
      * }
      */
     public function __construct($data = NULL) {
@@ -222,6 +227,37 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->method_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 8;</code>
+     * @return \ChargeHive\Chtype\TransactionLinks|null
+     */
+    public function getTransactionLinks()
+    {
+        return $this->transaction_links;
+    }
+
+    public function hasTransactionLinks()
+    {
+        return isset($this->transaction_links);
+    }
+
+    public function clearTransactionLinks()
+    {
+        unset($this->transaction_links);
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 8;</code>
+     * @param \ChargeHive\Chtype\TransactionLinks $var
+     * @return $this
+     */
+    public function setTransactionLinks(\ChargeHive\Chtype\TransactionLinks|null $var)
+    {
+        $this->transaction_links = $var;
 
         return $this;
     }

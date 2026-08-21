@@ -128,6 +128,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string issuer_name = 25;</code>
      */
     protected $issuer_name = '';
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
+     */
+    protected $transaction_links = null;
 
     /**
      * Constructor.
@@ -168,6 +172,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type string $psp_request_id
      *           Request ID returned by PSP
      *     @type string $issuer_name
+     *     @type \ChargeHive\Chtype\TransactionLinks $transaction_links
      * }
      */
     public function __construct($data = NULL) {
@@ -805,6 +810,37 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->issuer_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
+     * @return \ChargeHive\Chtype\TransactionLinks|null
+     */
+    public function getTransactionLinks()
+    {
+        return $this->transaction_links;
+    }
+
+    public function hasTransactionLinks()
+    {
+        return isset($this->transaction_links);
+    }
+
+    public function clearTransactionLinks()
+    {
+        unset($this->transaction_links);
+    }
+
+    /**
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
+     * @param \ChargeHive\Chtype\TransactionLinks $var
+     * @return $this
+     */
+    public function setTransactionLinks(\ChargeHive\Chtype\TransactionLinks|null $var)
+    {
+        $this->transaction_links = $var;
 
         return $this;
     }
