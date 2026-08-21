@@ -45,6 +45,10 @@ message Transaction {
   string payment_method_issuer = 30;
 }
 
+message TransactionLinks {
+  string mastercard_link_id = 1; // Mastercard Transaction Link Identifier (TLID)
+}
+
 message TransactionDetail {
   string actor_id = 1;
   string actor_version = 2;
@@ -70,7 +74,7 @@ message TransactionDetail {
   string psp_transaction_id = 23; // Transaction ID returned by the PSP to replace transaction_id which is ambiguous
   string psp_request_id = 24; // Request ID returned by PSP
   string issuer_name = 25;
-  string transaction_link_id = 26; // MasterCard transaction link id
+  TransactionLinks transaction_links = 26;
 }
 
 message VerifyRequestData {
@@ -127,5 +131,5 @@ message InitialTransactionData {
   TransactionType transaction_type = 5;
   google.protobuf.Timestamp transaction_time = 6;
   string method_id = 7;
-  string transaction_link_id = 8;
+  TransactionLinks transaction_links = 8;
 }

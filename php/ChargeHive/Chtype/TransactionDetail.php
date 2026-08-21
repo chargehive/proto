@@ -129,11 +129,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     protected $issuer_name = '';
     /**
-     * MasterCard transaction link id
-     *
-     * Generated from protobuf field <code>string transaction_link_id = 26;</code>
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
      */
-    protected $transaction_link_id = '';
+    protected $transaction_links = null;
 
     /**
      * Constructor.
@@ -174,8 +172,7 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type string $psp_request_id
      *           Request ID returned by PSP
      *     @type string $issuer_name
-     *     @type string $transaction_link_id
-     *           MasterCard transaction link id
+     *     @type \ChargeHive\Chtype\TransactionLinks $transaction_links
      * }
      */
     public function __construct($data = NULL) {
@@ -818,27 +815,32 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * MasterCard transaction link id
-     *
-     * Generated from protobuf field <code>string transaction_link_id = 26;</code>
-     * @return string
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
+     * @return \ChargeHive\Chtype\TransactionLinks|null
      */
-    public function getTransactionLinkId()
+    public function getTransactionLinks()
     {
-        return $this->transaction_link_id;
+        return $this->transaction_links;
+    }
+
+    public function hasTransactionLinks()
+    {
+        return isset($this->transaction_links);
+    }
+
+    public function clearTransactionLinks()
+    {
+        unset($this->transaction_links);
     }
 
     /**
-     * MasterCard transaction link id
-     *
-     * Generated from protobuf field <code>string transaction_link_id = 26;</code>
-     * @param string $var
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
+     * @param \ChargeHive\Chtype\TransactionLinks $var
      * @return $this
      */
-    public function setTransactionLinkId(string $var)
+    public function setTransactionLinks(\ChargeHive\Chtype\TransactionLinks|null $var)
     {
-        GPBUtil::checkString($var, true);
-        $this->transaction_link_id = $var;
+        $this->transaction_links = $var;
 
         return $this;
     }

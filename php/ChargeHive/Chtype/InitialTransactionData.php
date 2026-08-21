@@ -43,9 +43,9 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      */
     protected $method_id = '';
     /**
-     * Generated from protobuf field <code>string transaction_link_id = 8;</code>
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 8;</code>
      */
-    protected $transaction_link_id = '';
+    protected $transaction_links = null;
 
     /**
      * Constructor.
@@ -60,7 +60,7 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
      *     @type int $transaction_type
      *     @type \Google\Protobuf\Timestamp $transaction_time
      *     @type string $method_id
-     *     @type string $transaction_link_id
+     *     @type \ChargeHive\Chtype\TransactionLinks $transaction_links
      * }
      */
     public function __construct($data = NULL) {
@@ -232,23 +232,32 @@ class InitialTransactionData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string transaction_link_id = 8;</code>
-     * @return string
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 8;</code>
+     * @return \ChargeHive\Chtype\TransactionLinks|null
      */
-    public function getTransactionLinkId()
+    public function getTransactionLinks()
     {
-        return $this->transaction_link_id;
+        return $this->transaction_links;
+    }
+
+    public function hasTransactionLinks()
+    {
+        return isset($this->transaction_links);
+    }
+
+    public function clearTransactionLinks()
+    {
+        unset($this->transaction_links);
     }
 
     /**
-     * Generated from protobuf field <code>string transaction_link_id = 8;</code>
-     * @param string $var
+     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 8;</code>
+     * @param \ChargeHive\Chtype\TransactionLinks $var
      * @return $this
      */
-    public function setTransactionLinkId(string $var)
+    public function setTransactionLinks(\ChargeHive\Chtype\TransactionLinks|null $var)
     {
-        GPBUtil::checkString($var, true);
-        $this->transaction_link_id = $var;
+        $this->transaction_links = $var;
 
         return $this;
     }
