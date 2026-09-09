@@ -129,9 +129,9 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      */
     protected $issuer_name = '';
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
+     * Generated from protobuf field <code>string scheme_link_id = 26;</code>
      */
-    protected $transaction_links = null;
+    protected $scheme_link_id = '';
 
     /**
      * Constructor.
@@ -172,10 +172,11 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type string $psp_request_id
      *           Request ID returned by PSP
      *     @type string $issuer_name
-     *     @type \ChargeHive\Chtype\TransactionLinks $transaction_links
+     *     @type string $scheme_link_id
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \ChargeHive\Chtype\Metadata\Transaction::initOnce();
         parent::__construct($data);
     }
@@ -815,32 +816,23 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
-     * @return \ChargeHive\Chtype\TransactionLinks|null
+     * Generated from protobuf field <code>string scheme_link_id = 26;</code>
+     * @return string
      */
-    public function getTransactionLinks()
+    public function getSchemeLinkId()
     {
-        return $this->transaction_links;
-    }
-
-    public function hasTransactionLinks()
-    {
-        return isset($this->transaction_links);
-    }
-
-    public function clearTransactionLinks()
-    {
-        unset($this->transaction_links);
+        return $this->scheme_link_id;
     }
 
     /**
-     * Generated from protobuf field <code>.chargehive.chtype.TransactionLinks transaction_links = 26;</code>
-     * @param \ChargeHive\Chtype\TransactionLinks $var
+     * Generated from protobuf field <code>string scheme_link_id = 26;</code>
+     * @param string $var
      * @return $this
      */
-    public function setTransactionLinks(\ChargeHive\Chtype\TransactionLinks|null $var)
+    public function setSchemeLinkId(string $var)
     {
-        $this->transaction_links = $var;
+        GPBUtil::checkString($var, true);
+        $this->scheme_link_id = $var;
 
         return $this;
     }
