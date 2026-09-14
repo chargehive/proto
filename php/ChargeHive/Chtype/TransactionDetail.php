@@ -128,6 +128,10 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string issuer_name = 25;</code>
      */
     protected $issuer_name = '';
+    /**
+     * Generated from protobuf field <code>string scheme_link_id = 26;</code>
+     */
+    protected $scheme_link_id = '';
 
     /**
      * Constructor.
@@ -168,9 +172,11 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
      *     @type string $psp_request_id
      *           Request ID returned by PSP
      *     @type string $issuer_name
+     *     @type string $scheme_link_id
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \ChargeHive\Chtype\Metadata\Transaction::initOnce();
         parent::__construct($data);
     }
@@ -805,6 +811,28 @@ class TransactionDetail extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->issuer_name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string scheme_link_id = 26;</code>
+     * @return string
+     */
+    public function getSchemeLinkId()
+    {
+        return $this->scheme_link_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string scheme_link_id = 26;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSchemeLinkId(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->scheme_link_id = $var;
 
         return $this;
     }
