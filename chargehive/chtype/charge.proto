@@ -167,4 +167,9 @@ message Device {
   DeviceType type = 24;
   string timezone = 25;
   repeated Header request_headers = 26;
+  // device_id is app-device's reference for this device, resolved by paymentauth
+  // when it recorded the device. Carried so a charge can attach the device already
+  // recorded for the session rather than recording it a second time. Empty for
+  // API-initiated charges, which never went through paymentauth.
+  string device_id = 27;
 }
