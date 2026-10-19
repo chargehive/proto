@@ -45,6 +45,10 @@ class TransactionType
      */
     const TRANSACTION_TYPE_EXPIRED = 7;
     /**
+     * Generated from protobuf enum <code>TRANSACTION_TYPE_RISK_ASSESSMENT = 8;</code>
+     */
+    const TRANSACTION_TYPE_RISK_ASSESSMENT = 8;
+    /**
      * Generated from protobuf enum <code>TRANSACTION_TYPE_INTERNAL = 99;</code>
      */
     const TRANSACTION_TYPE_INTERNAL = 99;
@@ -58,6 +62,7 @@ class TransactionType
         self::TRANSACTION_TYPE_DISPUTE => 'TRANSACTION_TYPE_DISPUTE',
         self::TRANSACTION_TYPE_VERIFY => 'TRANSACTION_TYPE_VERIFY',
         self::TRANSACTION_TYPE_EXPIRED => 'TRANSACTION_TYPE_EXPIRED',
+        self::TRANSACTION_TYPE_RISK_ASSESSMENT => 'TRANSACTION_TYPE_RISK_ASSESSMENT',
         self::TRANSACTION_TYPE_INTERNAL => 'TRANSACTION_TYPE_INTERNAL',
     ];
 
