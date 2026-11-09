@@ -24,7 +24,8 @@ fi
 
 protodep up
 
-rm -rf golang && mkdir -p golang
+# Only generated files are removed, so hand-written Go such as chtype/country_codes.go survives regeneration.
+mkdir -p golang && find golang \( -name '*.pb.go' -o -name '*.pb.enums.go' \) -delete
 rm -rf php && mkdir -p php
 $PROTOC_PATH \
   -I . \
